@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+  <title>icon图标</title>
+  <link rel="stylesheet" href="./iconfont.css">
+  <style>
+    .icon_box {
+      display: inline-block;
+      position: relative;
+      margin: 16px;
+      padding: 15px;
+      width: 160px;
+      text-align: center;
+      border-radius: 3px;
+      background-color: #fff;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      box-sizing: border-box;
+    }
+    .icon_box:hover {
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    }
+    .icon_outter {
+      display: inline-block;
+      position: relative;
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+      font-size: 24px;
+    }
+    .icon_name {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  </style>
+</head>
+<body>
+  <div class="icons_wrapper">
+    <!-- <div class="icon_box">
+      <div class="icon_outter"><i class="item"></i></div>
+      <p class="icon_name" :title="item">{{ item }}</p>
+    </div> -->
+  </div>
+  <script>
+    // 请使用网络地址预览
+    var itemTemplate = '<div class="icon_box">'
+      + '<div class="icon_outter"><i class="iconfont {{ item }}"></i></div>'
+      + ' <p class="icon_name" title="{{item}}">{{ item }}</p>'
+      + '</div>';
+    var frag = document.createDocumentFragment();
+    [].slice.call(document.styleSheets[0].cssRules)
+      .forEach(function (item) {
+        var matchRes = item.cssText.match(/[^.:]+?(?=:{1,2}before)/);
+        if (matchRes) {
+          var el = document.createElement('div');
+          el.innerHTML = itemTemplate.replace(/\{\{\s?item\s?\}\}/g, matchRes[0]);
+          frag.append(el.firstElementChild);
+        }
+      });
+    document.querySelector('.icons_wrapper').appendChild(frag);
+  </script>
+</body>
+</html>

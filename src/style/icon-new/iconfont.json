@@ -1,0 +1,86 @@
+{
+  "id": "2377982",
+  "name": "产品",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1580408",
+      "name": "jpg",
+      "font_class": "jpg",
+      "unicode": "e8003",
+      "unicode_decimal": 950275
+    },
+    {
+      "icon_id": "7838656",
+      "name": "dwg",
+      "font_class": "dwg",
+      "unicode": "e8004",
+      "unicode_decimal": 950276
+    },
+    {
+      "icon_id": "7842403",
+      "name": "png",
+      "font_class": "png",
+      "unicode": "e8005",
+      "unicode_decimal": 950277
+    },
+    {
+      "icon_id": "12268101",
+      "name": "文档",
+      "font_class": "wendang",
+      "unicode": "e8006",
+      "unicode_decimal": 950278
+    },
+    {
+      "icon_id": "12574202",
+      "name": "PPT",
+      "font_class": "ppt",
+      "unicode": "e8007",
+      "unicode_decimal": 950279
+    },
+    {
+      "icon_id": "12574749",
+      "name": "DOC",
+      "font_class": "DOC",
+      "unicode": "e8008",
+      "unicode_decimal": 950280
+    },
+    {
+      "icon_id": "14439591",
+      "name": "压缩包",
+      "font_class": "yasuobao",
+      "unicode": "e8009",
+      "unicode_decimal": 950281
+    },
+    {
+      "icon_id": "14587624",
+      "name": "xsl",
+      "font_class": "xsl",
+      "unicode": "e8010",
+      "unicode_decimal": 950288
+    },
+    {
+      "icon_id": "19697585",
+      "name": "pdf",
+      "font_class": "pdf",
+      "unicode": "e8011",
+      "unicode_decimal": 950289
+    },
+    {
+      "icon_id": "16388840",
+      "name": "文件夹",
+      "font_class": "wenjianjia",
+      "unicode": "e8001",
+      "unicode_decimal": 950273
+    },
+    {
+      "icon_id": "7586700",
+      "name": "图档管理",
+      "font_class": "tudangguanli",
+      "unicode": "e8002",
+      "unicode_decimal": 950274
+    }
+  ]
+}
