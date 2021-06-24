@@ -1,5 +1,5 @@
 <template>
-    <div id="sapi-layout">
+    <div class="sapi-layout">
         <nav-header></nav-header>
         <nav-sidebar></nav-sidebar>
         <sapi-content></sapi-content>
@@ -27,3 +27,11 @@ export default {
     }
 }
 </script>
+<style lang="less">
+    // @import url('./layout.css');
+    .sapi-layout{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+</style>

@@ -40,11 +40,28 @@ exports.cssLoaders = function (options) {
           sourceMap: options.sourceMap
         })
       })
+      console.log(loader)
+      if(loader == 'less'){
+        loaders.push({
+          
+            loader: 'sass-resources-loader',
+            options: {
+              resources: [
+                path.resolve(__dirname, '../src/style/common.less'),
+                // path.resolve(__dirname, '../src/common/less/variable.less')
+              ],
+              javascriptEnabled: true,
+            }
+          
+    
+        })
+      }
     }
 
     // Extract CSS when that option is specified
     // (which is the case during production build)
     if (options.extract) {
+     
       return ExtractTextPlugin.extract({
         use: loaders,
         fallback: 'vue-style-loader'
