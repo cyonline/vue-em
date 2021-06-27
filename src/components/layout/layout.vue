@@ -1,5 +1,5 @@
 <template>
-    <div class="sapi-layout">
+    <div class="sapi-layout" :class="isCollapse?'left-close':''">
         <nav-header></nav-header>
         <nav-sidebar></nav-sidebar>
         <sapi-content></sapi-content>
@@ -14,6 +14,12 @@ export default {
     data(){
         return {
 
+        }
+    },
+    computed:{
+        isCollapse:function(){
+            console.info(this.$store.state.isCollapse)
+            return this.$store.state.isCollapse;
         }
     },
     props:{},

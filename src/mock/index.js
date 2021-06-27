@@ -1,5 +1,5 @@
 import Mock from 'mockjs'
 
-import Menu from './menu'
+const Menu = require('./menu.json'); 
 
-Mock.mock('/api/users/menus','get',Menu.data)
+Mock.mock('/api/users/menus','get',Menu)

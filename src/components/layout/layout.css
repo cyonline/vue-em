@@ -52,7 +52,7 @@
     text-align: center;
     font-size: 16px;
     color: #8492A6;
-    background-color: rgba(255, 255, 255, 0.15);
+    /* background-color: rgba(255, 255, 255, 0.15); */
     line-height: 60px;
     cursor: pointer;
     transition: transform 0.5s;
@@ -246,12 +246,12 @@
     overflow: hidden;
 }
 
-.left-close .body-content .left-inner-box {
+.left-close .sapi-siderbar .left-inner-box {
     width: 65px;
     overflow: visible;
 }
 
-.left-close .body-content .right-content,
+.left-close .right-content,
 .left-close .header .right-header {
     padding-left: 65px;
 }
@@ -424,7 +424,7 @@
 .header{
     box-shadow: none;
 }
-.body-content .left-inner-box{
+.sapi-siderbar .left-inner-box{
     overflow: hidden;
     width: 200px;
     transition: all 0.3s;
@@ -471,6 +471,7 @@
 }
 .left-inner-box .el-menu{
     background-color: transparent;
+    border:none;
 }
 
 .collapse-wrapper{

@@ -6,12 +6,16 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
     state:{
-        sideMenu:[]
+        sideMenu:[],
+        isCollapse:false,
     },
     mutations:{
         changeSideMenu(state,item){
             console.info(state,item);
             this.state.sideMenu = item;
+        },
+        toggleCollapse(state,isCollapse){
+            this.state.isCollapse = isCollapse
         }
     }
 

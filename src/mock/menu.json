@@ -1,5 +1,4 @@
-export default  {
-    data:[
+[
     {
         "MenuId": "8D441DE3-A2DF-4A81-B6FB-454722A1BF3E",
         "MenuName": "看板管理",
@@ -2311,4 +2310,3 @@ export default  {
         ]
     }
 ]
-}
