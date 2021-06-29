@@ -1,6 +1,11 @@
 <template>
   <div id="index">
-    <layout></layout>
+    <layout>
+      <template>
+        这是一个插槽
+        <router-view/>
+      </template>
+    </layout>
   </div>
 </template>
 <script>

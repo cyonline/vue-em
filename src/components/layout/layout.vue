@@ -2,7 +2,9 @@
     <div class="sapi-layout" :class="isCollapse?'left-close':''">
         <nav-header></nav-header>
         <nav-sidebar></nav-sidebar>
-        <sapi-content></sapi-content>
+        <sapi-content>
+            <slot></slot>
+        </sapi-content>
         <!-- <navHeader></navHeader> -->
     </div>
 </template>
@@ -11,6 +13,7 @@ import navHeader from './nav-header';
 import navSidebar from './nav-sidebar';
 import sapiContent from './sapi-content';
 export default {
+    name:'layout',
     data(){
         return {
 

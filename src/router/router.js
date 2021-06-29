@@ -6,21 +6,36 @@ import test from '@/components/test'
 
 import lookBoardRoutes from '@/router/modules/lookboardRoutes'
 
-import IndexComponent from '../views/index'
+import IndexComponent from '@/views/index'
 // Vue.use(Router)
 
 const routes = [
-  
     {
       path: '/',
-      name: 'index',
-      component: IndexComponent
+      redirect: '/index'
     },
     {
-      path:'/test',
-      name: 'test',
-      component: test
+      path: '/index',
+      name: 'index',
+      component: IndexComponent,
+      children:[
+        {
+          path:'/helloWorld',
+          name: 'helloWorld',
+          component: HelloWorld
+        },
+        {
+          path:'/test',
+          name: 'test',
+          component: test
+        },
+      ]
     },
+    {
+      path: '**',
+      redirect: { name:'index'}
+    },
+    
     // lookBoardRoutes,
 
 ]
