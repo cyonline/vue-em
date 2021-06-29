@@ -1,0 +1,99 @@
+/* #region */
+[v-cloak] {
+  display: none;
+}
+.main {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  background-color: #efeff4;
+}
+.main_content {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0;
+      -ms-flex: 1 0;
+          flex: 1 0;
+  overflow: auto;
+}
+/* #region */
+.lookboard_panel_header {
+  /* border-bottom: 1px solid #ddd; */
+    align-items: center;
+    padding: 12px 14px 8px 0;
+    background-color: #fff;
+    box-sizing: border-box;
+    position: relative;
+    width: calc(100% + 30px);
+    width: -webkit-calc(100% + 30px);
+    width: -moz-calc(100% + 30px);
+    left: -15px;
+}
+.lookboard_panel_header .struct_container{
+    margin-right: 15px;
+}
+.header-title{
+  font-size: 16px;
+  color: #333;
+  margin-left: 25px;
+  font-weight: 600;
+  line-height: 30px;
+}
+.stage-box{
+  border-top: none;
+}
+.header_tail {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+          align-items: center;
+}
+.struct_container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 20px;
+}
+.header_label {
+  display: inline-block;
+  position: relative;
+  line-height: 1;
+}
+.struct_tree {
+  width: 200px;
+}
+.struct_option_item {
+  width: 200px;
+}
+.projectStructTree {
+  width: 200px;
+}
+/* 单独处理年月日选择框样式 */
+.index-choose-list .date .el-dropdown {
+    width: 80px !important;
+}
+.index-choose-list .date .el-select {
+    width: 80px !important;
+}
+.index-choose-list .date .el-input {
+    width: 80px !important;
+}
+.el-date-editor--year input{
+  height: 30px;
+}
+/* #region */

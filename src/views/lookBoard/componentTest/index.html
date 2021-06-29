@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cmn-hans">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>页面标题</title>
+  <!--[if lt IE 9]>
+  <script src="../../../../static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="../../../../static/css/normalize.css" />
+  <link rel="stylesheet" href="../../../../lib/element/index.css">
+  <link rel="stylesheet" href="../../../../static/css/common.css" />
+  <link rel="stylesheet" href="../../../../static/css/element-change.css">
+  <link rel="stylesheet" href="../../../../static/css/common@hyk.css">
+  <link rel="stylesheet" href="../../../../pages/em/lookBoard/componentTest/style.css">
+</head>
+<body>
+  <div class="stage-box" id="main" v-cloak>
+    <breadcrumb :data="breadcrumbs"></breadcrumb>
+    <div class="container-fluid">
+      <chart1 :hierarchy-type="1" :echart-options="[echartsOptions.chart1, echartsOptions.chart2]" :tabs="['质量问题分析', '安全问题分析']" :init-tab="1"></chart1>
+    </div>
+  </div>
+  <!-- polyfill -->
+  <script src="../../../../lib/babel-polyfill/7.0.0-beta.49/polyfill.min.js"></script>
+  <script src="../../../../lib/jquery-1.11.3.min.js"></script>
+  <script src="../../../../lib/layer-v3.0.1/layer.js"></script>
+  <script src="../../../../lib/sliderShow/jquery.albumSliderShow.js"></script>
+  <script src="../../../../lib/vue-2.2.6.min.js"></script>
+  <script src="../../../../lib/element/index.js?version=1.4.12"></script>
+  <script src="../../../../lib/echarts.4.2.0-rc.2.min.js"></script>
+  <script src="../../../../config.js"></script>
+  <script src="../../../../static/js/base.js"></script>
+  <script src="../../../../static/js/util@hyk.es5.js"></script>
+  <script type="text/javascript" src="../../../../pages/em/lookBoard/componentTest/index.es6.js"></script>
+</body>
+</html>

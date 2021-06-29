@@ -11,9 +11,12 @@ import './style/normalize.css';
 import './style/common.less';
 
 import * as Base from './utils/base'
+// import utils from './utils/utils'
+
 import axios from 'axios'
 import store from './store'
 require('./mock')
+
 Vue.prototype.$Base = Base;
 Vue.prototype.$http = axios;
 
