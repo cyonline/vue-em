@@ -40,7 +40,9 @@ export default {
         }
     },
     methods:{
-        chooseMenuList(){},
+        chooseMenuList(item){
+            console.info('side',item)
+        },
         toggleCollapse(){
             this.setCollapse = !this.setCollapse;
             
