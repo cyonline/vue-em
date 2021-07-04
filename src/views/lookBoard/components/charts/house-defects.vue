@@ -185,7 +185,7 @@ export default {
   },
   components: {
     chartTab: function () {
-      return import('@/lookBoard/components/chart-tab/index.vue');
+      return import('@/views/lookBoard/components/chart-tab/index.vue');
     },
   },
   props: {

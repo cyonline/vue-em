@@ -99,7 +99,7 @@
 </template>
 
 <script>
-import tableStandard from '@/lookBoard/components/charts/tableStandard/sp.js'
+import tableStandard from '@/views/lookBoard/components/charts/tableStandard/sp.js'
 
 var DefaultChartOption = {
   backgroundColor: '#fff',
@@ -259,7 +259,7 @@ export default {
   },
   components: {
     chartTab: function () {
-      return import('@/lookBoard/components/chart-tab/index.vue');
+      return import('@/views/lookBoard/components/chart-tab/index.vue');
     },
   },
   props: {

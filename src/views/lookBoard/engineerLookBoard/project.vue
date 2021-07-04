@@ -1,16 +1,38 @@
-(function () {
-  new Vue({
-    el: "#lookBoard",
-    mixins: [commonMixin],
-    data: function() {
+<template>
+  <div>
+    <div class="stage-box" id="lookBoard" v-cloak>
+      <main class="main">
+        <header class="lookboard_panel_header">
+          <div class="float-left header-title">项目看板</div>
+          <div v-show="boardMenuType > 1" class="struct_container float-right">
+            <label for class="header_label">{{ computedLabelText }} &nbsp;</label>
+
+          </div>
+        </header>
+        <article ref="mainContent" class="main_content">
+          <!-- 放置组件 -->
+        </article>
+      </main>
+    </div>
+  </div>
+</template>
+
+<script>
+import treeSelect from '@/components/sapi-tree-select'
+
+
+export default {
+  name: "lookBoard",
+  data() {
       var panels = JSON.parse(
         window.sessionStorage.getItem("look-board-menus") || "[]"
       );
       panels = panels.filter(function(item) {
         return item.Children && item.Children.length;
       });
-      return {
-        webUrl: webInit.fileUrl,
+    return  {
+        // webUrl: webInit.fileUrl,
+        webUrl: '',
         permissions: {},
         breadcrumbs: [],
         userInfo: null,
@@ -37,25 +59,18 @@
         ReportBoardType: 0,
         panelMenuId: ""
       };
-    },
-    components: {
+  },
+  components: {
       panelTab: function() {
-        return __import__("@/views/lookBoard/componentspanel-tab/index.vue");
+        return import("@/views/lookBoard/components/panel-tab/index.vue");
       },
       chartTab: function() {
-        return __import__("@/views/lookBoard/componentschart-tab/index.vue");
+        return import("@/views/lookBoard/components/chart-tab/index.vue");
       },
-      groupPanel: function() {
-        return __import__("@/views/lookBoard/componentspanels/group.vue");
-      },
-      companyPanel: function() {
-        return __import__("@/views/lookBoard/componentspanels/company.vue");
-      },
-      projectPanel: function() {
-        return __import__("@/views/lookBoard/componentspanels/project.vue");
-      }
+
+      treeSelect,
     },
-    computed: {
+     computed: {
       headerTitle:function(){
         var tilte ={"1":"集团看板","2":"公司看板","3":"项目看板"}
         return tilte[this.boardMenuType + '']
@@ -149,38 +164,7 @@
         return node;
       }
     },
-    watch: {
-      boardMenuType: function(n) {
-        this.$refs.mainContent.scrollTop = 0;
-        this.fetchModulesPermissions();
-        this.structId = "";
-        if (n > 0) {
-          this.fetchStructData().then(this.doSthAfterFetchStructData);
-        }
-      },
-    //   ReportBoardType: function() {
-    //     this.$refs.mainContent.scrollTop = 0;
-    //     // if (this.tabIndex === 0) {
-    //     //   this.fetchModulesPermissions();
-    //     //   }
-    //     this.fetchModulesPermissions();
-
-    //     // this.tabIndex = 0;
-    //   }
-    },
-    created: function() {
-      this.fetchModulesPermissions();
-      if (this.boardMenuType > 1) {
-        this.fetchStructData().then(this.doSthAfterFetchStructData);
-      }
-      this.panelMenuId = window.sessionStorage.getItem("menuId");
-
-      var paramArr = window.location.search.split("&");
-      this.ReportBoardType = paramArr[1].split("=")[1]; // 0工程看板  1 验房看板
-        this.boardMenuType = paramArr[2].split("=")[1]; // 1 集团看板  2公司看板 3 项目看板
-        console.log(this.boardMenuType,178);
-    },
-    methods: {
+  methods:  {
       doSthAfterFetchStructData: function() {
         // 默认选中第一个公司或项目
         var vm = this;
@@ -305,6 +289,27 @@
             });
         }
       }
-    }
-  });
-})();
+    },
+  watch: {
+      boardMenuType: function(n) {
+        this.$refs.mainContent.scrollTop = 0;
+        this.fetchModulesPermissions();
+        this.structId = "";
+        if (n > 0) {
+          this.fetchStructData().then(this.doSthAfterFetchStructData);
+        }
+      },
+    
+    },
+     created: function() {
+      this.fetchModulesPermissions();
+      if (this.boardMenuType > 1) {
+        this.fetchStructData().then(this.doSthAfterFetchStructData);
+      }
+      this.panelMenuId = window.sessionStorage.getItem("menuId");
+    },
+};
+</script>
+<style lang="less">
+  @import url('../style.css');
+</style>

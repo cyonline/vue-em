@@ -129,7 +129,7 @@
 </template>
 
 <script>
-import groupSort from '@/lookBoard/components/problem-stat/statStandard/group/sort.js' // 合作单位排名
+import groupSort from '@/views/lookBoard/components/problem-stat/statStandard/group/sort.js' // 合作单位排名
 
 export default {
     name: 'stat-table',

@@ -1,13 +1,14 @@
 <template>
-    <div class="sapi-content">
-        {{title}}
+    <div class="sapi-content" :class="isCollapse?'collapse':''">
+        <!-- {{title}}
         <el-button @click="goPage('test')">默认按钮</el-button>
         <el-button type="primary" @click="goPage('helloWorld')">主要按钮</el-button>
         <el-button type="success">成功按钮</el-button>
         <el-button type="info">信息按钮</el-button>
         <el-button type="warning">警告按钮</el-button>
-        <el-button type="danger" @click="test">危险按钮</el-button>
-        <slot></slot>
+        <el-button type="danger" @click="test">危险按钮</el-button> -->
+        <!-- <slot></slot> -->
+        <router-view/>
     </div>
 </template>
 <script>
@@ -18,6 +19,11 @@ export default {
     data(){
         return {
             title:'content'
+        }
+    },
+    computed:{
+        isCollapse(){
+            return this.$store.state.isCollapse
         }
     },
     created(){
@@ -45,9 +51,14 @@ export default {
 </script>
 <style lang="less">
     .sapi-content{
-        float:left;
-        width: calc(~'100% - 200px');
+        width: 100%;
         height: calc(~'100% - 60px');
-        overflow: hidden;
+        padding-left: 200px;
+        background-color: #EFEFF4;
+        transition:all 0.1;
+        -webkit-transition:all 0.3s;
+        &.collapse{
+             padding-left: 65px;
+        }
     }
 </style>

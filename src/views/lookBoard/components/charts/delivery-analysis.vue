@@ -70,7 +70,7 @@
                     <el-table-column align="center" v-if='tabIndex === 1' prop="WaitResolveCount" label="未整改数">
                     </el-table-column>
                     <el-table-column align="center" v-if='tabIndex === 1' prop="ResolveCountRate" label="整改率">
-                        <template scope="props">
+                        <template slot-scope="props">
                             {{props.row.ResolveCountRate}}%
                         </template>
                     </el-table-column>
@@ -81,7 +81,7 @@
                     <el-table-column align="center" v-if='tabIndex === 0' prop="SuccessCount" label="无意见接收">
                     </el-table-column>
                     <el-table-column align="center" v-if='tabIndex === 0' label="一次交付率">
-                        <template scope="props">
+                        <template slot-scope="props">
                             {{props.row.OneDliveryRate}}%
                         </template>
                     </el-table-column>
@@ -374,7 +374,7 @@ export default {
   },
   components: {
     chartTab: function () {
-      return import('@/lookBoard/components/chart-tab/index.vue');
+      return import('@/views/lookBoard/components/chart-tab/index.vue');
     },
   },
   props: {

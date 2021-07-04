@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import tableStandard from '@/lookBoard/components/charts/tableStandard/qs.js'
+import tableStandard from '@/views/lookBoard/components/charts/tableStandard/qs.js'
 
 export default {
   name: 'QualitySafeTyAnalysis',
@@ -59,7 +59,7 @@ export default {
   },
   components: {
     chartTab: function () {
-      return import('@/lookBoard/components/chart-tab/index.vue');
+      return import('@/views/lookBoard/components/chart-tab/index.vue');
     },
   },
   props: {

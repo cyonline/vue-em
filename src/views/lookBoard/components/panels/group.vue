@@ -83,7 +83,7 @@
 </template>
 
 <script>
-import PanelMixin from '@/lookBoard/mixins/panel.js';
+import PanelMixin from '@/views/lookBoard/mixins/panel.js';
 
 export default {
   name: 'GroupPanel',
@@ -104,37 +104,37 @@ export default {
   props: ['structId', 'structNodeData', 'modulePermissions', 'panelType'],
   components: {
     QualitySafety: function () {
-      return __import__('@/lookBoard/components/charts/quality-safety.vue');
+      return import('@/views/lookBoard/components/charts/quality-safety.vue');
     },
     HouseDefects: function () {
-      return __import__('@/lookBoard/components/charts/house-defects.vue');
+      return import('@/views/lookBoard/components/charts/house-defects.vue');
     },
     overview: function () {
-      return __import__('@/lookBoard/components/overview/overview.vue');
+      return import('@/views/lookBoard/components/overview/overview.vue');
     },
     stat: function () {
-      return __import__('@/lookBoard/components/problem-stat/stat.vue');
+      return import('@/views/lookBoard/components/problem-stat/stat.vue');
     },
     seriousProblem: function () {
-      return __import__("@/lookBoard/components/charts/serious-problem.vue")
+      return import("@/views/lookBoard/components/charts/serious-problem.vue")
     },
     deliveryAnalysis: function () {
-      return __import__("@/lookBoard/components/charts/delivery-analysis.vue")
+      return import("@/views/lookBoard/components/charts/delivery-analysis.vue")
     },
     checkItem: function () {
-      return __import__("@/lookBoard/components/charts/check-item.vue")
+      return import("@/views/lookBoard/components/charts/check-item.vue")
     },
     mapBox: function() {
-      return __import__("@/lookBoard/components/baiduMap/baiduMap.vue")
+      return import("@/views/lookBoard/components/baiduMap/baiduMap.vue")
     },
     accesscheckStat: function () {
-      return __import__('@/lookBoard/components/problem-stat/accesscheck-stat.vue');
+      return import('@/views/lookBoard/components/problem-stat/accesscheck-stat.vue');
     },
     QualityAssessment: function () {
-      return __import__('@/lookBoard/components/charts/quality-assessment.vue');
+      return import('@/views/lookBoard/components/charts/quality-assessment.vue');
     },
     statT: function () {
-      return __import__('@/lookBoard/components/problem-stat/statT.vue');
+      return import('@/views/lookBoard/components/problem-stat/statT.vue');
     },
   },
 };

@@ -30,19 +30,19 @@
     },
     components: {
       panelTab: function () {
-        return __import__('@/lookBoard/components/panel-tab/index.vue');
+        return __import__('@/views/lookBoard/componentspanel-tab/index.vue');
       },
       chartTab: function () {
-        return __import__('@/lookBoard/components/chart-tab/index.vue');
+        return __import__('@/views/lookBoard/componentschart-tab/index.vue');
       },
       groupPanel: function () {
-        return __import__('@/lookBoard/components/panels/group.vue');
+        return __import__('@/views/lookBoard/componentspanels/group.vue');
       },
       companyPanel: function () {
-        return __import__('@/lookBoard/components/panels/company.vue');
+        return __import__('@/views/lookBoard/componentspanels/company.vue');
       },
       projectPanel: function () {
-        return __import__('@/lookBoard/components/panels/project.vue');
+        return __import__('@/views/lookBoard/componentspanels/project.vue');
       },
     },
     computed: {
