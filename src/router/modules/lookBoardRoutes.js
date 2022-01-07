@@ -1,13 +1,14 @@
 const routes = [
     {
         path: '/',
-        redirect: 'engineerLookBoard',
+        redirect: 'engineerLookBoard/group',
     },
     {
         path: 'engineerLookBoard',
         name: 'engineerLookBoard',
         component: () => import('@/views/lookBoard/index.vue'),
         children: [
+            
             {
                 path: 'group',
                 name: 'engineerLookBoard-group',

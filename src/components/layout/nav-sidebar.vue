@@ -6,7 +6,7 @@
                 </div>
                 <!-- 使用 el-scrollbar 导致 el-menu 的collapse为true 时 侧边导航被遮掉，在 .el-menu--collapse类上加 fixed解决（不过会产生当的collapse为true时滚动组件无效，无大的影响） -->
                 <el-scrollbar class='page-component__scroll' :noresize="false">
-                    <el-menu class="index-menu" @select="chooseMenuList" :collapse="isCollapse" :default-openeds="openeds">
+                    <el-menu class="index-menu" @select="chooseMenuList" :collapse="isCollapse" default-active="'472FD1A1-8A8E-4AB9-9EF7-888068E0254B'"  :default-openeds="openeds">
                         <index-menu :data="menuData" :icon="true"></index-menu>
                     </el-menu>
                 </el-scrollbar>
@@ -45,15 +45,18 @@ export default {
         },
         openeds(){
             var menu = this.$store.state.sideMenu;
-            this.chooseMenuList(menu[0])
             return menu.length>0? [menu[0].MenuId]:[]
+        },
+        acitveIndex(){
+            var menu = this.$store.state.sideMenu;
+            return menu.length>0? menu[0].Children[0].MenuId:''
         }
     },
     methods:{
-        chooseMenuList(item){
-            console.info('side',item)
+        chooseMenuList(path){
+            console.info('side',path)
             this.$router.push({
-                path: item,
+                path: path,
             });
             
         },
@@ -64,14 +67,11 @@ export default {
         }
     },
     mounted(){
-        
+        console.info('mounted');
+        console.info(this.$store.state.sideMenu)
+        // this.chooseMenuList(this.$store.state.sideMenu[0].MenuPath)
     },
 
-    updated(){
-        console.info('xx',this.menuData)
-       
-       
-    },
 }
 </script>
 <style lang="less">

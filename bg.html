@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>em</title>
+  </head>
+  <style>
+    html,body{
+      margin: 0;
+      padding: 0;
+      /* height: 200vh; */
+      /* overflow-x:hidden; */
+    }
+    .background{
+      background-image: url('src/assets/images/login-bg1.jpg');
+      background-size: cover;
+      background-position: 50% 50%;
+      width: 100%;
+      height: 700px;
+      font: 900 39rem '';
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position: relative;
+      top:50px;
+      text-align: center;
+      overflow: hidden;
+      transition: all 0.2s linear;
+    }
+    .background::before{
+      content: '';
+      background-size: 100% 100%;
+      background-image: inherit;
+      background-position: -50% -50%;
+      position: absolute;
+      top:0;
+      left:0;
+      bottom:0;
+      right:0;
+      z-index:-99;
+    }
+     
+    
+  </style>
+  <body>
+    <h1>cyonline</h1>
+    <div class="background">
+      sapi
+    </div>
+    
+    <script>
+        let background = document.querySelector(".background");
+        document.addEventListener('mousemove',function(e){
+          console.log(e);
+          const scrollY = e.clientY;
+          const scrollX = e.clientX;
+           
+            background.style.backgroundPosition = `calc(-50% + ${scrollX}px) calc(-50% + ${scrollY}px)`;
+          
+        })
+
+        document.addEventListener('mouseleave',function(e){
+          background.style.backgroundPosition = ''
+        })
+    </script>
+  </body>
+</html>

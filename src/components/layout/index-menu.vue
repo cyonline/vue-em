@@ -17,7 +17,7 @@
                     <span>{{menu.MenuName}}</span>
                 </template>
             </el-menu-item>
-            <el-submenu v-if="menu.Children.length > 0" :index="menu.MenuId" :key="menu.MenuId">
+            <el-submenu v-if="menu.Children.length > 0" :index="menu.MenuPath" :key="menu.MenuId">
                 <template slot="title">
                         <i v-if="icon" :class="['el-icon-', 'iconfont', menu.IconPath ? menu.IconPath : 'icon-tian']"></i>
                         <span>{{menu.MenuName}}</span>
@@ -35,8 +35,12 @@ export default {
             data: { type: Array, default: [] },
             icon: { type: Boolean, dafault: false }
         },
+    methods:{
+       
+    },
     mounted(){
-        // console.info('indexMenu',this.data)
+        console.info('indexMenu',this.data)
+        
     },
     
 }
