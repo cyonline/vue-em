@@ -3,7 +3,7 @@
         <!-- <div class="header-box"> -->
             <div class="header">
                 <div :class="['banner-wrapper',isCollapse ? 'w-60' :'w-200']">
-                    <div class="login-box" >
+                    <div class="header-logo">
                         <a href="index.html"><img :src="indexLogo" alt=""></a>
                         <div :class="['maskBanner',isCollapse ? 'w-150' :'w-0']" class=""></div>
                     </div>

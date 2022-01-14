@@ -6,12 +6,18 @@ import layout from "@/components/layout/layout.vue";
 import lookBoardRoutes from '@/router/modules/lookboardRoutes'
 
 import IndexComponent from '@/views/index'
+import LoginComponent from '@/views/index/login.vue'
 // Vue.use(Router)
 
 const routes = [
     {
       path: '/',
-      redirect: '/lookBoard'
+      redirect: '/login'
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: LoginComponent,
     },
     {
       path: '/index',
@@ -19,7 +25,7 @@ const routes = [
       component: IndexComponent,
       children:[
         {
-          path:'helloWorld', // 子路由不加/就会在父级路由后面添加路由
+          path:'helloWorld', // 子路由不加/就会在父级路由后面添加路由,加了/会作为一个独立的路由
           name: 'helloWorld',
           component: HelloWorld
         },
@@ -36,10 +42,10 @@ const routes = [
       component: layout,
       children:lookBoardRoutes,
     },
-    {
-      path: '**',
-      redirect: { name:'index'}
-    },
+    // {
+    //   path: '**',
+    //   redirect: { name:'index'}
+    // },
     
     // lookBoardRoutes,
 

@@ -18,8 +18,8 @@
     z-index: 1;
 }
 
-.header .login-box {
-    padding: 5px 0;
+.header .header-logo {
+    padding: 2px 0;
     display: inline-block;
     vertical-align: top;
 }
@@ -32,13 +32,13 @@
     vertical-align: top;
 }
 
-.header .login-box img,
+.header .header-logo img,
 .header .login-icon img {
     height: 50px;
     vertical-align: top;
 }
 
-.header .login-box img {
+.header .header-logo img {
     width: 200px;
 }
 
@@ -48,6 +48,7 @@
 .clap-btn {
     width: 60px;
     height: 100%;
+    float:left;
     display: inline-block;
     text-align: center;
     font-size: 16px;
@@ -514,6 +515,7 @@
     -moz-transition: all 0.3s;
     -webkit-transition: all 0.3s;
     overflow: hidden;
+    float:left;
 }
 .w-60{
     width: 60px;
@@ -551,10 +553,10 @@
     border-top-color: #ffffff !important;
     opacity: 0.8;
 }
-.header .login-box img{
+.header .header-logo img{
     height: auto;
 }
-.login-box{
+.header-logo{
     position: relative;
 }
 .maskBanner{
@@ -585,7 +587,7 @@
     font-size: 20px;
     vertical-align: text-top;
 }
-.header .login-box{
+.header .header-logo{
     padding-top: 2px;
 }
 .left-inner-box .el-submenu>.el-menu{
