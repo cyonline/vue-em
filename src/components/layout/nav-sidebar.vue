@@ -30,7 +30,6 @@ export default {
     computed:{
         menuData:{
             get(){
-                
                 return this.$store.state.sideMenu
             },
         },
@@ -55,6 +54,10 @@ export default {
     methods:{
         chooseMenuList(path){
             console.info('side',path)
+            // 修复重复点击同一个路由报错
+            if(path == this.$route.path){
+                return;
+            }
             this.$router.push({
                 path: path,
             });

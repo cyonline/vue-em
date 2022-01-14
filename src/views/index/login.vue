@@ -68,6 +68,7 @@ export default {
                 // encrypt.setPublicKey(_this.pubkey);
                 // var enUserName = encrypt.encrypt(_this.user.uname);
                 // var enPwd = encrypt.encrypt(_this.user.pwd);
+                localStorage.setItem('username',this.user.name)
                 this.$router.push({
                     name: 'index'
                 })

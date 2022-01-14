@@ -7,9 +7,9 @@
                         <a href="index.html"><img :src="indexLogo" alt=""></a>
                         <div :class="['maskBanner',isCollapse ? 'w-150' :'w-0']" class=""></div>
                     </div>
-                    <div class="login-icon" v-if="isCollapse">
+                    <!-- <div class="login-icon" v-if="isCollapse">
                         <a href="index.html"><img src="static/images/logo-mini.png" alt=""></a>
-                    </div>
+                    </div> -->
                 </div>
             <div :class="['clap-btn', isCollapse ? 'is-open':'']" @click="toggleCollapse">
                 <i class="iconfont icon-shink-20"></i>
