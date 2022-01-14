@@ -11,6 +11,7 @@
         </header>
         <article ref="mainContent" class="main_content">
           <!-- 放置组件 -->
+          1
         </article>
       </main>
     </div>
