@@ -269,25 +269,25 @@ export default {
           return this.chartModulesMap[this.panelMenuId];
         } else {
           var vm = this;
-          return this.$$get("/api/reportBoardMenu", {
-            menuId: vm.panelMenuId,
-            modularType: 0, // 模块类型 0:Web / 1;App
-            pageSize: 0
-          })
-            .then(function(res) {
-              vm.$set(
-                vm.chartModulesMap,
-                vm.panelMenuId,
-                res.data.Rows || []
-              );
-              return vm.chartModulesMap[vm.panelMenuId];
-            })
-            .catch(function(err) {
-              if (err.message) {
-                vm.$message.error(err.message);
-              }
-              throw err;
-            });
+          // return this.$$get("/api/reportBoardMenu", {
+          //   menuId: vm.panelMenuId,
+          //   modularType: 0, // 模块类型 0:Web / 1;App
+          //   pageSize: 0
+          // })
+          //   .then(function(res) {
+          //     vm.$set(
+          //       vm.chartModulesMap,
+          //       vm.panelMenuId,
+          //       res.data.Rows || []
+          //     );
+          //     return vm.chartModulesMap[vm.panelMenuId];
+          //   })
+          //   .catch(function(err) {
+          //     if (err.message) {
+          //       vm.$message.error(err.message);
+          //     }
+          //     throw err;
+          //   });
         }
       }
     },
