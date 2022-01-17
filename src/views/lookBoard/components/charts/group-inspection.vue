@@ -147,7 +147,7 @@ export default {
   },
   computed: {
     computedEchartOps: function () {
-      return this.$$merge(this.$$deepClone(DefaultChartOption), this.chartData, true);
+      // return this.$$merge(this.$$deepClone(DefaultChartOption), this.chartData, true);
     },
   },
   watch: {

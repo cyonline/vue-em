@@ -142,32 +142,32 @@ export default {
                 commonId: this.structId, // 下拉选择项(公司Id或项目Id)
                 type: this.currentIdx
             };
-            this.$$get('/api/engineeringReportBoard/supervisionManagement', subData)
-            .then(function (res) {
-                vm.supData = res.data
-                vm.createSector({
-                    dom:'#myCanvas1',
-                    r:10,
-                    ang: res.data.TimelyDeliveryRate * 360 * 0.01,
-                    color:"#388D91"
-                })
-                vm.createSector({
-                    dom:'#myCanvas2',
-                    r:10,
-                    ang: res.data.TotalReadRate * 360 * 0.01,
-                    color:"#388D91"
-                })
-                vm.createSector({
-                    dom:'#myCanvas3',
-                    r:10,
-                    ang: res.data.PendingCompletionRate * 360 * 0.01,
-                    color:"#388D91"
-                })
-            }).catch(function (err) {
-                if (err.message) {
-                    vm.$message.error(err.message);
-                }
-            });
+            // this.$$get('/api/engineeringReportBoard/supervisionManagement', subData)
+            // .then(function (res) {
+            //     vm.supData = res.data
+            //     vm.createSector({
+            //         dom:'#myCanvas1',
+            //         r:10,
+            //         ang: res.data.TimelyDeliveryRate * 360 * 0.01,
+            //         color:"#388D91"
+            //     })
+            //     vm.createSector({
+            //         dom:'#myCanvas2',
+            //         r:10,
+            //         ang: res.data.TotalReadRate * 360 * 0.01,
+            //         color:"#388D91"
+            //     })
+            //     vm.createSector({
+            //         dom:'#myCanvas3',
+            //         r:10,
+            //         ang: res.data.PendingCompletionRate * 360 * 0.01,
+            //         color:"#388D91"
+            //     })
+            // }).catch(function (err) {
+            //     if (err.message) {
+            //         vm.$message.error(err.message);
+            //     }
+            // });
         },
         createSector: function(options){
             // let {dom,r,x=r,y=r,ang,color} = options;

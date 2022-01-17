@@ -144,7 +144,7 @@ export default {
         // 层级(1.集团，2.公司，3.项目)
         hierarchyType: {
             type: Number|String,
-            required: true,
+            required: false,
             default: function () {
                 return 1;
             },
@@ -159,7 +159,7 @@ export default {
     },
     computed: {
         computedEchartOps: function () {
-        return this.$$merge(this.$$deepClone(DefaultChartOption), this.chartData, true);
+        // return this.$$merge(this.$$deepClone(DefaultChartOption), this.chartData, true);
         },
     },
     methods: {
@@ -186,15 +186,15 @@ export default {
         initEcharts: function () {
             var self = this;
             console.info('computedEchartOps',this.computedEchartOps)
-            if (!this.echartIns) {
-                var echartIns = window.echarts.init(this.$refs.echart);
-                // console.info(this.computedEchartOps)
-                echartIns.setOption(this.computedEchartOps);
-                echartIns.__INITED__ = true;
-                this.echartIns = echartIns;
-            } else {
-                this.echartIns.setOption(this.computedEchartOps, true);
-            }
+            // if (!this.echartIns) {
+            //     var echartIns = window.echarts.init(this.$refs.echart);
+            //     // console.info(this.computedEchartOps)
+            //     echartIns.setOption(this.computedEchartOps);
+            //     echartIns.__INITED__ = true;
+            //     this.echartIns = echartIns;
+            // } else {
+            //     this.echartIns.setOption(this.computedEchartOps, true);
+            // }
         },
         fetchData: function () {
             var vm = this;

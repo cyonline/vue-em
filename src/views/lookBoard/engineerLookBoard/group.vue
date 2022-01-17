@@ -137,7 +137,7 @@ export default {
       hierarchyType: '',
       structId:'',
       projectMapData: [],
-      companyInfoData: [],
+      companyInfoData: {},
     };
   },
   components: {

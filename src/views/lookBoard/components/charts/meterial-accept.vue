@@ -144,7 +144,7 @@ export default {
   },
   computed: {
     computedEchartOps: function () {
-      return this.$$merge(this.$$deepClone(DefaultChartOption),this.$$deepClone(CustomChartOption[0]), this.chartData, true);
+      // return this.$$merge(this.$$deepClone(DefaultChartOption),this.$$deepClone(CustomChartOption[0]), this.chartData, true);
     },
   },
   watch: {
@@ -183,15 +183,15 @@ export default {
      */
     initEcharts: function () {
         var self = this;
-      if (!this.echartIns) {
-        var echartIns = window.echarts.init(this.$refs.echart);
-        // console.info(this.computedEchartOps)
-        echartIns.setOption(this.computedEchartOps);
-        echartIns.__INITED__ = true;
-        this.echartIns = echartIns;
-      } else {
-        this.echartIns.setOption(this.computedEchartOps, true);
-      }
+      // if (!this.echartIns) {
+      //   var echartIns = window.echarts.init(this.$refs.echart);
+      //   // console.info(this.computedEchartOps)
+      //   echartIns.setOption(this.computedEchartOps);
+      //   echartIns.__INITED__ = true;
+      //   this.echartIns = echartIns;
+      // } else {
+      //   this.echartIns.setOption(this.computedEchartOps, true);
+      // }
     },
     fetchData: function () {
       var vm = this;

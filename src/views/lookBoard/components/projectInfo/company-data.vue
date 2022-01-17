@@ -161,26 +161,26 @@ export default {
      */
         initEcharts: function () {
             var self = this;
-            if (!this.echartIns) {
-                var echartIns = window.echarts.init(this.$refs.echart);
-                // console.info(this.computedEchartOps)
-                echartIns.setOption(this.computedEchartOps);
-                echartIns.__INITED__ = true;
-                this.echartIns = echartIns;
-            } else {
-                this.echartIns.setOption(this.computedEchartOps, true);
-            }
+            // if (!this.echartIns) {
+            //     var echartIns = window.echarts.init(this.$refs.echart);
+            //     // console.info(this.computedEchartOps)
+            //     echartIns.setOption(this.computedEchartOps);
+            //     echartIns.__INITED__ = true;
+            //     this.echartIns = echartIns;
+            // } else {
+            //     this.echartIns.setOption(this.computedEchartOps, true);
+            // }
         },
         initEcharts2: function () {
             var self = this;
-            if (!this.echartIns2) {
-                var echartIns2 = window.echarts.init(this.$refs.echart2);
-                echartIns2.setOption(this.computedEchartOps2);
-                echartIns2.__INITED__ = true;
-                this.echartIns2 = echartIns2;
-            } else {
-                this.echartIns2.setOption(this.computedEchartOps2, true);
-            }
+            // if (!this.echartIns2) {
+            //     var echartIns2 = window.echarts.init(this.$refs.echart2);
+            //     echartIns2.setOption(this.computedEchartOps2);
+            //     echartIns2.__INITED__ = true;
+            //     this.echartIns2 = echartIns2;
+            // } else {
+            //     this.echartIns2.setOption(this.computedEchartOps2, true);
+            // }
         },
         fetchData: function () {
             var vm = this;
@@ -221,10 +221,10 @@ export default {
     },
     computed: {
         computedEchartOps: function () {
-            return this.$$merge(this.$$deepClone(DefaultChartOption),this.$$deepClone(CustomChartOption[0]), this.chartData, true);
+            // return this.$$merge(this.$$deepClone(DefaultChartOption),this.$$deepClone(CustomChartOption[0]), this.chartData, true);
         },
         computedEchartOps2: function () {
-            return this.$$merge(this.$$deepClone(DefaultChartOption),this.$$deepClone(CustomChartOption[0]), this.chartData2, true);
+            // return this.$$merge(this.$$deepClone(DefaultChartOption),this.$$deepClone(CustomChartOption[0]), this.chartData2, true);
         },
     },
 }
