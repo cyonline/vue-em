@@ -1,11 +1,11 @@
 <template>
-  <div>
+
     <div class="stage-box" id="lookBoard" v-cloak>
       <main class="main">
         <header class="lookboard_panel_header">
           <div class="float-left header-title">{{ headerTitle }}</div>
         </header>
-        <article ref="mainContent" class="main_content">
+        <article ref="mainContent" class="lookboard_panel_content">
           <!-- 放置组件 -->
           <div id="group_panel">
             <section class="top-container">
@@ -91,7 +91,7 @@
         </article>
       </main>
     </div>
-  </div>
+  
 </template>
 
 <script>
@@ -192,7 +192,14 @@ export default {
       return tilte[this.boardMenuType + ""];
     }
   },
-  methods: {},
+  methods: {
+    getProjectImage(){
+      this.$http('/api/project/images').then((value) => {
+        console.info('images',value);
+        this.projectMapData = value.data;
+      })
+    }
+  },
   watch: {
     boardMenuType: function(n) {
       this.$refs.mainContent.scrollTop = 0;
@@ -204,6 +211,9 @@ export default {
     }
     this.panelMenuId = window.sessionStorage.getItem("menuId");
 
+  },
+  mounted(){
+    this.getProjectImage();
   }
 };
 </script>

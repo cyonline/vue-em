@@ -60,5 +60,8 @@ export default {
         &.collapse{
              padding-left: 65px;
         }
+        &>div{
+            height: 100%;
+        }
     }
 </style>

@@ -1,6 +1,6 @@
 <template>
-    <!-- <div class="carousel" @mouseenter="clearInterval(timerAuto)" @mouseleave="autoPlay"> -->
-    <div class="carousel">
+    <div class="carousel" @mouseenter="clear" @mouseleave="autoPlay">
+    <!-- <div class="carousel"> -->
         <div class="banner" :style="{width:imgList.length*mainWidth+'px'}">
             <span v-for="(item,index) in imgList" :key="index" :style="{width:mainWidth+'px'}">
                 <img v-if="item[props.imgUrl]" :src="item[props.imgUrl]" :alt="item[props.imgUrl]">
@@ -106,20 +106,26 @@ export default {
             if(this.imgList.length>2){
                 this.timerAuto = setInterval(this.next,4000)
             }
+        },
+        clear(){
+            window.clearInterval(this.timerAuto)
         }
     },
     mounted:function() {
-        // this.init();
-        // var _this = this;
-        // window.onresize = function(){
-        //     _this.throttle(_this.init,1000)
-        // }
-        // this.autoPlay()
+        this.init();
+        var _this = this;
+        window.onresize = function(){
+            _this.throttle(_this.init,1000)
+        }
+        this.autoPlay()
+    },
+    beforeDestroy(){
+        this.clear();
     },
     watch:{
         list:function(n,o){
-            // this.init();
-            // this.autoPlay()
+            this.init();
+            this.autoPlay()
         }
     }
 }
