@@ -4,13 +4,96 @@
       <main class="main">
         <header class="lookboard_panel_header">
           <div class="float-left header-title">项目看板</div>
-          <div v-show="boardMenuType > 1" class="struct_container float-right">
-            <label for class="header_label">{{ computedLabelText }} &nbsp;</label>
-
-          </div>
+          <!-- <div v-show="boardMenuType > 1" class="struct_container float-right">
+            <label for class="header_label"
+              >{{ computedLabelText }} &nbsp;</label
+            >
+          </div> -->
         </header>
-        <article ref="mainContent" class="main_content">
+        <article ref="mainContent" class="lookboard_panel_content">
           <!-- 放置组件 -->
+          <div id="project_panel">
+            <section class="top-container">
+              <div class="col-left">
+                <project-info
+                  :data="projectInfoData"
+                  :struct-id="structId"
+                ></project-info>
+              </div>
+              <div class="col-center">
+                <project-map :data="projectMapData"></project-map>
+              </div>
+              <div class="col-right">
+                <weather-info
+                  :data1="weatherInfoData.ProjectCastWeatherList"
+                  :data2="weatherInfoData.ProjectMonthWeatherList"
+                  :struct-id="structId"
+                ></weather-info>
+              </div>
+            </section>
+            <section class="middle-container">
+              <div class="col-left">
+                <supervisor-manage
+                  :hierarchy-type="hierarchyType"
+                  :struct-id="structId"
+                >
+                </supervisor-manage>
+              </div>
+              <div class="col-center">
+                <key-node-track
+                  :hierarchy-type="hierarchyType"
+                  :struct-id="structId"
+                ></key-node-track>
+              </div>
+              <div class="col-right">
+                <sample-accept
+                  :hierarchy-type="hierarchyType"
+                  :struct-id="structId"
+                >
+                </sample-accept>
+              </div>
+            </section>
+            <section class="bottom-container">
+              <div class="col-left">
+                <div class="col-left-top">
+                  <inspection-assessment
+                    :hierarchy-type="hierarchyType"
+                    :struct-id="structId"
+                  >
+                  </inspection-assessment>
+                </div>
+                <div class="col-left-bottom">
+                  <project-data
+                    :hierarchy-type="hierarchyType"
+                    :struct-id="structId"
+                  ></project-data>
+                </div>
+              </div>
+              <div class="col-center">
+                <!-- <project-info :data="projectInfoData"></project-info> -->
+                <product-progress
+                  :hierarchy-type="hierarchyType"
+                  :struct-id="structId"
+                ></product-progress>
+              </div>
+              <div class="col-left">
+                <div class="col-left-top">
+                  <range-check
+                    :hierarchy-type="hierarchyType"
+                    :struct-id="structId"
+                  >
+                  </range-check>
+                </div>
+                <div class="col-left-bottom">
+                  <meterial-accept
+                    :hierarchy-type="hierarchyType"
+                    :struct-id="structId"
+                  >
+                  </meterial-accept>
+                </div>
+              </div>
+            </section>
+          </div>
         </article>
       </main>
     </div>
@@ -18,298 +101,140 @@
 </template>
 
 <script>
-import treeSelect from '@/components/sapi-tree-select'
-
+import treeSelect from "@/components/sapi-tree-select";
 
 export default {
   name: "lookBoard",
   data() {
-      var panels = JSON.parse(
-        window.sessionStorage.getItem("look-board-menus") || "[]"
-      );
-      panels = panels.filter(function(item) {
-        return item.Children && item.Children.length;
-      });
-    return  {
-        // webUrl: webInit.fileUrl,
-        webUrl: '',
-        permissions: {},
-        breadcrumbs: [],
-        userInfo: null,
-        //
-        panels: panels,
-        // panelType: 0, // 0 工程 1 交付
-        //
-        typeIndex: 0, // 工程/交付
-        tabIndex: 0, // 集团/公司/项目
-        // panel: 'group-panel', // [group-panel|compony-panel|project-panel]
-        //
-        structId: "", // 公司看看板和项目看板默认选中第一个
-        structDataInited: false,
-        structData: {},
-        projectTreeDataModel: {
-          label: "Name",
-          children: "ChildNodes"
-        },
-        projectTreeDefaultExpandedKeys: [],
-        // 以子级MenuId作为key
-        chartModulesMap: {},
-        //
-        boardMenuType: 1,
-        ReportBoardType: 0,
-        panelMenuId: ""
-      };
+  
+    return {
+      structId: "", // 公司看看板和项目看板默认选中第一个
+      hierarchyType: 3,
+      // 以子级MenuId作为key
+      boardMenuType: 1,
+      projectInfoData:{},
+      projectMapData:[],
+      weatherInfoData:{},
+    };
   },
   components: {
-      panelTab: function() {
-        return import("@/views/lookBoard/components/panel-tab/index.vue");
-      },
-      chartTab: function() {
-        return import("@/views/lookBoard/components/chart-tab/index.vue");
-      },
+    ProjectInfo: function () {
+      return import('@/views/lookBoard/components/projectInfo/index.vue');
+    },
+    ProjectMap: function(){
+      return import('@/views/lookBoard/components/projectMap/index.vue');
+    },
+    WeatherInfo: function(){
+      return import('@/views/lookBoard/components/weatherInfo/index.vue');
+    },
+    KeyNodeTrack: function(){
+      return import('@/views/lookBoard/components/keyNode/index.vue');
+    },
+	  supervisorManage: function() {
+      return import('@/views/lookBoard/components/projectInfo/supervisor-manage.vue')
+    },
+    inspectionAssessment: function() {
+      return import('@/views/lookBoard/components/projectInfo/inspection-assessment.vue')
+    },
+	  projectData: function() {
+      return import('@/views/lookBoard/components/projectInfo/project-data.vue')
+    },
+    rangeCheck: function() {
+      return import('@/views/lookBoard/components/charts/range-check.vue')
+    },
+    sampleAccept: function() {
+      return import('@/views/lookBoard/components/charts/sample-accept.vue')
+    },
+    meterialAccept: function() {
+      return import('@/views/lookBoard/components/charts/meterial-accept.vue')
+    },
+    ProductProgress: function(){
+      return import('@/views/lookBoard/components/productProgress/index.vue')
+    },
 
-      treeSelect,
-    },
-     computed: {
-      headerTitle:function(){
-        var tilte ={"1":"集团看板","2":"公司看板","3":"项目看板"}
-        return tilte[this.boardMenuType + '']
-      },
-      /**
-       * 面板类型 0 工程 1 交付
-       */
-      computedPanelType: function() {
-        var idx = 0;
-        try {
-          switch (this.ReportBoardType + "") {
-            case "0":
-              // 工程
-              idx = 0;
-              break;
-            case "1":
-              // 验房
-              idx = 1;
-              break;
-          }
-        } catch (error) {}
-        return idx;
-      },
-      computedCurrentPanel: function() {
-        var m = {
-          0: "group-panel",
-          1: "company-panel",
-          2: "project-panel"
+    treeSelect
+  },
+  computed: {
+    headerTitle: function() {
+      var tilte = { "1": "集团看板", "2": "公司看板", "3": "项目看板" };
+      return tilte[this.boardMenuType + ""];
+    }
+  },
+  methods: {
+    getProjectInfo:function(){
+      var _this = this;
+      this.$request("/api/engineeringReportBoard/projectInfo").then((res) => {
+        console.info('项目',res)
+        let data = res.data;
+        _this.projectInfoData = {
+          ProjectName:data.ProjectName,
+          ProjectOldName:data.ProjectOldName,
+          LandUseArea:data.LandUseArea,
+          BuildingArea:data.BuildingArea,
+          VolumeRate:data.VolumeRate,
+          BuildingStoreys:data.BuildingStoreys,
+          BuildingType:data.BuildingType,
+          ConstructionUnit:data.ConstructionUnit,
+          SurveyUnit:data.SurveyUnit,
+          DesignyUnit:data.DesignyUnit,
+          ProgressUnit:data.ProgressUnit,
+          SupervisorSupplierName:data.SupervisorSupplierName,
+          SupervisorSupplierNameStr:data.SupervisorSupplierNameStr,
         };
-        return m[this.boardMenuType - 1];
-      },
-      computedLabelText: function() {
-        var m = {
-          1: "公司",
-          2: "项目"
-        };
-        return m[this.boardMenuType - 1];
-      },
-      // 1 公司 2 项目
-      computedStructType: function() {
-        var idx = 0;
-        switch (this.boardMenuType - 1) {
-          case 0:
-            idx = 0;
-            break;
-          case 1:
-            idx = 1;
-            break;
-          case 2:
-            idx = 2;
-            break;
+        _this.projectMapData = data.ImgUrls;
+        _this.weatherInfoData = {
+            ProjectMonthWeatherList:data.ProjectMonthWeatherList,
+            ProjectCastWeatherList:data.ProjectCastWeatherList
         }
-        return idx;
-      },
-      /**
-       * 当是公司和项目看板时，必需先等待项目树请求完后才启用面板
-       */
-      computedEnableComponent: function() {
-        return (
-        //   this.panels &&
-        //   this.panels.length &&
-          
-            (this.boardMenuType  && this.structDataInited)
-        
-        );
-      },
-      /**
-       * 看板图表权限
-       */
-      computedModulePermissions: function() {
-        return this.chartModulesMap[this.panelMenuId] || [];
-      },
-      /**
-       * 公司或项目当前选中的数据
-       * @returns {Object|Null}
-       */
-      computedStructNode: function() {
-        var idx = this.boardMenuType - 1;
-        if (idx === 0) {
-          return null;
-        }
-        var vm = this;
-        var node = null;
-        (this.structData[idx] || []).some(function(item) {
-          if (item.Id === vm.structId) {
-            node = vm.$$deepClone(item);
-            return true;
-          }
-          return false;
-        });
-        return node;
-      }
-    },
-  methods:  {
-      doSthAfterFetchStructData: function() {
-        // 默认选中第一个公司或项目
-        var vm = this;
-        var idx = vm.boardMenuType - 1;
-        var t = vm.structData[idx];
-        vm.structDataInited = true;
-        if (idx === 1) {
-          vm.structId = t && t.length ? t[0].Id : "";
-        } else if (idx === 2) {
-          var first = vm.getFirstProStructNode(t) || {};
-          vm.structId = first.Id || "";
-          this.$nextTick(function() {
-            var proStructTreeRef = this.$refs.projectStructTree;
-            proStructTreeRef.clearSelect();
-            proStructTreeRef.clickPartTree(first, null, {
-              $el: proStructTreeRef.$el.querySelector(".tree-select-box")
-            });
-          });
-        }
-      },
-      fetchStructData: function() {
-        var vm = this;
-        var idx = vm.boardMenuType - 1;
-        vm.structDataInited = false;
-        if (!vm.structData[idx] && idx > 0) {
-          var m = {
-            1: {
-              // 公司
-              url: "/api/structures/reportstruTreeByUserId",
-              request: {}
-            },
-            2: {
-              // 项目
-              url: "/projectBuilding/getSpecialCheckProjectTreeData",
-              request: {
-                isContainStage: false
-              }
-            }
-          };
-          return vm.$$get(m[idx].url, m[idx].request)
-            .then(function(res) {
-              vm.$set(vm.structData, idx, res.data);
-              if (idx == 1) {
-                res.data.forEach(function(ele) {
-                  ele.concatName = ele.ParentName + "-" + ele.Name;
-                });
-              }
-              return res.data;
-            })
-            .catch(function(err) {
-              if (err.message) {
-                vm.$message.error(err.message);
-              }
-              throw err;
-            });
-        }
-        return Promise.resolve(vm.structData[idx]);
-      },
-      handleProjectTreeNodeClick: function(nodeData) {
-        if (+nodeData.Type === 2) {
-          this.structId = nodeData.Id;
-        }
-      },
-      /**
-       * 项目树节点是否可点
-       */
-      isProDisabled: function(nodeData) {
-        return nodeData.Type !== 2;
-      },
-      /**
-       * 默认选中第一个项目节点
-       */
-      getFirstProStructNode: function(payload) {
-        var o = null;
-        var vm = this;
-        (payload || []).some(function(node) {
-          if (node.Type === 2) {
-            o = node;
-            vm.projectTreeDefaultExpandedKeys.push(node.Id);
-            return true;
-          }
-          var children = node[vm.projectTreeDataModel.children];
-          if (children && children.length) {
-            o = vm.getFirstProStructNode(children);
-            if (o) {
-              vm.projectTreeDefaultExpandedKeys.push(node.Id);
-              return true;
-            }
-          }
-          return false;
-        });
-        return o;
-      },
-      /**
-       * 获取看板模块权限
-       */
-      fetchModulesPermissions: function() {
-        if (!this.panelMenuId) {
-          return [];
-        } else if (this.chartModulesMap[this.panelMenuId]) {
-          return this.chartModulesMap[this.panelMenuId];
-        } else {
-          var vm = this;
-          // return this.$$get("/api/reportBoardMenu", {
-          //   menuId: vm.panelMenuId,
-          //   modularType: 0, // 模块类型 0:Web / 1;App
-          //   pageSize: 0
-          // })
-          //   .then(function(res) {
-          //     vm.$set(
-          //       vm.chartModulesMap,
-          //       vm.panelMenuId,
-          //       res.data.Rows || []
-          //     );
-          //     return vm.chartModulesMap[vm.panelMenuId];
-          //   })
-          //   .catch(function(err) {
-          //     if (err.message) {
-          //       vm.$message.error(err.message);
-          //     }
-          //     throw err;
-          //   });
-        }
-      }
-    },
-  watch: {
-      boardMenuType: function(n) {
-        this.$refs.mainContent.scrollTop = 0;
-        this.fetchModulesPermissions();
-        this.structId = "";
-        if (n > 0) {
-          this.fetchStructData().then(this.doSthAfterFetchStructData);
-        }
-      },
-    
-    },
-     created: function() {
-      this.fetchModulesPermissions();
-      if (this.boardMenuType > 1) {
-        this.fetchStructData().then(this.doSthAfterFetchStructData);
-      }
-      this.panelMenuId = window.sessionStorage.getItem("menuId");
-    },
+      })
+              
+    }
+  },
+  watch: {},
+  mounted(){
+    this.getProjectInfo();
+  }
 };
 </script>
 <style lang="less">
-  @import url('../style.css');
+@import url("../style.css");
+#project_panel {
+  background-color: #efeff4;
+  width: 100%;
+  overflow: hidden;
+}
+#project_panel section {
+  position: relative;
+  margin: 10px 0px;
+  padding: 5px;
+  overflow: hidden;
+  
+}
+.top-container{
+  min-height: 500px;
+  height: 40vh;
+}
+.middle-container{
+  min-height: 300px;
+  height: 34vh;
+}
+.bottom-container{
+  min-height: 500px;
+  height: 600px;
+}
+.col-left,.col-right{
+  float:left;
+  width: 25%;
+  height: 100%;
+}
+.col-left-top,.col-left-bottom{
+  height: calc(~'50% - 8px');
+  margin-bottom: 16px;
+}
+.col-center{
+  float:left;
+  width: calc(~'50% - 30px');
+  margin: 0 15px;
+  height: 100%;
+}
 </style>

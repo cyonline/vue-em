@@ -184,7 +184,7 @@ export default {
     initEcharts: function () {
         var self = this;
       // if (!this.echartIns) {
-      //   var echartIns = window.echarts.init(this.$refs.echart);
+      //   var echartIns = this.$echarts.init(this.$refs.echart);
       //   // console.info(this.computedEchartOps)
       //   echartIns.setOption(this.computedEchartOps);
       //   echartIns.__INITED__ = true;

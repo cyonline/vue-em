@@ -8,9 +8,7 @@
                     <span @click="checkFilter(0)" :class="{'active': currentIdx === 0}">上月</span>
                     <span @click="checkFilter(1)" :class="{'active': currentIdx === 1}">本年</span>
                 </div>
-                <div
-                    ref="echart"
-                    class="chart_stack-bar"></div>
+                <div ref="echart" class="chart_stack-bar"></div>
                 <div class="bottom-content" v-if="dataList.length > 0 && hierarchyType==3">
                     <div v-for="item in dataList" :key="item.ItemId">
                         <span>{{item.ItemName}}</span>
@@ -137,7 +135,7 @@ export default {
   },
   computed: {
     computedEchartOps: function () {
-      // return this.$$merge(this.$$deepClone(DefaultChartOption), this.chartData, true);
+      return this.$utils.merge(this.$utils.deepClone(DefaultChartOption), this.chartData, true);
     },
   },
   watch: {
@@ -176,7 +174,7 @@ export default {
     initEcharts: function () {
         var self = this;
       if (!this.echartIns) {
-        var echartIns = window.echarts.init(this.$refs.echart);
+        var echartIns = this.$echarts.init(this.$refs.echart);
         // console.info(this.computedEchartOps)
         echartIns.setOption(this.computedEchartOps);
         echartIns.__INITED__ = true;
@@ -192,22 +190,23 @@ export default {
         commonId: this.structId,
         type: this.currentIdx,
       };
-      // this.$$get('/api/engineeringReportBoard/areaQualityInspection', subData)
-      //   .then(function (res) {
-      //     vm.chartData = {
-      //         series: [{
-      //             data: [{
-      //                 value: res.data.TotalScore
-      //             }]
-      //         }]
-      //     };
-      //     vm.dataList = res.data.ItemScores
-      //     vm.$nextTick(vm.initEcharts);
-      //   }).catch(function (err) {
-      //     if (err.message) {
-      //       vm.$message.error(err.message);
-      //     }
-      //   });
+      this.$request('/api/engineeringReportBoard/areaQualityInspection', subData)
+        .then(function (res) {
+          console.info(res);
+          vm.chartData = {
+              series: [{
+                  data: [{
+                      value: res.data.TotalScore
+                  }]
+              }]
+          };
+          vm.dataList = res.data.ItemScores
+          vm.$nextTick(vm.initEcharts);
+        }).catch(function (err) {
+          if (err.message) {
+            vm.$message.error(err.message);
+          }
+        });
     },
   },
 }

@@ -87,41 +87,47 @@ export default {
         },
         getNodeData:function(){
             var _this = this;
-            $.request({
-                url: '/api/engineeringReportBoard/milestoneNode',
-                type: "get",
-                isLoad: true,
-                data: {
-                    sectionId: _this.sectionId,
-                },
-                success: function(data) {
-                    console.info('节点数据',data)
-                    _this.data = data;
-                    _this.nodeData = data.MilestoneNodeWorkItemList||[];
-                }
-            });
+            // $.request({
+            //     url: '/api/engineeringReportBoard/milestoneNode',
+            //     type: "get",
+            //     isLoad: true,
+            //     data: {
+            //         sectionId: _this.sectionId,
+            //     },
+            //     success: function(data) {
+            //         console.info('节点数据',data)
+            //         _this.data = data;
+            //         _this.nodeData = data.MilestoneNodeWorkItemList||[];
+            //     }
+            // });
+            this.$request('/api/engineeringReportBoard/milestoneNode').then((res) => {
+                    console.info('节点数据',res.data)
+                    _this.data = res.data;
+                    _this.nodeData = res.data.MilestoneNodeWorkItemList||[];
+            })
         },
         getSection: function(){
             var _this = this;
-            $.request({
-                url: '/projectBuilding/getSections',
-                type: "get",
-                isLoad: true,
-                data: {
-                    stageId: _this.structId,
-                },
-                success: function(data) {
-                    _this.sectionOptions = data;
-                    // console.log('_this.标段:', data)
-                    _this.sectionId = !!data.length?data[0].SectionId:'';
-                    // _this.getNodeData();
-                }
-            });
+            // $.request({
+            //     url: '/projectBuilding/getSections',
+            //     type: "get",
+            //     isLoad: true,
+            //     data: {
+            //         stageId: _this.structId,
+            //     },
+            //     success: function(data) {
+            //         _this.sectionOptions = data;
+            //         // console.log('_this.标段:', data)
+            //         _this.sectionId = !!data.length?data[0].SectionId:'';
+            //         // _this.getNodeData();
+            //     }
+            // });
             
         }
     },
     mounted:function() {
         this.getSection();
+        this.getNodeData();
     },
     watch:{
         sectionId:function(n){

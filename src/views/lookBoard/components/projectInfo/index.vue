@@ -34,7 +34,7 @@ export default {
         // 层级(1.集团，2.公司，3.项目)
         hierarchyType: {
             type: Number|String,
-            required: true,
+            required: false,
             default: function () {
                 return 0;
             },

@@ -147,7 +147,7 @@ export default {
   },
   computed: {
     computedEchartOps: function () {
-      // return this.$$merge(this.$$deepClone(DefaultChartOption), this.chartData, true);
+      return this.$utils.merge(this.$utils.deepClone(DefaultChartOption), this.chartData, true);
     },
   },
   watch: {
@@ -185,7 +185,7 @@ export default {
     initEcharts: function () {
         var self = this;
       if (!this.echartIns) {
-        var echartIns = window.echarts.init(this.$refs.echart);
+        var echartIns = this.$echarts.init(this.$refs.echart);
         // console.info(this.computedEchartOps)
         echartIns.setOption(this.computedEchartOps);
         echartIns.__INITED__ = true;
@@ -201,22 +201,22 @@ export default {
         commonId: this.structId,
         type: this.currentIdx,
       };
-      // this.$$get('/api/engineeringReportBoard/thirdParityAssess', subData)
-      //   .then(function (res) {
-      //     vm.chartData = {
-      //         series: [{
-      //             data: [{
-      //                 value: res.data.Score
-      //             }]
-      //         }]
-      //     };
-      //     vm.dataList = res.data
-      //     vm.$nextTick(vm.initEcharts);
-      //   }).catch(function (err) {
-      //     if (err.message) {
-      //       vm.$message.error(err.message);
-      //     }
-      //   });
+      this.$request('/api/engineeringReportBoard/thirdParityAssess', subData)
+        .then(function (res) {
+          vm.chartData = {
+              series: [{
+                  data: [{
+                      value: res.data.Score
+                  }]
+              }]
+          };
+          vm.dataList = res.data
+          vm.$nextTick(vm.initEcharts);
+        }).catch(function (err) {
+          if (err.message) {
+            vm.$message.error(err.message);
+          }
+        });
     },
   },
 }

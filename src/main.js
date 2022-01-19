@@ -11,14 +11,17 @@ import './style/normalize.css';
 import './style/common.less';
 
 import * as Base from './utils/base'
-// import utils from './utils/utils'
+import utils from './utils/utils'
 
 import axios from 'axios'
 import store from './store'
 require('./mock')
+import * as echarts from 'echarts'; // 引入方式要注意  同 const echarts = require('echarts')
 
 Vue.prototype.$Base = Base;
-Vue.prototype.$http = axios;
+Vue.prototype.$request = axios;
+Vue.prototype.$echarts = echarts;
+Vue.prototype.$utils = utils;
 
 Vue.use(ElementUI);
 Vue.config.productionTip = false
@@ -28,6 +31,5 @@ new Vue({
   el: '#app',
   store,
   router:createRouter(),
-
   render: h => h(App)
 })

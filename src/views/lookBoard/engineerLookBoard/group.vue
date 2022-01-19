@@ -65,7 +65,7 @@
                 </sample-accept>
               </div>
             </section>
-            <section class="bottom-container">
+            <!-- <section class="bottom-container">
               <div class="col-left">
                 <company-data
                   :hierarchy-type="hierarchyType"
@@ -86,7 +86,7 @@
                 >
                 </meterial-accept>
               </div>
-            </section>
+            </section> -->
           </div>
         </article>
       </main>
@@ -194,7 +194,7 @@ export default {
   },
   methods: {
     getProjectImage(){
-      this.$http('/api/project/images').then((value) => {
+      this.$request('/api/project/images').then((value) => {
         console.info('images',value);
         this.projectMapData = value.data;
       })

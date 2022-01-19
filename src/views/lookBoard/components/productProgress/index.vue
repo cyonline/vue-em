@@ -190,21 +190,21 @@ export default {
         getProjectData: function() {
             var _this = this;
             _this.openProjectTree = [];
-            $.request({
-                url: '/project/porjectStageSection?projectStatus=1',
-                type: "get",
-                isLoad: true,
-                data: {
-                    companyId: _this.structId,
-                    isContainSection: false,
-                },
-                success: function(data) {
-                    _this.projectData = data;
-                    var firstNode = _this.getFirstNode(data)||{};
-                    console.info('firstNode',firstNode)
-                    // _this.stageId = firstNode.Id||'';
-                }
-            });
+            // $.request({
+            //     url: '/project/porjectStageSection?projectStatus=1',
+            //     type: "get",
+            //     isLoad: true,
+            //     data: {
+            //         companyId: _this.structId,
+            //         isContainSection: false,
+            //     },
+            //     success: function(data) {
+            //         _this.projectData = data;
+            //         var firstNode = _this.getFirstNode(data)||{};
+            //         console.info('firstNode',firstNode)
+            //         // _this.stageId = firstNode.Id||'';
+            //     }
+            // });
             
         },
         buildingChange:function(data){

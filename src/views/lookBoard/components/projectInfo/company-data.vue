@@ -162,7 +162,7 @@ export default {
         initEcharts: function () {
             var self = this;
             // if (!this.echartIns) {
-            //     var echartIns = window.echarts.init(this.$refs.echart);
+            //     var echartIns = this.$echarts.init(this.$refs.echart);
             //     // console.info(this.computedEchartOps)
             //     echartIns.setOption(this.computedEchartOps);
             //     echartIns.__INITED__ = true;
@@ -174,7 +174,7 @@ export default {
         initEcharts2: function () {
             var self = this;
             // if (!this.echartIns2) {
-            //     var echartIns2 = window.echarts.init(this.$refs.echart2);
+            //     var echartIns2 = this.$echarts.init(this.$refs.echart2);
             //     echartIns2.setOption(this.computedEchartOps2);
             //     echartIns2.__INITED__ = true;
             //     this.echartIns2 = echartIns2;

@@ -3,7 +3,7 @@
         <div slot="right-title"> 更多</div>
         <div class="left">
             <div ref="echart" class="chart_stack-bar"></div>
-            <img src="/static/images/echart-bg.png" id="bg_img" style="display:none" />
+            <img src="../../../../assets/images/echart-bg.png" id="bg_img" style="display:none" />
         </div>
         <div class="right">
             <div class="r-item"><span>节点总数</span><span>{{TotalCount}}</span></div>
@@ -159,7 +159,7 @@ export default {
     },
     computed: {
         computedEchartOps: function () {
-        // return this.$$merge(this.$$deepClone(DefaultChartOption), this.chartData, true);
+            return this.$utils.merge(this.$utils.deepClone(DefaultChartOption), this.chartData, true);
         },
     },
     methods: {
@@ -186,15 +186,15 @@ export default {
         initEcharts: function () {
             var self = this;
             console.info('computedEchartOps',this.computedEchartOps)
-            // if (!this.echartIns) {
-            //     var echartIns = window.echarts.init(this.$refs.echart);
-            //     // console.info(this.computedEchartOps)
-            //     echartIns.setOption(this.computedEchartOps);
-            //     echartIns.__INITED__ = true;
-            //     this.echartIns = echartIns;
-            // } else {
-            //     this.echartIns.setOption(this.computedEchartOps, true);
-            // }
+            if (!this.echartIns) {
+                var echartIns = this.$echarts.init(this.$refs.echart);
+                // console.info(this.computedEchartOps)
+                echartIns.setOption(this.computedEchartOps);
+                echartIns.__INITED__ = true;
+                this.echartIns = echartIns;
+            } else {
+                this.echartIns.setOption(this.computedEchartOps, true);
+            }
         },
         fetchData: function () {
             var vm = this;
@@ -202,45 +202,45 @@ export default {
                 hierarchyType: this.hierarchyType,
                 commonId: this.structId,
             };
-            // this.$$get('/api/engineeringReportBoard/milestoneNodeInfo', subData)
-            //     .then(function (res) {
-            //         console.info('res',res)
-            //         var value = res.data.CompleteRate/100;
-            //         vm.NoCompleteCount = res.data.NoCompleteCount;
-            //         vm.NoCompleteKeyCount = res.data.NoCompleteKeyCount;
-            //         vm.TotalCount = res.data.TotalCount;
-            //         pointerAngle = (startAngle - endAngle) * (1 - value) + endAngle;
-            //         vm.chartData = {
-            //             series: [{
-            //                 startAngle: pointerAngle,
-            //                 axisTick: {
-            //                     splitNumber: Math.ceil((1 - value) * splitCount),
-            //                 },
-            //                 data: [{
-            //                     value: value
-            //                 }]
-            //             },{
-            //                 endAngle: pointerAngle,
-            //                 axisTick: {
-            //                     splitNumber: Math.ceil(value * splitCount),
-            //                     lineStyle: {
-            //                         color: {
-            //                         image: document.getElementById('bg_img'),
-            //                         repeat: 'no-repeat'
-            //                         },
-            //                     }
-            //                 },
-            //                 data: [{
-            //                     value: value
-            //                 }]
-            //             }]
-            //         };
-            //         vm.$nextTick(vm.initEcharts);
-            //     }).catch(function (err) {
-            //         if (err.message) {
-            //             vm.$message.error(err.message);
-            //         }
-            //     });
+            this.$request('/api/engineeringReportBoard/milestoneNodeInfo', subData)
+                .then(function (res) {
+                    console.info('res',res)
+                    var value = res.data.CompleteRate/100;
+                    vm.NoCompleteCount = res.data.NoCompleteCount;
+                    vm.NoCompleteKeyCount = res.data.NoCompleteKeyCount;
+                    vm.TotalCount = res.data.TotalCount;
+                    pointerAngle = (startAngle - endAngle) * (1 - value) + endAngle;
+                    vm.chartData = {
+                        series: [{
+                            startAngle: pointerAngle,
+                            axisTick: {
+                                splitNumber: Math.ceil((1 - value) * splitCount),
+                            },
+                            data: [{
+                                value: value
+                            }]
+                        },{
+                            endAngle: pointerAngle,
+                            axisTick: {
+                                splitNumber: Math.ceil(value * splitCount),
+                                lineStyle: {
+                                    color: {
+                                    image: document.getElementById('bg_img'),
+                                    repeat: 'no-repeat'
+                                    },
+                                }
+                            },
+                            data: [{
+                                value: value
+                            }]
+                        }]
+                    };
+                    vm.$nextTick(vm.initEcharts);
+                }).catch(function (err) {
+                    if (err.message) {
+                        vm.$message.error(err.message);
+                    }
+                });
             
         },
         doMore:function(){
