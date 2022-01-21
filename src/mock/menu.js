@@ -1,4 +1,4 @@
-[
+var menu = [
     {
         "MenuId": "8D441DE3-A2DF-4A81-B6FB-454722A1BF3E",
         "MenuName": "看板管理",
@@ -58,56 +58,8 @@
                         "Children": []
                     }
                 ]
-            },
-            {
-                "MenuId": "C5DE5919-DDFF-4568-B8BD-2B5958566873",
-                "MenuName": "验房看板",
-                "MenuNo": "14",
-                "MenuPath": "/houseInspection",
-                "ParentMenuId": "8D441DE3-A2DF-4A81-B6FB-454722A1BF3E",
-                "IconPath": "icon-shujukanban",
-                "RowIndex": 10,
-                "Level": 2,
-                "ChildDisplayMode": 1,
-                "Children": [
-                    {
-                        "MenuId": "A6503E00-3227-4927-B1E8-F4BD20E45E1B",
-                        "MenuName": "集团看板",
-                        "MenuNo": "14.1",
-                        "MenuPath": "pages/em/lookBoard/index.html&ReportBoardType=1&Type=1",
-                        "ParentMenuId": "C5DE5919-DDFF-4568-B8BD-2B5958566873",
-                        "IconPath": "",
-                        "RowIndex": 10,
-                        "Level": 3,
-                        "ChildDisplayMode": 1,
-                        "Children": []
-                    },
-                    {
-                        "MenuId": "E83D0118-B31B-43CF-B108-02CB80206746",
-                        "MenuName": "公司看板",
-                        "MenuNo": "14.2",
-                        "MenuPath": "pages/em/lookBoard/index.html&ReportBoardType=1&Type=2",
-                        "ParentMenuId": "C5DE5919-DDFF-4568-B8BD-2B5958566873",
-                        "IconPath": "",
-                        "RowIndex": 20,
-                        "Level": 3,
-                        "ChildDisplayMode": 1,
-                        "Children": []
-                    },
-                    {
-                        "MenuId": "9E50FDC1-C09D-4567-B70D-BBEEFD5EBB80",
-                        "MenuName": "项目看板",
-                        "MenuNo": "14.3",
-                        "MenuPath": "pages/em/lookBoard/index.html&ReportBoardType=1&Type=3",
-                        "ParentMenuId": "C5DE5919-DDFF-4568-B8BD-2B5958566873",
-                        "IconPath": "",
-                        "RowIndex": 30,
-                        "Level": 3,
-                        "ChildDisplayMode": 1,
-                        "Children": []
-                    }
-                ]
             }
+            
         ]
     },
     {
@@ -2310,3 +2262,5 @@
         ]
     }
 ]
+
+export default menu;

@@ -1,7 +1,8 @@
 import Mock from 'mockjs'
 import lookBoardData from './lookBoardData.js'
+import Menu from './menu.js'
 // 这是一个模拟接口的文件,所有的数据通过json在此引入,通过mock的形式
-const Menu = require('./menu.json'); 
+// const Menu = require('./menu'); 
 const Image = require('./image.json'); 
 // 菜单
 Mock.mock('/api/users/menus','get',Menu)
