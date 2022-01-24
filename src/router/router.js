@@ -42,6 +42,12 @@ const routes = [
       component: layout,
       children:lookBoardRoutes,
     },
+    {
+      path: '/engineerManage',
+      name: 'engineerManage',
+      component: layout,
+      children:lookBoardRoutes,
+    },
     // {
     //   path: '**',
     //   redirect: { name:'index'}
