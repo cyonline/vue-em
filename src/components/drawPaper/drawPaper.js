@@ -27,6 +27,20 @@ function DrawArea(el, option, initCallback, deleteCallback) {
         y: 0,
     }
 }
+function guid() {
+    var counter = 0;
+
+    return function( prefix ) {
+        var guid = (+new Date()).toString( 32 ),
+            i = 0;
+
+        for ( ; i < 5; i++ ) {
+            guid += Math.floor( Math.random() * 65535 ).toString( 32 );
+        }
+
+        return (prefix || 'wu_') + guid + (counter++).toString( 32 );
+    };
+};
 
 DrawArea.prototype.init = function() {
     if (!this.dragBox) {
@@ -105,7 +119,7 @@ DrawArea.prototype.handleMousedown = function (e) {
     if (e.stopPropagation) {
         e.stopPropagation();
     } else {
-        e.cancelBubble = true;
+        e.cancelBubble = true; // 兼容ie
     }
 
     var drwaAreaInstance = this._drwa_area_instance_;

@@ -9,6 +9,7 @@ import './style/common@hyk.css';
 import './style/normalize.css';
 
 import './style/common.less';
+import './style/layout.css';
 
 import * as Base from './utils/base'
 import utils from './utils/utils'

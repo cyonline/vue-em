@@ -153,7 +153,7 @@
      * @returns
      */
     /* eslint-disable no-bitwise */
-    function generateUuid(len, _radix) {
+    function guid(len, _radix) {
       const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'.split('');
       const uuid = [];
       let i = 0;
@@ -200,7 +200,7 @@
       isInteger,
       deepClone,
       merge,
-      generateUuid,
+      guid,
       checkFloatNumber,
     }
     

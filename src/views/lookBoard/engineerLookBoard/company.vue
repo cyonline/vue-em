@@ -12,6 +12,7 @@
         <article ref="mainContent" class="main_content">
           <!-- 放置组件 -->
           1
+          <draw-paper :img-src="hxImg" :data="pointData"></draw-paper>
         </article>
       </main>
     </div>
@@ -20,7 +21,7 @@
 
 <script>
 import treeSelect from '@/components/sapi-tree-select'
-
+import drawPaper from '@/components/drawPaper/drawPaper.vue'
 
 export default {
   name: "lookBoard",
@@ -58,7 +59,9 @@ export default {
         //
         boardMenuType: 1,
         ReportBoardType: 0,
-        panelMenuId: ""
+        panelMenuId: "",
+        hxImg: require('../../../assets/images/huxingtu.png'),
+        pointData:[],
       };
   },
   components: {
@@ -70,6 +73,7 @@ export default {
       },
 
       treeSelect,
+      drawPaper
     },
      computed: {
       headerTitle:function(){

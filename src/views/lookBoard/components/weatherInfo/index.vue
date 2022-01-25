@@ -22,29 +22,34 @@
             </div>
             <calendar-table :weather-data="weatherData" :year="year" :month="month"></calendar-table>
         </div>
-        <div class="show-data-box" style="display:none">
-            <div class="calendar-dialog">
-                <div class="header">
-                    <div class="mark">
-                        <span class="mark-item"><i class="sun"></i>晴天</span>
-                        <span class="mark-item"><i class="cloundy"></i>阴天</span>
-                        <span class="mark-item"><i class="rain"></i>雨天</span>
+        <el-dialog  :visible.sync="dialogVisible" :show-close="false">
+            
+            <!-- <div class="show-data-box" > -->
+                <div class="calendar-dialog">
+                    <div slot="title" >
+                        <div class="header">
+                            <div class="mark">
+                                <span class="mark-item"><i class="sun"></i>晴天</span>
+                                <span class="mark-item"><i class="cloundy"></i>阴天</span>
+                                <span class="mark-item"><i class="rain"></i>雨天</span>
+                            </div>
+                            <div class="select-month">
+                                <span class="left-arrow" @click="preMonth"><i class="iconfont icon-arrow-down"></i></span>
+                                <span class="text">{{dialogParams.year}}年{{dialogParams.month}}月</span>
+                                <span class="right-arrow" @click="nextMonth"><i class="iconfont icon-arrow-down"></i></span>
+                            </div>
+                            <div class="close" @click="closeDialog"><i class="iconfont icon-close1"></i></div>
+                        </div>
                     </div>
-                    <div class="select-month">
-                        <span class="left-arrow" @click="preMonth"><i class="iconfont icon-arrow-down"></i></span>
-                        <span class="text">{{dialogParams.year}}年{{dialogParams.month}}月</span>
-                        <span class="right-arrow" @click="nextMonth"><i class="iconfont icon-arrow-down"></i></span>
+                    <div class="body">
+                        <calendar-table-dialog :weather-data="dialogParams.weatherData" :year="dialogParams.year" :month="dialogParams.month"></calendar-table-dialog>
                     </div>
-                    <div class="close" @click="closeDialog"><i class="iconfont icon-close1"></i></div>
-                </div>
-                <div class="body">
-                    <calendar-table-dialog :weather-data="dialogParams.weatherData" :year="dialogParams.year" :month="dialogParams.month"></calendar-table-dialog>
-                </div>
-                <div class="footer">
-                    <span class="closeBtn" @click="closeDialog">关闭</span>
-                </div>
+                    <div class="footer">
+                        <span class="closeBtn" @click="closeDialog">关闭</span>
+                    </div>
+                <!-- </div> -->
             </div>
-        </div>
+        </el-dialog>
     </card>
     
 </template>
@@ -52,6 +57,7 @@
 import card from "@/views/lookBoard/components/common/card.vue"
 import calendarTable from '@/views/lookBoard/components/weatherInfo/calendar-table.vue'
 import calendarTableDialog from '@/views/lookBoard/components/weatherInfo/calendar-table-dialog.vue'
+
 export default {
     name: 'weather',
     components:{
@@ -100,28 +106,30 @@ export default {
                 year:new Date().getFullYear(),
                 month:new Date().getMonth()+1,
                 weatherData:[],
-            }
+            },
+            dialogVisible:false,
         }
     },
     methods:{
         doMore:function(){
-            
-            this.layerIndex = layer.open({
-                type: 1,
-                title: '',
-                shade: 0,
-                area: ['600px', '500px'],
-                resize: false,
-                closeBtn:0,
-                content: $('.show-data-box'),
-                cancel: function () {
-                    //右上角关闭回调
+            this.dialogVisible = true;
+            // this.layerIndex = layer.open({
+            //     type: 1,
+            //     title: '',
+            //     shade: 0,
+            //     area: ['600px', '500px'],
+            //     resize: false,
+            //     closeBtn:0,
+            //     content: $('.show-data-box'),
+            //     cancel: function () {
+            //         //右上角关闭回调
                     
-                }
-            });
+            //     }
+            // });
         },
         closeDialog:function(){
-            layer.close(this.layerIndex)
+            this.dialogVisible = false;
+            // layer.close(this.layerIndex)
         },
         preMonth:function(){
             if(this.dialogParams.month==1){
@@ -145,22 +153,22 @@ export default {
         },
         getWeahterData:function(){
             var _this = this;
-            $.request({
-                url: "/api/engineeringReportBoard/projectWeather",
-                type: "get",
-                isLoad: true,
-                data:{
-                    stageId:_this.structId,
-                    cityCode:'',
-                    dt: _this.dialogParams.year+'-'+_this.dialogParams.month,
-                },
-                success: function (data, res) {
-                    if (res.Code == 0) {
-                        console.info('天气数据',data)
-                        _this.dialogParams.weatherData = data||[];
-                    }
-                },
-            })
+            // $.request({
+            //     url: "/api/engineeringReportBoard/projectWeather",
+            //     type: "get",
+            //     isLoad: true,
+            //     data:{
+            //         stageId:_this.structId,
+            //         cityCode:'',
+            //         dt: _this.dialogParams.year+'-'+_this.dialogParams.month,
+            //     },
+            //     success: function (data, res) {
+            //         if (res.Code == 0) {
+            //             console.info('天气数据',data)
+            //             _this.dialogParams.weatherData = data||[];
+            //         }
+            //     },
+            // })
         }
     },
     created:function() {
@@ -270,7 +278,7 @@ export default {
     .calendar-dialog{
         width:100%;
         height: 100%;
-        padding: 15px;
+        /* padding: 15px; */
     }
     .calendar-dialog .header{
         position: relative;
@@ -333,4 +341,7 @@ export default {
         cursor: pointer;
     }
 
+    /* .el-dialog__header{
+        padding: 0;
+    } */
 </style>
