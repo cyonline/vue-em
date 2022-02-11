@@ -3,7 +3,8 @@ import test from '@/components/test'
 import layout from "@/components/layout/layout.vue";
 
 
-import lookBoardRoutes from '@/router/modules/lookboardRoutes.js'
+// import lookBoardRoutes from '@/router/modules/lookboardRoutes.js'
+import lookBoardRoutes from './modules/lookboardRoutes.js'
 
 import IndexComponent from '@/views/index'
 import LoginComponent from '@/views/index/login.vue'
