@@ -155,8 +155,8 @@ export default {
     }
 }
 </script>
-<style lang="less" scoped>
-    .login {
+<style lang="less">
+.login {
     width: 100%;
     height: 100%;
     background-image: url("../../assets/images/login-bg1.jpg");
@@ -213,7 +213,7 @@ export default {
     padding-left: 30px;
 }
 
-.input-icon {
+.login-box .input-icon {
     position: absolute;
     top: 4px;
     left: 10px;
