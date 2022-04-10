@@ -1,12 +1,13 @@
-﻿var comConfig = {
+﻿export default {
 
     // writeUrl: "http://192.168.1.144:1090/", // test
     // readUrl: "http://192.168.1.144:1090/", // test
     // fileUrl: "http://192.168.1.144:1090/", // test
 
-    writeUrl: "http://192.168.1.144:1100/", // test
-    readUrl: "http://192.168.1.144:1100/", // test
-    fileUrl: "http://192.168.1.144:1100/", // test
+    serverHost: "http://localhost:8001", // test
+    // serverHost: "http://cyonline.club:8001/", // test
+    // readUrl: "http://192.168.1.144:1100/", // test
+    // fileUrl: "http://192.168.1.144:1100/", // test
 
     // writeUrl: "http://rmis.ideasoft.net.cn:8913/", // test
     // readUrl: "http://rmis.ideasoft.net.cn:8913/", // test
@@ -22,7 +23,8 @@
     pageArr: [10, 20, 50, 100],
     // 配置文件预览 
     fileViewUrl: "http://172.56.2.28:8050/",
-    em_dir: "em_zhtest"
+    em_dir: "em_zhtest",
+    timeout: 2000,
     
 };
 

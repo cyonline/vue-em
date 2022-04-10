@@ -62,6 +62,14 @@ export default {
                 // if(this.user.uname.indexOf('\\') != -1) {
                 //     grant_type = 'domain';
                 // }
+                // var res = this.$request.get('/user/list',{});
+                var res = this.$http({
+                    url: '/user/list',
+                    methods: 'get'
+                });
+                res.then(res=>{
+                    console.info(res);
+                })
                 session.setItem('loginType', 0);
                 _this.rememberUserInfo();
                 // var encrypt = new JSEncrypt();
@@ -69,9 +77,9 @@ export default {
                 // var enUserName = encrypt.encrypt(_this.user.uname);
                 // var enPwd = encrypt.encrypt(_this.user.pwd);
                 localStorage.setItem('username',this.user.name)
-                this.$router.push({
-                    name: 'index'
-                })
+                // this.$router.push({
+                //     name: 'index'
+                // })
             },
             login: function() {
                 var _this = this;

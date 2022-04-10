@@ -87,6 +87,7 @@ export default {
       } else {
         e.cancelBubble = true;
       }
+      console.info('e',e)
       if (e.button === 0) {
         var boundingClientRect = this.drawImg.getBoundingClientRect();
         this.startPos = {
