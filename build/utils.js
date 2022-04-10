@@ -40,7 +40,7 @@ exports.cssLoaders = function (options) {
           sourceMap: options.sourceMap
         })
       })
-      console.log(loader)
+      // console.log('loader:',loader)
       if(loader == 'less'){
         loaders.push({
           
@@ -64,7 +64,8 @@ exports.cssLoaders = function (options) {
      
       return ExtractTextPlugin.extract({
         use: loaders,
-        fallback: 'vue-style-loader'
+        fallback: 'vue-style-loader',
+        publicPath: '../../'
       })
     } else {
       return ['vue-style-loader'].concat(loaders)

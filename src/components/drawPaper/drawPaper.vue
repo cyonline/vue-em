@@ -87,22 +87,25 @@ export default {
       } else {
         e.cancelBubble = true;
       }
-      console.info('e',e)
-      if (e.button === 0) {
-        var boundingClientRect = this.drawImg.getBoundingClientRect();
+      console.info(e);
+      if (e.button === 0) { // 判断鼠标点击是否是左键 0左键 1滚轮 2右键
+        var boundingClientRect = this.drawImg.getBoundingClientRect();  //用于获取某个元素相对于视窗的位置集合
+        // 这里计算的坐标相当于点击事件中的属性offsetX,offsetY,即点击位置相对于元素的位置
         this.startPos = {
           x: e.clientX - this.drawImg.clientLeft - boundingClientRect.left,
           y: e.clientY - this.drawImg.clientTop - boundingClientRect.top
         };
+        console.info(this.startPos);
         this.$el.addEventListener("mousemove", this.handleMousemove, false);
       }
     },
     handleMousemove: function(e) {
       document.body.addEventListener("mouseup", this.handleMouseup, false);
       e = e || window.event;
-      var boundingClientRect = this.drawImg.getBoundingClientRect();
+      var boundingClientRect = this.drawImg.getBoundingClientRect();  
       var x = e.clientX - this.drawImg.clientLeft - boundingClientRect.left;
       var y = e.clientY - this.drawImg.clientTop - boundingClientRect.top;
+      console.info(x,y)
       var offset_x = x - this.startPos.x;
       var offset_y = y - this.startPos.y;
       if (!this.drawArea) {
