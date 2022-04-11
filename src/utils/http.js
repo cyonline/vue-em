@@ -64,7 +64,7 @@ http.interceptors.request.use(
 http.interceptors.response.use(
     response => {
         const code = response.status
-        console.log('response:',response)
+        // console.log('response:',response)
         if (code < 200 || code > 300) {
             Notification.error({
                 title: response.message

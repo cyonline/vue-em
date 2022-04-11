@@ -63,12 +63,32 @@ export default {
                 //     grant_type = 'domain';
                 // }
                 // var res = this.$request.get('/user/list',{});
+                let params = {
+                    username: _this.user.uname,
+                    password: _this.user.pwd
+                }
+                console.info(params);
                 var res = this.$http({
-                    url: '/user/list',
-                    methods: 'get'
+                    url: '/user/login',
+                    methods: 'get',
+                    params:params
                 });
                 res.then(res=>{
                     console.info(res);
+                    
+                    if(res.code == 200){
+                        this.$message({
+                            message: res.msg,
+                            type: 'success'
+                        })
+                        this.$router.push({
+                            name: 'index'
+                        })
+                    }else{
+                        this.$message.error(res.msg)
+                    }
+                }).catch(err => {
+                    this.$message.error(err)
                 })
                 session.setItem('loginType', 0);
                 _this.rememberUserInfo();
@@ -76,10 +96,8 @@ export default {
                 // encrypt.setPublicKey(_this.pubkey);
                 // var enUserName = encrypt.encrypt(_this.user.uname);
                 // var enPwd = encrypt.encrypt(_this.user.pwd);
-                localStorage.setItem('username',this.user.name)
-                // this.$router.push({
-                //     name: 'index'
-                // })
+                localStorage.setItem('username',this.user.uname)
+                
             },
             login: function() {
                 var _this = this;
