@@ -51,14 +51,15 @@ export default {
 </script>
 <style lang="less">
     .sapi-content{
-        width: 100%;
+        // width: calc(~'100% - 200px');
         height: calc(~'100% - 60px');
-        padding-left: 200px;
+        // padding-left: 200px;
+        overflow: auto;
         background-color: #EFEFF4;
         transition:all 0.1;
         -webkit-transition:all 0.3s;
         &.collapse{
-             padding-left: 65px;
+            //  padding-left: 65px;
         }
         &>div{
             height: 100%;

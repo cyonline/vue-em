@@ -1,10 +1,11 @@
 <template>
 
-    <div class="stage-box" id="lookBoard" v-cloak>
+    <div id="lookBoard" v-cloak>
       <main class="main">
         <header class="lookboard_panel_header">
           <div class="float-left header-title">{{ headerTitle }}</div>
         </header>
+        <div class="lookboard_panel_header_blank"></div>
         <article ref="mainContent" class="lookboard_panel_content">
           <!-- 放置组件 -->
           <div id="group_panel">

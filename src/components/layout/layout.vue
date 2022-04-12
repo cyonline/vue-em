@@ -1,11 +1,12 @@
 <template>
     <div class="sapi-layout" :class="isCollapse?'left-close':''">
         <nav-header></nav-header>
-        <nav-sidebar></nav-sidebar>
-        <sapi-content>
-            <slot></slot>
-        </sapi-content>
-        <!-- <navHeader></navHeader> -->
+        <div class="sapi-layout-box">
+            <nav-sidebar></nav-sidebar>
+            <sapi-content>
+                <slot></slot>
+            </sapi-content>
+        </div>
     </div>
 </template>
 <script>
@@ -42,5 +43,9 @@ export default {
         width: 100%;
         height: 100%;
         overflow: hidden;
+        .sapi-layout-box{
+            width: 100%;
+            height: 100%;
+        }
     }
 </style>
