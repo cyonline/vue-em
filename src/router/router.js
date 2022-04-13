@@ -1,6 +1,7 @@
 import HelloWorld from '@/components/HelloWorld'
 import test from '@/components/test'
 import layout from "@/components/layout/layout.vue";
+import routerView from "@/components/layout/router-view.vue";
 
 
 import lookBoardRoutes from './modules/lookBoardRoutes'
@@ -12,46 +13,51 @@ import LoginComponent from '@/views/index/login.vue'
 const routes = [
     {
       path: '/',
-      redirect: '/login'
+      redirect: '/login',
+      component: layout,
+      children:[
+        {
+          path: 'index',
+          name: 'index',
+          // redirect: '/lookBoard',
+          // component: IndexComponent,
+          children:[
+            {
+              path:'helloWorld', // 子路由不加/就会在父级路由后面添加路由,加了/会作为一个独立的路由
+              name: 'helloWorld',
+              component: HelloWorld
+            },
+            {
+              path:'test',
+              name: 'test',
+              component: test
+            },
+          ]
+        },
+        {
+          path: 'lookBoard',
+          name: 'lookBoard',
+          component: routerView,
+          children:lookBoardRoutes,
+        },
+        {
+          path: 'engineerManage',
+          name: 'engineerManage',
+          component: routerView,
+          children:lookBoardRoutes,
+        },
+      ]
     },
     {
       path: '/login',
       name: 'login',
       component: LoginComponent,
     },
+    
     {
-      path: '/index',
-      name: 'index',
-      component: IndexComponent,
-      children:[
-        {
-          path:'helloWorld', // 子路由不加/就会在父级路由后面添加路由,加了/会作为一个独立的路由
-          name: 'helloWorld',
-          component: HelloWorld
-        },
-        {
-          path:'test',
-          name: 'test',
-          component: test
-        },
-      ]
+      path: '**',
+      redirect: { name:'index'}
     },
-    {
-      path: '/lookBoard',
-      name: 'lookBoard',
-      component: layout,
-      children:lookBoardRoutes,
-    },
-    {
-      path: '/engineerManage',
-      name: 'engineerManage',
-      component: layout,
-      children:lookBoardRoutes,
-    },
-    // {
-    //   path: '**',
-    //   redirect: { name:'index'}
-    // },
     
     // lookBoardRoutes,
 

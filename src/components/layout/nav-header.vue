@@ -66,7 +66,7 @@ export default {
     methods:{
         getData(){
             this.$request('/api/users/menus').then((res) => {
-                console.info(res);
+                console.info('菜单:',res);
                 this.menu = res.data;
                 this.setActiveMenu(this.menu[0],0)
             })
