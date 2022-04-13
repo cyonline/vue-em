@@ -6,7 +6,7 @@
                 </div>
                 <!-- 使用 el-scrollbar 导致 el-menu 的collapse为true 时 侧边导航被遮掉，在 .el-menu--collapse类上加 fixed解决（不过会产生当的collapse为true时滚动组件无效，无大的影响） -->
                 <el-scrollbar class='page-component__scroll' :noresize="false">
-                    <el-menu class="index-menu" @select="chooseMenuList" :collapse="isCollapse" default-active="'472FD1A1-8A8E-4AB9-9EF7-888068E0254B'"  :default-openeds="openeds">
+                    <el-menu class="index-menu" @select="chooseMenuList" :collapse="isCollapse" :default-active="acitveIndex"  :default-openeds="openeds" router>
                         <index-menu :data="menuData" :icon="true"></index-menu>
                     </el-menu>
                 </el-scrollbar>
@@ -44,23 +44,24 @@ export default {
         },
         openeds(){
             var menu = this.$store.state.sideMenu;
-            return menu.length>0? [menu[0].MenuId]:[]
+            // 默认展开第一个子级
+            return menu.length>0?  [menu[0].MenuId]:[]
         },
         acitveIndex(){
             var menu = this.$store.state.sideMenu;
-            return menu.length>0? menu[0].Children[0].MenuId:''
+            return menu.length>0? menu[0].Children[0].MenuPath:''
         }
     },
     methods:{
-        chooseMenuList(path){
+        chooseMenuList(index,path){
             console.info('side',path)
             // 修复重复点击同一个路由报错
-            if(path == this.$route.path){
-                return;
-            }
-            this.$router.push({
-                path: path,
-            });
+            // if(path == this.$route.path){
+            //     return;
+            // }
+            // this.$router.push({
+            //     path: path,
+            // });
             
         },
         toggleCollapse(){
@@ -71,10 +72,24 @@ export default {
     },
     mounted(){
         console.info('mounted');
-        console.info(this.$store.state.sideMenu)
+        // console.info(this.$store.state.sideMenu)
         // this.chooseMenuList(this.$store.state.sideMenu[0].MenuPath)
-    },
+        // 判断侧边栏是否有菜单;菜单下第一个子级是否有子菜单
+        if(this.menuData && this.menuData[0].Children){
+            this.$router.replace(this.menuData[0].Children[0].MenuPath)
 
+        }
+    },
+    watch:{
+        // menuData:{
+        //     handler(val){
+        //         console.info('监听',val);
+        //         if(val && val[0].Children){
+        //             this.$router.push(val[0].Children[0].MenuPath)
+        //         }
+        //     }
+        // }
+    }
 }
 </script>
 <style lang="less">

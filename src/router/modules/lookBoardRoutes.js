@@ -1,8 +1,8 @@
 const routes = [
-    {
-        path: '/',
-        redirect: 'engineerLookBoard/group',
-    },
+    // {
+    //     path: '/',
+    //     redirect: 'engineerLookBoard/group',
+    // },
     {
         path: 'engineerLookBoard',
         name: 'engineerLookBoard',
@@ -25,10 +25,10 @@ const routes = [
             }
         ]
     },
-    {
-        path: '**',
-        redirect: 'engineerLookBoard',
-    },
+    // {
+    //     path: '**',
+    //     redirect: 'engineerLookBoard',
+    // },
 
 
 ]
