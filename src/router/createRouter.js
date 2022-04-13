@@ -5,7 +5,7 @@ import routes from './router'
 
 Vue.use(VueRouter)
 
-// vue-router 版本在3.0+加上以下代码
+// vue-router 版本在3.0+加上以下代码,重写push和replace,防止重复点击菜单提示路由重复跳转
 const originalPush = VueRouter.prototype.push
 VueRouter.prototype.push = function push(location, onResolve, onReject) {
   if (onResolve || onReject) return originalPush.call(this, location, onResolve, onReject)
