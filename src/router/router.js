@@ -1,6 +1,7 @@
 import HelloWorld from '@/components/HelloWorld'
 import test from '@/components/test'
 import layout from "@/components/layout/layout.vue";
+import routerView from "@/components/layout/router-view.vue";
 
 
 import lookBoardRoutes from './modules/lookBoardRoutes'
@@ -36,13 +37,13 @@ const routes = [
         {
           path: 'lookBoard',
           name: 'lookBoard',
-          // component: layout,
+          component: routerView,
           children:lookBoardRoutes,
         },
         {
           path: 'engineerManage',
           name: 'engineerManage',
-          // component: layout,
+          component: routerView,
           children:lookBoardRoutes,
         },
       ]

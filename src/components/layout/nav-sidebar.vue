@@ -61,8 +61,7 @@ export default {
             // }
             // this.$router.push({
             //     path: path,
-            // });
-            
+            // });   
         },
         toggleCollapse(){
             this.setCollapse = !this.setCollapse;
@@ -80,16 +79,7 @@ export default {
 
         }
     },
-    watch:{
-        // menuData:{
-        //     handler(val){
-        //         console.info('监听',val);
-        //         if(val && val[0].Children){
-        //             this.$router.push(val[0].Children[0].MenuPath)
-        //         }
-        //     }
-        // }
-    }
+    
 }
 </script>
 <style lang="less">
