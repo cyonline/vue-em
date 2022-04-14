@@ -68,11 +68,12 @@ export default {
                     password: _this.user.pwd
                 }
                 console.info(params);
-                var res = this.$http({
-                    url: '/user/login',
-                    methods: 'get',
-                    params:params
-                });
+                // var res = this.$http({
+                //     url: '/user/login',
+                //     methods: 'get',
+                //     params:params
+                // });
+                var res = this.$http.get( '/user/login', params);
                 res.then(res=>{
                     console.info(res);
                     

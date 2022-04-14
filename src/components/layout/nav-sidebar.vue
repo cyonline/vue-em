@@ -73,13 +73,16 @@ export default {
         console.info('mounted');
         // console.info(this.$store.state.sideMenu)
         // this.chooseMenuList(this.$store.state.sideMenu[0].MenuPath)
+        
+    },
+    updated(){
+        console.info('updated')
         // 判断侧边栏是否有菜单;菜单下第一个子级是否有子菜单
-        if(this.menuData && this.menuData[0].Children){
+        if(this.menuData.length>0 && this.menuData[0].Children){
             this.$router.replace(this.menuData[0].Children[0].MenuPath)
 
         }
-    },
-    
+    }
 }
 </script>
 <style lang="less">

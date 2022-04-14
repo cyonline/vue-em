@@ -12,31 +12,19 @@ function getToken(){
     let nowTime = new Date().getTime();
     let expiresTime = ws.getItem('expiresTime')
     // if ((nowTime < expiresTime && expiresTime - nowTime < 300000) || nowTime > expiresTime) {
-    //     $.request({
-    //         url: "/Authorize",
-    //         type: "POST",
-    //         isLogin: true,
-    //         isLoad: true,
-    //         data: {
-    //             grant_type: 'refresh_token',
-    //             refresh_token: ws.getItem('refresh_token'),
-    //         },
-    //         success: function(data) {
-    //             ws.setItem('token', data.access_token);
-    //             ws.setItem('refresh_token', data.refresh_token);
-    //             ws.setItem('expiresTime', new Date().getTime() + data.expires_in * 1000);
-    //         }
+    //     axios.post("/Authorize").then(res=>{
+    //         ws.setItem('access_token',res.data)
     //     })
     // }
-    if (ws.getItem("token")) {
-        var token = ws.getItem("token");
-        return token;
-    } else {
-        // $.goToLogin();
-    }
+    // if (ws.getItem("token")) {
+    //     var token = ws.getItem("token");
+    //     return token;
+    // } else {
+    //     this.$router.push({name: 'login'})
+    // }
 }
 // 创建axios实例
-const http = axios.create({
+const service = axios.create({
     baseURL: Config.serverHost, // api 的 base_url
     // baseURL: process.env.BASE_API, // api 的 base_url
     timeout: Config.timeout, // 请求超时时间
@@ -44,7 +32,7 @@ const http = axios.create({
 })
 
 // request拦截器
-http.interceptors.request.use(
+service.interceptors.request.use(
     config => {
         // console.info('xxx',Config)
         if (getToken()) {
@@ -61,7 +49,7 @@ http.interceptors.request.use(
 )
 
 // response 拦截器
-http.interceptors.response.use(
+service.interceptors.response.use(
     response => {
         const code = response.status
         // console.log('response:',response)
@@ -123,4 +111,37 @@ http.interceptors.response.use(
         return Promise.reject(error)
     }
 )
+
+let http = {
+    get: function(url,params){
+        return service({
+            url: url,
+            method: 'get',
+            params: params,
+        })
+    },
+    post: function(url,params){
+        return service({
+            url: url,
+            method: 'post',
+            data: params,
+        })
+    },
+    put: function(url,params){
+        return service({
+            url: url,
+            method: 'put',
+            data: params,
+        })
+    },
+    delete: function(url,params){
+        return service({
+            url: url,
+            method: 'delete',
+            data: params,
+        })
+    },
+}
+
+
 export default http
