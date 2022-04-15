@@ -11,9 +11,9 @@
                         <a href="index.html"><img src="static/images/logo-mini.png" alt=""></a>
                     </div> -->
                 </div>
-            <div :class="['clap-btn', isCollapse ? 'is-open':'']" @click="toggleCollapse">
-                <i class="iconfont icon-shink-20"></i>
-            </div>
+                <div :class="['clap-btn', isCollapse ? 'is-open':'']" @click="toggleCollapse">
+                    <i class="iconfont icon-shink-20"></i>
+                </div>
                 <div class="top-menu">
                     <ul class="list-unstyled index-choose-list clearfix">
                         <li class="w-90" :class="[getActiveMenu(index)? 'active' : '']" v-for="(item, index) in menu" :key="index" @click="setActiveMenu(item,index)">
@@ -36,6 +36,22 @@
                         </li>
                     </ul>
                 </div>
+                <div class="user-info">
+                        <el-avatar class="user-avatar" size="medium" :src="squareUrl" @error="true">
+                            <img src="https://cube.elemecdn.com/e/fd/0fc7d20532fdaf769a25683617711png.png"/>
+                        </el-avatar>
+                    <div class="user-name">{{username}}</div>
+                    <el-dropdown @command="handleCommand">
+                        <span class="el-dropdown-link">
+                            <i class="el-icon-arrow-down el-icon--right"></i>
+                        </span>
+                        <el-dropdown-menu slot="dropdown">
+                            <el-dropdown-item icon="iconfont icon-set2" command="a">用户信息</el-dropdown-item>
+                            <el-dropdown-item icon="iconfont icon-login-out" command="b">退出</el-dropdown-item>
+                            
+                        </el-dropdown-menu>
+                    </el-dropdown>
+                </div>
             </div>
         <!-- </div> -->
     </div>
@@ -50,7 +66,9 @@ export default {
             indexLogo:require('../../assets/images/banner.png'),
             moreList:'',
             menu:[],
-            curIndex:0
+            curIndex:0,
+            squareUrl: '',
+
         }
     },
     computed:{
@@ -61,6 +79,9 @@ export default {
             get(){
                 return this.$store.state.isCollapse;
             }
+        },
+        username:()=>{
+            return localStorage.getItem('username')
         }
     },
     methods:{
@@ -82,6 +103,16 @@ export default {
         toggleCollapse(){
             this.setCollapse=!this.setCollapse;
             this.$store.commit('toggleCollapse',this.setCollapse)
+        },
+        handleCommand(c){
+            switch(c){
+                case 'a':
+                    // 用户信息
+                    break;
+                case 'b':    
+                // 退出登录
+                break;
+            }
         }
     },
     mounted(){
@@ -92,11 +123,38 @@ export default {
 <style lang="less">
 @import url('./layout.css');
     #sapi-header{
-        .header-box{
-            display: inline-block;
-            width: 100%;
-            height: 60px;
-            background: #ddd;
-        }
+        // .header-box{
+        //     display: inline-block;
+        //     width: 100%;
+        //     height: 60px;
+        //     background: #ddd;
+            
+        // }
+        .user-info{
+                float: right;
+                width: 200px;
+                height: 100%;
+                // background: #ddd;
+                display: flex;
+                align-items: center;
+                .user-avatar{
+                    margin:0 10px;
+                }
+                .user-name{
+                    max-width: 70px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    font-size: 14px;
+                    color: #fff;
+                    margin-right: 10px;
+                }
+            }
+        .el-dropdown-link{
+            width: 50px;
+            text-align: center;
+        }    
     }
+    
+
+
 </style>

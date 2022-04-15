@@ -50,15 +50,13 @@ export default {
                     "pwd": [{ required: true, message: '请输入密码', trigger: 'change' }]
                 },
                 checkList: [],
-                pubkey:  "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCpKt4XzMOHfW4yW6/JOd1H6wDqjWgYDVZq1a3ZL5z6B4kY9d70x1x69L2mh0ff1zy+hqtRlL9L7W784ROWRx83a5DJeKEGVtohB1QEo2YvHgUPho89hkKNtuXe8kdWlOnQvLlEAV3j8PQBqkxq8K2bRzoBwos8DOil/t2yqR3GYQIDAQAB"
+                pubkey:  ""
             }
     },
     methods:{
         postLoginData: function() {
                 var _this = this;
-                var grant_type = 'password';
-                var session = window.sessionStorage;
-
+                var grant_type = 'password';                
                 // if(this.user.uname.indexOf('\\') != -1) {
                 //     grant_type = 'domain';
                 // }
@@ -68,20 +66,15 @@ export default {
                     password: _this.user.pwd
                 }
                 console.info(params);
-                // var res = this.$http({
-                //     url: '/user/login',
-                //     methods: 'get',
-                //     params:params
-                // });
-                var res = this.$http.get( '/user/login', params);
-                res.then(res=>{
+                this.$http.get('/authorize', params).then(res=>{
                     console.info(res);
-                    
                     if(res.code == 200){
                         this.$message({
                             message: res.msg,
                             type: 'success'
                         })
+                        localStorage.setItem('access_token',res.data.access_token)
+                        localStorage.setItem('expiresTime',res.data.expiresTime)
                         this.$router.push({
                             name: 'index'
                         })
@@ -91,7 +84,7 @@ export default {
                 }).catch(err => {
                     this.$message.error(err)
                 })
-                session.setItem('loginType', 0);
+                sessionStorage.setItem('loginType', 0);
                 _this.rememberUserInfo();
                 // var encrypt = new JSEncrypt();
                 // encrypt.setPublicKey(_this.pubkey);

@@ -80,8 +80,7 @@
     color: #2d2f33;
 }
 
-.header .todo-box,
-.header .user-info {
+.header .todo-box{
     height: 100%;
     display: inline-block;
     vertical-align: middle;
@@ -93,9 +92,7 @@
     margin-right: 50px;
 }
 
-.header .user-info {
-    padding-right: 10px;
-}
+
 
 .todo-box .icon-lingdang {
     font-size: 25px;
@@ -110,53 +107,7 @@
     left: 15px;
 }
 
-.header .user-info .caret {
-    margin: -4px 0 0 2px;
-    vertical-align: middle;
-    border-top: 5px dashed;
-    border-top: 5px solid \9;
-    border-right: 5px solid transparent;
-    border-left: 5px solid transparent;
-}
 
-.user-info .user-photo {
-    display: inline-block;
-    width: 36px;
-    height: 36px;
-    overflow: hidden;
-    border-radius: 50%;
-    vertical-align: middle;
-    margin-right: 5px;
-    margin-top: -3px;
-}
-
-.user-info .kanBan-photo {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    overflow: hidden;
-    border-radius: 50%;
-    vertical-align: middle;
-    margin-right: -5px;
-    margin-top: -3px;
-}
-
-.user-info .kanBan-photo>img {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
-.user-info .user-photo>img {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
-#sapi-header  .header .user-info.active .dropdown-menu-usermenu,
-.header .user-info:hover .dropdown-menu-usermenu {
-    display: block;
-}
 
 #sapi-header .header .dropdown-menu {
     border: 0;
@@ -351,12 +302,10 @@
     margin-top: -2px;
 }
 
-.top-menu {
+/* .top-menu {
     display: inline-block;
-    /* width: calc(100% - 500px); */
     vertical-align: top;
     height: 100%;
-    /* min-width: 880px; */
 }
 
 .top-menu ul.index-choose-list {
@@ -381,7 +330,7 @@
 .top-menu ul li.active {
     background: #efeff4;
     font-weight: bolder;
-}
+} */
 
 .index-menu {
     overflow: visible;

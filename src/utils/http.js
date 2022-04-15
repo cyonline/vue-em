@@ -8,7 +8,7 @@ import Config from './config'
 // import { baseUrl } from '@/utils/env'
 
 function getToken(){
-    var ws = window.sessionStorage;
+    var ws = window.localStorage;
     let nowTime = new Date().getTime();
     let expiresTime = ws.getItem('expiresTime')
     // if ((nowTime < expiresTime && expiresTime - nowTime < 300000) || nowTime > expiresTime) {
@@ -16,12 +16,12 @@ function getToken(){
     //         ws.setItem('access_token',res.data)
     //     })
     // }
-    // if (ws.getItem("token")) {
-    //     var token = ws.getItem("token");
-    //     return token;
-    // } else {
-    //     this.$router.push({name: 'login'})
-    // }
+    if (ws.getItem("access_token")) {
+        var token = ws.getItem("access_token");
+        return token;
+    } else {
+        // window.location.href = '/'
+    }
 }
 // 创建axios实例
 const service = axios.create({
@@ -33,13 +33,14 @@ const service = axios.create({
 
 // request拦截器
 service.interceptors.request.use(
-    config => {
-        // console.info('xxx',Config)
-        if (getToken()) {
-            config.headers['Authorization'] = 'Bearer ' + getToken() // 让每个请求携带自定义token 请根据实际情况自行修改
+    request => {
+        // console.info('xxx',request)
+        let whilteList = ['/authorize']; // 白名单中的接口不用携带token
+        if (!whilteList.includes(request.url) && getToken()) {
+            request.headers['Authorization'] = 'Bearer ' + getToken() // 让每个请求携带自定义token 请根据实际情况自行修改
         }
-        config.headers['Content-Type'] = 'application/json'
-        return config
+        request.headers['Content-Type'] = 'application/json'
+        return request
     },
     error => {
         // Do something with request error
@@ -112,7 +113,7 @@ service.interceptors.response.use(
     }
 )
 
-let http = {
+const http = {
     get: function(url,params){
         return service({
             url: url,

@@ -24,7 +24,7 @@ export default function createRouter(beforeEach,afterEach){
     });
     // 路由守卫
     router.beforeEach((to,from,next)=>{
-      console.info('路由守卫',to,from)
+      // console.info('路由守卫',to,from)
       if(to.name!=='login'){
         let userName = window.localStorage.getItem('username')|| '';
         if(!userName){
