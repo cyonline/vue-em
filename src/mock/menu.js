@@ -56,6 +56,18 @@ var menu = [
                         "Level": 3,
                         "ChildDisplayMode": 1,
                         "Children": []
+                    },
+                    {
+                        "MenuId": "E619FA12-6FF3-4338-966D-4EA27196A4A6",
+                        "MenuName": "个人看板",
+                        "MenuNo": "13.4",
+                        "MenuPath": "/lookBoard/engineerLookBoard/person",
+                        "ParentMenuId": "472FD1A1-8A8E-4AB9-9EF7-888068E0254B",
+                        "IconPath": "",
+                        "RowIndex": 30,
+                        "Level": 3,
+                        "ChildDisplayMode": 1,
+                        "Children": []
                     }
                 ]
             }

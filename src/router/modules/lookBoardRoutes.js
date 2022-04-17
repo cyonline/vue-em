@@ -22,6 +22,11 @@ const routes = [
                 path: 'project',
                 name: 'engineerLookBoard-project',
                 component: () => import('@/views/lookBoard/engineerLookBoard/project.vue'),
+            },
+            {
+                path: 'person',
+                name: 'engineerLookBoard-person',
+                component: () => import('@/views/lookBoard/engineerLookBoard/person.vue'),
             }
         ]
     },

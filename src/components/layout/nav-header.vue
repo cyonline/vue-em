@@ -111,8 +111,18 @@ export default {
                     break;
                 case 'b':    
                 // 退出登录
+                
+                this.loginOut();
+
                 break;
             }
+        },
+        loginOut(){
+            // 这里要发送一个请求给后端废弃token
+            localStorage.removeItem('access_token')
+            localStorage.removeItem('expiresTime')
+            localStorage.removeItem('username')
+            this.$router.replace({'name':'login'})
         }
     },
     mounted(){

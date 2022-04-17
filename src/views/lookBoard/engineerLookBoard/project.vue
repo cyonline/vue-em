@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="stage-box" id="lookBoard" v-cloak>
+    <div id="lookBoard" v-cloak>
       <main class="main">
         <header class="lookboard_panel_header">
           <div class="float-left header-title">项目看板</div>
@@ -10,6 +10,7 @@
             >
           </div> -->
         </header>
+        <div class="lookboard_panel_header_blank"></div>
         <article ref="mainContent" class="lookboard_panel_content">
           <!-- 放置组件 -->
           <div id="project_panel">
@@ -196,7 +197,7 @@ export default {
   }
 };
 </script>
-<style lang="less">
+<style lang="less" scoped>
 @import url("../style.css");
 #project_panel {
   background-color: #efeff4;

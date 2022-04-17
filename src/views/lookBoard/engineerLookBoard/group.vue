@@ -218,7 +218,7 @@ export default {
   }
 };
 </script>
-<style lang="less">
+<style lang="less" scoped>
 @import url("../style.css");
 #group_panel {
   background-color: #efeff4;
