@@ -35,7 +35,7 @@ const service = axios.create({
 service.interceptors.request.use(
     request => {
         // console.info('xxx',request)
-        let whilteList = ['/authorize']; // 白名单中的接口不用携带token
+        let whilteList = ['/authorize','/register']; // 白名单中的接口不用携带token
         if (!whilteList.includes(request.url) && getToken()) {
             request.headers['Authorization'] = 'Bearer ' + getToken() // 让每个请求携带自定义token 请根据实际情况自行修改
         }

@@ -1,7 +1,7 @@
 <template>
-    <div id="login" class="login" @keyup.enter="login" v-cloak>
+    <div id="login"  @keyup.enter="login" v-cloak>
         
-        <div class="login-box">
+        <div class="login-box login" :class="isAnimate?'loginHide':'loginShow'">
             <div class="form-body">
                 <img class="login-logo" src="../../assets/images/logo-red.png" alt="中海地产">
                 <el-form :model="user" ref="loginForm" label-position="left" label-width="0">
@@ -12,7 +12,7 @@
                             <div class="input-icon"><i class="iconfont icon-icon1460188199600"></i></div>
                         </el-form-item>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group form-password">
                         <el-form-item prop="pwd" :rules="setRules.pwd">
                             <el-input placeholder="密码" size="large" v-model="user.pwd" type="password">
                             </el-input>
@@ -25,9 +25,41 @@
                     </el-checkbox-group>
                     <el-button type="primary" size="large" class="btn-login" @click="login">登录</el-button>
                 </el-form>
+                <a class="goRegister" @click="toggleState">没有账号?请先注册</a>
             </div>
         </div>
-            
+        <div class="login-box register" :class="isAnimate?'registerShow':'registerHide'">
+            <div class="form-body">
+                <div class="register-title">注册新账号</div>
+                <!-- <img class="login-logo" src="../../assets/images/logo-red.png" alt="中海地产"> -->
+                <el-form :model="newUser" ref="registerForm" label-position="left" label-width="0">
+                    <div class="form-group form-name">
+                        <el-form-item prop="uname" :rules="setRules.uname">
+                            <el-input placeholder="用户名" size="large" v-model="newUser.uname">
+                            </el-input>
+                            <div class="input-icon"><i class="iconfont icon-icon1460188199600"></i></div>
+                        </el-form-item>
+                    </div>
+                    <div class="form-group form-email">
+                        <el-form-item prop="email" :rules="setRules.email">
+                            <el-input placeholder="邮箱" size="large" v-model="newUser.email">
+                            </el-input>
+                            <div class="input-icon"><i class="el-icon-message"></i></div>
+                        </el-form-item>
+                    </div>
+                    <div class="form-group form-password">
+                        <el-form-item prop="pwd" :rules="setRules.pwd">
+                            <el-input placeholder="密码" size="large" v-model="newUser.pwd" type="password">
+                            </el-input>
+                            <div class="input-icon"><i class="iconfont icon-mima"></i></div>
+                        </el-form-item>
+                    </div>
+                    <el-button type="primary" size="large" class="btn-login" @click="register">注册</el-button>
+                </el-form>
+                <a class="goLogin" @click="toggleState">已有账号,直接登录</a>
+            </div>
+        </div> 
+        
     </div>
 </template>
 <script>
@@ -39,6 +71,11 @@ export default {
                     uname: "",
                     pwd: "",
                 },
+                newUser: {
+                    uname: '',
+                    pwd: '',
+                    email: '',
+                },
                 mobileConfig: {
                     AppDownUrl: '',
                     AppQRCodeUrl: '',
@@ -47,26 +84,25 @@ export default {
                 },
                 setRules: {
                     "uname": [{ required: true, message: '请输入用户名', trigger: 'change' }],
+                    "email": [{ required: true, message: '请输入邮箱', trigger: 'change' }],
                     "pwd": [{ required: true, message: '请输入密码', trigger: 'change' }]
+                
                 },
                 checkList: [],
-                pubkey:  ""
+                pubkey:  "",
+                isAnimate: false,
             }
     },
     methods:{
         postLoginData: function() {
                 var _this = this;
-                var grant_type = 'password';                
-                // if(this.user.uname.indexOf('\\') != -1) {
-                //     grant_type = 'domain';
-                // }
-                // var res = this.$request.get('/user/list',{});
+                
                 let params = {
                     username: _this.user.uname,
                     password: _this.user.pwd
                 }
                 console.info(params);
-                this.$http.get('/authorize', params).then(res=>{
+                this.$http.get('/public/authorize', params).then(res=>{
                     console.info(res);
                     if(res.code == 200){
                         this.$message({
@@ -100,13 +136,32 @@ export default {
                     _this.postLoginData();
                 }
             },
-            changeLang: function(type) {
-                var lang = window.localStorage.getItem("language");
-                var change = !type ? 'cn' : 'en';
-                if ((!lang && change == 'en') || (lang && change != lang)) {
-                    window.localStorage.setItem("language", change);
-                    window.location.reload(true);
+            register(){
+                if(this.submitForm('registerForm')){
+                    this.postRegisterData()
                 }
+            },
+            postRegisterData(){
+                let params = {
+                    username: this.newUser.uname,
+                    password: this.newUser.pwd,
+                    email: this.newUser.email
+                }
+                console.info(params);
+                this.$http.post('/public/register', params).then(res=>{
+                    console.info(res);
+                    if(res.code == 200){
+                        this.$message({
+                            message: res.msg,
+                            type: 'success'
+                        })
+                        this.$refs['registerForm'].resetFields();
+                    }else{
+                        this.$message.error(res.msg)
+                    }
+                }).catch(err => {
+                    this.$message.error(err)
+                })
             },
             submitForm: function(formName) {
                 var res = false;
@@ -139,24 +194,15 @@ export default {
                     window.localStorage.removeItem('autoLogin');
                 }
             },
-            getAppConfig: function () {
-                var _this = this;
-                $.request({
-                    url: '/api/mobileSetting',
-                    type: "post",
-                    isLoad: true,
-                    isLogin: true,
-                    data: {},
-                    success: function (data) {
-                        _this.mobileConfig = data.Data; 
-                    }
-                });
-            },
+        
             checkRemerber: function () {
                 if(this.checkList.indexOf('自动登录') != -1 && this.checkList.indexOf('记住用户名及密码') == -1){
                     this.checkList.push('记住用户名及密码');
                 }
-            }
+            },
+            toggleState(){
+                this.isAnimate = !this.isAnimate;
+            },
     },
     mounted(){
         var localUserName = window.atob(window.localStorage.getItem('userName'));
@@ -176,7 +222,7 @@ export default {
 }
 </script>
 <style lang="less">
-.login {
+#login {
     width: 100%;
     height: 100%;
     background-image: url("../../assets/images/login-bg1.jpg");
@@ -206,73 +252,183 @@ export default {
     margin-left: -160px;
     background-color: #fff;
     border-radius: 4px;
+
+    .form-group {
+        margin-bottom: 5px;
+    }
+    .form-name,.form-email {
+        .el-form-item__error {
+            position: relative;
+        }
+    }
+    .el-form-item {
+        margin-bottom: 0;
+    }
+    .el-input__inner {
+        border: 1px solid #ddd;
+        height: 48px;
+        line-height: 48px;
+        padding-left: 30px;
+    }
+    .input-icon {
+        position: absolute;
+        top: 4px;
+        left: 10px;
+    }
+    .btn-login {
+        width: 100%;
+        height: 48px;
+        margin-top: 10px;
+    }
+    .btn-login {
+        width: 100%;
+        height: 48px;
+        margin-top: 10px;
+    }
+    .remember-user-info{
+        margin-top: 10px;
+        margin-top: 10px;
+    }
+
+    .remember-user-info{
+        margin-top: 10px;
+    }
+    .login-logo {
+        width: 250px;
+        height: 60px;
+        margin-bottom: 30px;
+    }
+}
+.goRegister{
+    float: right;
+    cursor: pointer;
+    color: @text-blue;
+    line-height: 36px;
+}
+.goLogin{
+    float: right;
+    cursor: pointer;
+    color: @text-blue;
+    line-height: 36px;
+}
+.login{
+    // left: 38%;
+    z-index: 1;
+    &.loginHide{
+        animation: loginHide 0.5s ease-in-out;
+        box-shadow: none;
+        z-index: 0;
+        // margin-top: -180px;
+    }
+    &.loginShow{
+        animation: loginShow 0.5s ease-in-out;
+        box-shadow: none;
+        z-index: 1;
+        margin-top: -180px;
+    }
+}
+.register{
+    // left: 60%;
+    z-index: 0;
+    &.registerShow{
+        animation: registerShow 0.5s ease-in-out;
+        box-shadow: none;
+        z-index: 1;
+        // margin-top: -180px;
+    }
+    &.registerHide{
+        animation: registerHide 0.5s ease-in-out;
+        box-shadow: none;
+        z-index: 0;
+        margin-top: -180px;
+    }
+    .register-title{
+        text-align: center;
+        font-size: 20px;
+        font-weight: 400px;
+        margin-bottom: 25px;
+    }
 }
 
-.login-logo {
-    width: 250px;
-    height: 60px;
-    margin-bottom: 30px;
+
+@keyframes loginHide {
+    0% {
+        box-shadow:1px 1px 10px -5px #000;
+        z-index: 1;
+    }
+    50% {
+        left: 38%;
+        z-index: 1;
+        margin-top: -185px;
+    }
+    51%{
+        z-index:0
+    }
+    100% {
+        left: 50%;
+        z-index: 0;
+        margin-top: -180px;
+    }
+}
+@keyframes loginShow {
+    0% {
+        box-shadow: 1px 1px 10px -5px #000;
+        z-index: 0;
+    }
+    50% {
+        left: 38%;
+        z-index: 0;
+        margin-top: -185px;
+    }
+    51%{
+        z-index:1
+    }
+    100% {
+        left: 50%;
+        z-index: 1;
+        margin-top: -180px;
+    }
+}
+@keyframes registerShow {
+    0% {
+        box-shadow: 1px 1px 10px -5px #000;
+        z-index: 0;
+    }
+    50% {
+        left: 60%;
+        z-index: 0;
+        margin-top: -195px;
+    }
+    51%{
+        z-index:1;
+    }
+    100% {
+        left: 50%;
+        z-index: 1;
+        margin-top: -180px;
+    }
+}
+@keyframes registerHide {
+    0% {
+        box-shadow: 1px 1px 10px -5px #000;
+        z-index: 1;
+    }
+    50% {
+        left: 60%;
+        z-index: 1;
+        margin-top: -195px;
+    }
+    51%{
+        z-index:0;
+    }
+    100% {
+        left: 50%;
+        z-index: 0;
+        margin-top: -180px;
+    }
 }
 
-.login-box .form-group {
-    margin-bottom: 5px;
-}
 
-.login-box .form-name .el-form-item__error {
-    position: relative;
-}
 
-.login-box .el-form-item {
-    margin-bottom: 0;
-}
-
-.login-box .el-input__inner {
-    border: 1px solid #ddd;
-    height: 48px;
-    line-height: 48px;
-    padding-left: 30px;
-}
-
-.login-box .input-icon {
-    position: absolute;
-    top: 4px;
-    left: 10px;
-}
-
-.login-box .btn-login {
-    width: 100%;
-    height: 48px;
-    margin-top: 10px;
-}
-
-.remember-user-info{
-    margin-top: 10px;
-    margin-top: 10px;
-}
-
-.remember-user-info{
-    margin-top: 10px;
-}
-.app-img-box {
-    width: 150px;
-    height: 150px;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.8);
-    position: absolute;
-    top: 40px;
-    left: -33px;
-    border-radius: 3px;
-    z-index: 100;
-    display: none;
-    border: 1px solid #eee;
-}
-.app-img-box img{
-    width: 100%;
-}
-.app-down{
-    position:relative;
-    width: 150px;
-    height: 150px;
-}
 
 </style>
