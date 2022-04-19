@@ -5,7 +5,9 @@
         <div class="float-left header-title">个人看板</div>
       </header>
       <div class="lookboard_panel_header_blank"></div>
-      <article ref="mainContent" class="lookboard_panel_content"></article>
+      <article ref="mainContent" class="lookboard_panel_content">
+        
+      </article>
     </main>
   </div>
 </template>

@@ -109,6 +109,7 @@ export default {
                             message: res.msg,
                             type: 'success'
                         })
+                        localStorage.setItem('username',res.data.username)
                         localStorage.setItem('access_token',res.data.access_token)
                         localStorage.setItem('expiresTime',res.data.expiresTime)
                         this.$router.push({

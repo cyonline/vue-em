@@ -74,848 +74,848 @@ var menu = [
             
         ]
     },
-    {
-        "MenuId": "E6E5ECC3-3CD3-46BA-9732-F1098F21CB2D",
-        "MenuName": "工程管理",
-        "MenuNo": "08.02.51",
-        "MenuPath": "/engineerManage",
-        "ParentMenuId": null,
-        "IconPath": "icongongchengguanli1",
-        "RowIndex": 0,
-        "Level": 1,
-        "ChildDisplayMode": 1,
-        "Children": [
-            {
-                "MenuId": "E69D2C67-819E-463A-8698-68D9AF52F16C",
-                "MenuName": "基础设置",
-                "MenuNo": "08",
-                "MenuPath": "/basicSetting",
-                "ParentMenuId": "E6E5ECC3-3CD3-46BA-9732-F1098F21CB2D",
-                "IconPath": "iconjichushezhi",
-                "RowIndex": 0,
-                "Level": 2,
-                "ChildDisplayMode": 1,
-                "Children": [
-                    {
-                        "MenuId": "d5934cfa-9b22-4186-9866-a23cb59082f3",
-                        "MenuName": "桩基类型设置",
-                        "MenuNo": "08.02.03",
-                        "MenuPath": "/pileFoundationSet",
-                        "ParentMenuId": "E69D2C67-819E-463A-8698-68D9AF52F16C",
-                        "IconPath": null,
-                        "RowIndex": 20,
-                        "Level": 3,
-                        "ChildDisplayMode": 1,
-                        "Children": []
-                    },
-                    {
-                        "MenuId": "8f4ad5ad-5107-40d7-9d8d-076004de739f",
-                        "MenuName": "检查问题分类",
-                        "MenuNo": "08.02.02",
-                        "MenuPath": "pages/home/paramSet/checkProblemSet/checkProblemSet",
-                        "ParentMenuId": "E69D2C67-819E-463A-8698-68D9AF52F16C",
-                        "IconPath": null,
-                        "RowIndex": 21,
-                        "Level": 3,
-                        "ChildDisplayMode": 1,
-                        "Children": []
-                    },
-                    {
-                        "MenuId": "2a159f8b-2a93-4905-9bfe-fb15c739f517",
-                        "MenuName": "施工边界设置",
-                        "MenuNo": "08.02.04",
-                        "MenuPath": "pages/home/paramSet/constructionScope/constructionScope",
-                        "ParentMenuId": "E69D2C67-819E-463A-8698-68D9AF52F16C",
-                        "IconPath": null,
-                        "RowIndex": 30,
-                        "Level": 3,
-                        "ChildDisplayMode": 1,
-                        "Children": []
-                    },
-                    {
-                        "MenuId": "8A90D5DE-0CC5-496B-A660-B67356FECD35",
-                        "MenuName": "检查小组设置",
-                        "MenuNo": "08.02.05",
-                        "MenuPath": "pages/home/paramSet/checkGroup/checkGroup",
-                        "ParentMenuId": "E69D2C67-819E-463A-8698-68D9AF52F16C",
-                        "IconPath": null,
-                        "RowIndex": 40,
-                        "Level": 3,
-                        "ChildDisplayMode": 1,
-                        "Children": []
-                    },
-                    {
-                        "MenuId": "0722D2E2-9CA0-40B7-A0CF-51D7F7C389D3",
-                        "MenuName": "第三方账号管理",
-                        "MenuNo": "01",
-                        "MenuPath": "pages/home/sysSet/staffing/supervisor-staffing",
-                        "ParentMenuId": "E69D2C67-819E-463A-8698-68D9AF52F16C",
-                        "IconPath": null,
-                        "RowIndex": 50,
-                        "Level": 3,
-                        "ChildDisplayMode": 1,
-                        "Children": []
-                    },
-                    {
-                        "MenuId": "C4314FB2-A8BD-4BB6-9AD7-8A1C2D15B695",
-                        "MenuName": "第三方评估小组",
-                        "MenuNo": "08.02.51",
-                        "MenuPath": "pages/home/paramSet/thirdEvalGroup/thirdEvalGroup",
-                        "ParentMenuId": "E69D2C67-819E-463A-8698-68D9AF52F16C",
-                        "IconPath": null,
-                        "RowIndex": 60,
-                        "Level": 3,
-                        "ChildDisplayMode": 1,
-                        "Children": []
-                    },
-                    {
-                        "MenuId": "0FA466D3-6EE5-4C30-A228-DBE8E6071FFC",
-                        "MenuName": "检查经办人设置",
-                        "MenuNo": "08.02.06",
-                        "MenuPath": "pages/home/paramSet/agentSet/agentSet",
-                        "ParentMenuId": "E69D2C67-819E-463A-8698-68D9AF52F16C",
-                        "IconPath": null,
-                        "RowIndex": 70,
-                        "Level": 3,
-                        "ChildDisplayMode": 1,
-                        "Children": []
-                    },
-                    {
-                        "MenuId": "D2CF3D56-C8B7-46A2-885F-C97642A91591",
-                        "MenuName": "精装标段设置",
-                        "MenuNo": "08.04.21",
-                        "MenuPath": "pages/home/proSet/hardcoverSection/hardcoverSection",
-                        "ParentMenuId": "E69D2C67-819E-463A-8698-68D9AF52F16C",
-                        "IconPath": null,
-                        "RowIndex": 80,
-                        "Level": 3,
-                        "ChildDisplayMode": 1,
-                        "Children": []
-                    },
-                    {
-                        "MenuId": "fb3cbde5-dabc-42f3-bd89-3ded592eca8a",
-                        "MenuName": "项目桩基图配置",
-                        "MenuNo": "08.04.04",
-                        "MenuPath": "pages/home/proSet/pilePaperDraw/pilePaperDraw",
-                        "ParentMenuId": "E69D2C67-819E-463A-8698-68D9AF52F16C",
-                        "IconPath": null,
-                        "RowIndex": 90,
-                        "Level": 3,
-                        "ChildDisplayMode": 1,
-                        "Children": []
-                    },
-                    {
-                        "MenuId": "c59eb3f3-1b36-4cd3-a899-a4fabd1f7e31",
-                        "MenuName": "项目承建范围",
-                        "MenuNo": "08.04.06",
-                        "MenuPath": "pages/home/proSet/proScope/proScope",
-                        "ParentMenuId": "E69D2C67-819E-463A-8698-68D9AF52F16C",
-                        "IconPath": null,
-                        "RowIndex": 91,
-                        "Level": 3,
-                        "ChildDisplayMode": 1,
-                        "Children": []
-                    },
-                    {
-                        "MenuId": "E31F95EC-9416-4C14-AC30-AB7943318CCC",
-                        "MenuName": "项目级配置",
-                        "MenuNo": "",
-                        "MenuPath": "pages/home/proSet/projectCcUserSet/projectCcUserSet",
-                        "ParentMenuId": "E69D2C67-819E-463A-8698-68D9AF52F16C",
-                        "IconPath": null,
-                        "RowIndex": 110,
-                        "Level": 3,
-                        "ChildDisplayMode": 1,
-                        "Children": []
-                    }
-                ]
-            },
-            {
-                "MenuId": "bf028d04-71b4-4b52-accd-278a2d275fd9",
-                "MenuName": "标准库",
-                "MenuNo": "08.03",
-                "MenuPath": null,
-                "ParentMenuId": "E6E5ECC3-3CD3-46BA-9732-F1098F21CB2D",
-                "IconPath": "icon-wendangguanli",
-                "RowIndex": 7,
-                "Level": 2,
-                "ChildDisplayMode": 1,
-                "Children": [
-                    {
-                        "MenuId": "8a551fc6-54af-448f-8eb5-2744c022f133",
-                        "MenuName": "实测实量库",
-                        "MenuNo": "08.03.06",
-                        "MenuPath": "pages/home/libSet/measureStdLib/measureStdLib&type=1",
-                        "ParentMenuId": "bf028d04-71b4-4b52-accd-278a2d275fd9",
-                        "IconPath": null,
-                        "RowIndex": 0,
-                        "Level": 3,
-                        "ChildDisplayMode": 1,
-                        "Children": []
-                    },
-                    {
-                        "MenuId": "35e189ed-e68a-4b66-8339-15f8e54c047d",
-                        "MenuName": "工程验收库",
-                        "MenuNo": "08.03.01",
-                        "MenuPath": "pages/home/libSet/processLib/processLib",
-                        "ParentMenuId": "bf028d04-71b4-4b52-accd-278a2d275fd9",
-                        "IconPath": null,
-                        "RowIndex": 1,
-                        "Level": 3,
-                        "ChildDisplayMode": 1,
-                        "Children": []
-                    },
-                    {
-                        "MenuId": "6850D212-77DB-490F-B0F6-6C131DB1D683",
-                        "MenuName": "专项检查库",
-                        "MenuNo": "08.03.02",
-                        "MenuPath": "pages/home/libSet/specialCheckLib/specialCheckLib",
-                        "ParentMenuId": "bf028d04-71b4-4b52-accd-278a2d275fd9",
-                        "IconPath": null,
-                        "RowIndex": 1,
-                        "Level": 3,
-                        "ChildDisplayMode": 1,
-                        "Children": []
-                    },
-                    {
-                        "MenuId": "5761D017-13B0-4945-80CF-1468D9E3C728",
-                        "MenuName": "样板库",
-                        "MenuNo": "08.03.03",
-                        "MenuPath": "pages/home/libSet/SampleLibrary/sampleLibrary",
-                        "ParentMenuId": "bf028d04-71b4-4b52-accd-278a2d275fd9",
-                        "IconPath": null,
-                        "RowIndex": 2,
-                        "Level": 3,
-                        "ChildDisplayMode": 1,
-                        "Children": []
-                    },
-                    {
-                        "MenuId": "817f7a36-6a8f-42a9-bce8-7c47aa4ae02a",
-                        "MenuName": "评估检查库",
-                        "MenuNo": null,
-                        "MenuPath": "pages/home/libSet/checkEvalLib/checkEvalLib",
-                        "ParentMenuId": "bf028d04-71b4-4b52-accd-278a2d275fd9",
-                        "IconPath": null,
-                        "RowIndex": 3,
-                        "Level": 3,
-                        "ChildDisplayMode": 1,
-                        "Children": []
-                    },
-                    {
-                        "MenuId": "3b56068a-e885-4f22-96af-5c87c761ee9a",
-                        "MenuName": "评估实测库",
-                        "MenuNo": "08.03.04",
-                        "MenuPath": "pages/home/libSet/measureStdLib/measureStdLib&type=0",
-                        "ParentMenuId": "bf028d04-71b4-4b52-accd-278a2d275fd9",
-                        "IconPath": null,
-                        "RowIndex": 4,
-                        "Level": 3,
-                        "ChildDisplayMode": 1,
-                        "Children": []
-                    },
-                    {
-                        "MenuId": "113F9839-5F34-4AF1-BED8-9C2D4D9AF0C5",
-                        "MenuName": "企业质量验收库",
-                        "MenuNo": "08.03.05",
-                        "MenuPath": "pages/home/qualitySet/enterpriseQualityAccept/enterpriseQualityAccept",
-                        "ParentMenuId": "bf028d04-71b4-4b52-accd-278a2d275fd9",
-                        "IconPath": null,
-                        "RowIndex": 50,
-                        "Level": 3,
-                        "ChildDisplayMode": 1,
-                        "Children": []
-                    },
-                    {
-                        "MenuId": "28ADE05B-5892-4562-882B-7DFC3A9A4A76",
-                        "MenuName": "淋水试验库",
-                        "MenuNo": "08.03.07",
-                        "MenuPath": "pages/home/libSet/SprayWaterLib/SprayWaterLib",
-                        "ParentMenuId": "bf028d04-71b4-4b52-accd-278a2d275fd9",
-                        "IconPath": null,
-                        "RowIndex": 60,
-                        "Level": 3,
-                        "ChildDisplayMode": 1,
-                        "Children": []
-                    },
-                    {
-                        "MenuId": "AA7B43AE-E391-4456-B063-7F56F2063830",
-                        "MenuName": "闭水试验库",
-                        "MenuNo": "08.03.08",
-                        "MenuPath": "pages/home/libSet/CloseWaterLib/CloseWaterLib",
-                        "ParentMenuId": "bf028d04-71b4-4b52-accd-278a2d275fd9",
-                        "IconPath": null,
-                        "RowIndex": 61,
-                        "Level": 3,
-                        "ChildDisplayMode": 1,
-                        "Children": []
-                    },
-                    {
-                        "MenuId": "1EB2FF85-CA78-4D9E-BD66-95BD9DCDB92E",
-                        "MenuName": "安全验收库",
-                        "MenuNo": "08.03.09",
-                        "MenuPath": "pages/home/libSet/safeProcessLib/safeProcessLib",
-                        "ParentMenuId": "bf028d04-71b4-4b52-accd-278a2d275fd9",
-                        "IconPath": null,
-                        "RowIndex": 70,
-                        "Level": 3,
-                        "ChildDisplayMode": 1,
-                        "Children": []
-                    }
-                ]
-            },
-            {
-                "MenuId": "3e58653d-f7dd-4b82-9d24-9706748b1c7a",
-                "MenuName": "实测实量",
-                "MenuNo": "15",
-                "MenuPath": null,
-                "ParentMenuId": "E6E5ECC3-3CD3-46BA-9732-F1098F21CB2D",
-                "IconPath": "icon-celiang",
-                "RowIndex": 8,
-                "Level": 2,
-                "ChildDisplayMode": 1,
-                "Children": [
-                    {
-                        "MenuId": "0FC1FFE7-9F0E-4552-A014-389035BDE104",
-                        "MenuName": "实测实量对比",
-                        "MenuNo": "08.03.05",
-                        "MenuPath": "pages/em/measureStd/measureStdContrast/measureStdContrast",
-                        "ParentMenuId": "3e58653d-f7dd-4b82-9d24-9706748b1c7a",
-                        "IconPath": null,
-                        "RowIndex": 10,
-                        "Level": 3,
-                        "ChildDisplayMode": 1,
-                        "Children": []
-                    },
-                    {
-                        "MenuId": "EE585948-777B-4B96-AE7E-320781BD310D",
-                        "MenuName": "实测实量跟进",
-                        "MenuNo": "08.03.05",
-                        "MenuPath": "pages/em/measureStd/measureStdFollow/measureStdFollow",
-                        "ParentMenuId": "3e58653d-f7dd-4b82-9d24-9706748b1c7a",
-                        "IconPath": null,
-                        "RowIndex": 20,
-                        "Level": 3,
-                        "ChildDisplayMode": 1,
-                        "Children": []
-                    },
-                    {
-                        "MenuId": "D39F7C1D-E003-446F-93DC-64E6796314F8",
-                        "MenuName": "实测问题跟进",
-                        "MenuNo": "08.03.05",
-                        "MenuPath": "pages/em/daily/inspectionProblemFollow/inspectionProblemFollow&type=1",
-                        "ParentMenuId": "3e58653d-f7dd-4b82-9d24-9706748b1c7a",
-                        "IconPath": null,
-                        "RowIndex": 50,
-                        "Level": 3,
-                        "ChildDisplayMode": 1,
-                        "Children": []
-                    }
-                ]
-            },
-            // {
-            //     "MenuId": "287e57df-050f-485a-9ee8-ac0aef6e98cf",
-            //     "MenuName": "日常巡查",
-            //     "MenuNo": "01",
-            //     "MenuPath": null,
-            //     "ParentMenuId": "E6E5ECC3-3CD3-46BA-9732-F1098F21CB2D",
-            //     "IconPath": "icon-icon-fix_sent",
-            //     "RowIndex": 10,
-            //     "Level": 2,
-            //     "ChildDisplayMode": 1,
-            //     "Children": [
-            //         {
-            //             "MenuId": "ab340b5e-0634-46c8-8012-aae0c83da316",
-            //             "MenuName": "巡查问题跟进",
-            //             "MenuNo": "01.01",
-            //             "MenuPath": "pages/em/daily/inspectionProblemFollow/inspectionProblemFollow&type=0",
-            //             "ParentMenuId": "287e57df-050f-485a-9ee8-ac0aef6e98cf",
-            //             "IconPath": null,
-            //             "RowIndex": 10,
-            //             "Level": 3,
-            //             "ChildDisplayMode": 1,
-            //             "Children": []
-            //         }
-            //     ]
-            // },
-            // {
-            //     "MenuId": "981175D1-7C06-4853-8893-3C30CCE8D724",
-            //     "MenuName": "样板管理",
-            //     "MenuNo": "15",
-            //     "MenuPath": null,
-            //     "ParentMenuId": "E6E5ECC3-3CD3-46BA-9732-F1098F21CB2D",
-            //     "IconPath": "icon-LC_icon_date_line",
-            //     "RowIndex": 10,
-            //     "Level": 2,
-            //     "ChildDisplayMode": 1,
-            //     "Children": [
-            //         {
-            //             "MenuId": "5FE6D797-2E3B-4201-9C69-A3B2564FA726",
-            //             "MenuName": "样板验收跟进",
-            //             "MenuNo": "01.01",
-            //             "MenuPath": "pages/home/modelManagement/modelFollowup/modelFollowup",
-            //             "ParentMenuId": "981175D1-7C06-4853-8893-3C30CCE8D724",
-            //             "IconPath": null,
-            //             "RowIndex": 1,
-            //             "Level": 3,
-            //             "ChildDisplayMode": 1,
-            //             "Children": []
-            //         }
-            //     ]
-            // },
-            // {
-            //     "MenuId": "68566C98-DE7A-42C5-AEEE-BDAB1A77A4E6",
-            //     "MenuName": "淋水闭水试验",
-            //     "MenuNo": "16",
-            //     "MenuPath": null,
-            //     "ParentMenuId": "E6E5ECC3-3CD3-46BA-9732-F1098F21CB2D",
-            //     "IconPath": "icon-LC_icon_date_line",
-            //     "RowIndex": 11,
-            //     "Level": 2,
-            //     "ChildDisplayMode": 1,
-            //     "Children": [
-            //         {
-            //             "MenuId": "E8F41147-86F6-4024-86B5-14E18DD62EF8",
-            //             "MenuName": "淋水试验跟进",
-            //             "MenuNo": "16.01",
-            //             "MenuPath": "pages/em/SprayWaterFollow/SprayWaterFollow&type=0",
-            //             "ParentMenuId": "68566C98-DE7A-42C5-AEEE-BDAB1A77A4E6",
-            //             "IconPath": null,
-            //             "RowIndex": 10,
-            //             "Level": 3,
-            //             "ChildDisplayMode": 1,
-            //             "Children": []
-            //         },
-            //         {
-            //             "MenuId": "A50A10FD-840F-43BC-ACF5-31ECCF409132",
-            //             "MenuName": "闭水试验跟进",
-            //             "MenuNo": "16.02",
-            //             "MenuPath": "pages/em/SprayWaterFollow/SprayWaterFollow&type=1",
-            //             "ParentMenuId": "68566C98-DE7A-42C5-AEEE-BDAB1A77A4E6",
-            //             "IconPath": null,
-            //             "RowIndex": 11,
-            //             "Level": 3,
-            //             "ChildDisplayMode": 1,
-            //             "Children": []
-            //         }
-            //     ]
-            // },
-            // {
-            //     "MenuId": "4A0F9DC8-F45E-4C25-831D-F2DB050CE3C5",
-            //     "MenuName": "材料验收",
-            //     "MenuNo": "27",
-            //     "MenuPath": null,
-            //     "ParentMenuId": "E6E5ECC3-3CD3-46BA-9732-F1098F21CB2D",
-            //     "IconPath": " iconcailiao",
-            //     "RowIndex": 17,
-            //     "Level": 2,
-            //     "ChildDisplayMode": 1,
-            //     "Children": [
-            //         {
-            //             "MenuId": "AD3C1802-D0DB-4B42-8CD2-819378AE76E7",
-            //             "MenuName": "材料名称管理",
-            //             "MenuNo": "27",
-            //             "MenuPath": "pages/em/MaterialAccept/MaterialNameLibrary/MaterialNameLibrary",
-            //             "ParentMenuId": "4A0F9DC8-F45E-4C25-831D-F2DB050CE3C5",
-            //             "IconPath": null,
-            //             "RowIndex": 17,
-            //             "Level": 3,
-            //             "ChildDisplayMode": 1,
-            //             "Children": []
-            //         },
-            //         {
-            //             "MenuId": "D85FD1D5-A29B-4C34-A7E5-C6F9E32A6C7D",
-            //             "MenuName": "材料品牌管理",
-            //             "MenuNo": "27",
-            //             "MenuPath": "pages/em/MaterialAccept/MaterialBrandLibrary/MaterialBrandLibrary",
-            //             "ParentMenuId": "4A0F9DC8-F45E-4C25-831D-F2DB050CE3C5",
-            //             "IconPath": "",
-            //             "RowIndex": 17,
-            //             "Level": 3,
-            //             "ChildDisplayMode": 1,
-            //             "Children": []
-            //         },
-            //         {
-            //             "MenuId": "E172CE92-F63B-404C-A4E7-6A153617E2FE",
-            //             "MenuName": "材料合同管理",
-            //             "MenuNo": "27",
-            //             "MenuPath": "pages/em/MaterialAccept/ContractLibrary/ContractLibrary",
-            //             "ParentMenuId": "4A0F9DC8-F45E-4C25-831D-F2DB050CE3C5",
-            //             "IconPath": "",
-            //             "RowIndex": 17,
-            //             "Level": 3,
-            //             "ChildDisplayMode": 1,
-            //             "Children": []
-            //         },
-            //         {
-            //             "MenuId": "9C88E25F-A713-454A-947C-0C8F8FC042FF",
-            //             "MenuName": "材料验收跟进",
-            //             "MenuNo": "27",
-            //             "MenuPath": "pages\\em\\MaterialAccept\\materialAcceptanceFollow\\materialAcceptanceFollow",
-            //             "ParentMenuId": "4A0F9DC8-F45E-4C25-831D-F2DB050CE3C5",
-            //             "IconPath": null,
-            //             "RowIndex": 20,
-            //             "Level": 3,
-            //             "ChildDisplayMode": 1,
-            //             "Children": []
-            //         }
-            //     ]
-            // },
-            // {
-            //     "MenuId": "4C5531C1-C7E7-4B93-8B0C-1E84D4A81674",
-            //     "MenuName": "桩基管控",
-            //     "MenuNo": "27",
-            //     "MenuPath": "",
-            //     "ParentMenuId": "E6E5ECC3-3CD3-46BA-9732-F1098F21CB2D",
-            //     "IconPath": "icon-database",
-            //     "RowIndex": 17,
-            //     "Level": 2,
-            //     "ChildDisplayMode": 1,
-            //     "Children": [
-            //         {
-            //             "MenuId": "B84221B8-0D77-4AF7-80CD-B7412008E357",
-            //             "MenuName": "桩基管控跟进",
-            //             "MenuNo": "27",
-            //             "MenuPath": "pages/em/pileFoundation/accordingTo/index",
-            //             "ParentMenuId": "4C5531C1-C7E7-4B93-8B0C-1E84D4A81674",
-            //             "IconPath": "icon-database",
-            //             "RowIndex": 17,
-            //             "Level": 3,
-            //             "ChildDisplayMode": 1,
-            //             "Children": []
-            //         }
-            //     ]
-            // },
-            // {
-            //     "MenuId": "24d1bda1-3256-44f3-8c49-790f6ce5ce4e",
-            //     "MenuName": "工程验收",
-            //     "MenuNo": "02",
-            //     "MenuPath": null,
-            //     "ParentMenuId": "E6E5ECC3-3CD3-46BA-9732-F1098F21CB2D",
-            //     "IconPath": "icon-database",
-            //     "RowIndex": 20,
-            //     "Level": 2,
-            //     "ChildDisplayMode": 1,
-            //     "Children": [
-            //         {
-            //             "MenuId": "84570237-ba06-46e2-8c67-1a6ad1d7d378",
-            //             "MenuName": "工序验收总览",
-            //             "MenuNo": "02.01",
-            //             "MenuPath": "pages/em/process/processAccOverview/processAccOverview",
-            //             "ParentMenuId": "24d1bda1-3256-44f3-8c49-790f6ce5ce4e",
-            //             "IconPath": null,
-            //             "RowIndex": 10,
-            //             "Level": 3,
-            //             "ChildDisplayMode": 1,
-            //             "Children": []
-            //         },
-            //         {
-            //             "MenuId": "2abc22c8-931e-4c75-9816-27a1080de60a",
-            //             "MenuName": "工序验收跟进",
-            //             "MenuNo": "02.02",
-            //             "MenuPath": "pages/em/process/processAccFollow/processAccFollow",
-            //             "ParentMenuId": "24d1bda1-3256-44f3-8c49-790f6ce5ce4e",
-            //             "IconPath": null,
-            //             "RowIndex": 20,
-            //             "Level": 3,
-            //             "ChildDisplayMode": 1,
-            //             "Children": []
-            //         },
-            //         {
-            //             "MenuId": "6748D7F0-28F2-4439-9BA2-9BBD0AC0052B",
-            //             "MenuName": "工序移交跟进",
-            //             "MenuNo": "02.05",
-            //             "MenuPath": "pages/em/process/processHandover/processHandover",
-            //             "ParentMenuId": "24d1bda1-3256-44f3-8c49-790f6ce5ce4e",
-            //             "IconPath": null,
-            //             "RowIndex": 50,
-            //             "Level": 3,
-            //             "ChildDisplayMode": 1,
-            //             "Children": []
-            //         }
-            //     ]
-            // },
-            // {
-            //     "MenuId": "DF3759C9-C098-4BCA-848D-1B9DE7F92371",
-            //     "MenuName": "安全管理",
-            //     "MenuNo": "17",
-            //     "MenuPath": null,
-            //     "ParentMenuId": "E6E5ECC3-3CD3-46BA-9732-F1098F21CB2D",
-            //     "IconPath": "icon-LC_icon_date_line",
-            //     "RowIndex": 21,
-            //     "Level": 2,
-            //     "ChildDisplayMode": 1,
-            //     "Children": [
-            //         {
-            //             "MenuId": "C78B8726-8571-45B9-ABC7-35629792A6E2",
-            //             "MenuName": "安全验收跟进",
-            //             "MenuNo": "02.04",
-            //             "MenuPath": "pages/em/process/safeAccFollow/safeAccFollow",
-            //             "ParentMenuId": "DF3759C9-C098-4BCA-848D-1B9DE7F92371",
-            //             "IconPath": null,
-            //             "RowIndex": 40,
-            //             "Level": 3,
-            //             "ChildDisplayMode": 1,
-            //             "Children": []
-            //         },
-            //         {
-            //             "MenuId": "B7F28686-3E0D-4C79-8CCF-819984409806",
-            //             "MenuName": "安全晨会跟进",
-            //             "MenuNo": "02.05",
-            //             "MenuPath": "pages\\em\\process\\SafetyMorning\\SafetyMorning",
-            //             "ParentMenuId": "DF3759C9-C098-4BCA-848D-1B9DE7F92371",
-            //             "IconPath": null,
-            //             "RowIndex": 50,
-            //             "Level": 3,
-            //             "ChildDisplayMode": 1,
-            //             "Children": []
-            //         }
-            //     ]
-            // },
-            // {
-            //     "MenuId": "B96E18DD-1ED0-45A9-92D0-C2FA54C55917",
-            //     "MenuName": "过程评估",
-            //     "MenuNo": "06.01",
-            //     "MenuPath": null,
-            //     "ParentMenuId": "E6E5ECC3-3CD3-46BA-9732-F1098F21CB2D",
-            //     "IconPath": "icon-pinggu",
-            //     "RowIndex": 30,
-            //     "Level": 2,
-            //     "ChildDisplayMode": 1,
-            //     "Children": [
-            //         {
-            //             "MenuId": "84E8AA44-798B-4FB7-AA02-50D7A9C1FD08",
-            //             "MenuName": "过程评估任务",
-            //             "MenuNo": "06.01.01",
-            //             "MenuPath": "pages/em/courseEval/courseEvalTask/courseEvalTask",
-            //             "ParentMenuId": "B96E18DD-1ED0-45A9-92D0-C2FA54C55917",
-            //             "IconPath": null,
-            //             "RowIndex": 10,
-            //             "Level": 3,
-            //             "ChildDisplayMode": 1,
-            //             "Children": []
-            //         },
-            //         {
-            //             "MenuId": "423A3877-F423-48C7-A6E1-20E7B8DC2267",
-            //             "MenuName": "设置评估小组",
-            //             "MenuNo": "06.01.02",
-            //             "MenuPath": "pages/em/courseEval/setEvalGroup/setEvalGroup",
-            //             "ParentMenuId": "B96E18DD-1ED0-45A9-92D0-C2FA54C55917",
-            //             "IconPath": null,
-            //             "RowIndex": 11,
-            //             "Level": 3,
-            //             "ChildDisplayMode": 1,
-            //             "Children": []
-            //         },
-            //         {
-            //             "MenuId": "1ECAED97-DC0B-471F-861E-CF6CFCA49AC6",
-            //             "MenuName": "分配组员工作",
-            //             "MenuNo": "06.01.03",
-            //             "MenuPath": "pages/em/courseEval/assignWorkRange/assignWorkRange",
-            //             "ParentMenuId": "B96E18DD-1ED0-45A9-92D0-C2FA54C55917",
-            //             "IconPath": null,
-            //             "RowIndex": 12,
-            //             "Level": 3,
-            //             "ChildDisplayMode": 1,
-            //             "Children": []
-            //         },
-            //         {
-            //             "MenuId": "ED491102-8B49-48D9-9865-80E494B4FBF8",
-            //             "MenuName": "组员评估",
-            //             "MenuNo": "06.01.04",
-            //             "MenuPath": "pages/em/courseEval/memberScore/memberScore",
-            //             "ParentMenuId": "B96E18DD-1ED0-45A9-92D0-C2FA54C55917",
-            //             "IconPath": null,
-            //             "RowIndex": 14,
-            //             "Level": 3,
-            //             "ChildDisplayMode": 1,
-            //             "Children": []
-            //         },
-            //         {
-            //             "MenuId": "4ACDCC9F-3D51-4619-BE64-DCF00C05DA14",
-            //             "MenuName": "过程评估结果",
-            //             "MenuNo": "06.01.05",
-            //             "MenuPath": "pages/em/courseEval/courseEvalResult/courseEvalResult",
-            //             "ParentMenuId": "B96E18DD-1ED0-45A9-92D0-C2FA54C55917",
-            //             "IconPath": null,
-            //             "RowIndex": 20,
-            //             "Level": 3,
-            //             "ChildDisplayMode": 1,
-            //             "Children": []
-            //         },
-            //         {
-            //             "MenuId": "798BD4D9-6AE8-4E36-91B4-31448731CDB5",
-            //             "MenuName": "检查问题整理",
-            //             "MenuNo": "06.01.06",
-            //             "MenuPath": "pages/em/courseEval/evalQuestionArran/evalQuestionArran",
-            //             "ParentMenuId": "B96E18DD-1ED0-45A9-92D0-C2FA54C55917",
-            //             "IconPath": null,
-            //             "RowIndex": 30,
-            //             "Level": 3,
-            //             "ChildDisplayMode": 1,
-            //             "Children": []
-            //         },
-            //         {
-            //             "MenuId": "10144EEE-A123-41E9-A9C5-7F0BBA220D9B",
-            //             "MenuName": "整改报告派单",
-            //             "MenuNo": "06.01.09",
-            //             "MenuPath": "pages/em/courseEval/courseReportSendOut/courseReportSendOut",
-            //             "ParentMenuId": "B96E18DD-1ED0-45A9-92D0-C2FA54C55917",
-            //             "IconPath": null,
-            //             "RowIndex": 40,
-            //             "Level": 3,
-            //             "ChildDisplayMode": 1,
-            //             "Children": []
-            //         },
-            //         {
-            //             "MenuId": "54E10E4E-DFC8-4735-926B-307C792F44B4",
-            //             "MenuName": "上传评估报告",
-            //             "MenuNo": "08",
-            //             "MenuPath": "pages/em/courseEval/thirdWebUpload/thirdWebUpload",
-            //             "ParentMenuId": "B96E18DD-1ED0-45A9-92D0-C2FA54C55917",
-            //             "IconPath": null,
-            //             "RowIndex": 50,
-            //             "Level": 3,
-            //             "ChildDisplayMode": 1,
-            //             "Children": []
-            //         },
-            //         {
-            //             "MenuId": "117C2EB0-FD22-4DE6-8CD8-19140FDE7186",
-            //             "MenuName": "评估问题跟进",
-            //             "MenuNo": "07",
-            //             "MenuPath": "pages/em/courseEval/evalQuestFollow/evalQuestFollow",
-            //             "ParentMenuId": "B96E18DD-1ED0-45A9-92D0-C2FA54C55917",
-            //             "IconPath": null,
-            //             "RowIndex": 60,
-            //             "Level": 3,
-            //             "ChildDisplayMode": 1,
-            //             "Children": []
-            //         }
-            //     ]
-            // },
-            // {
-            //     "MenuId": "cdcf97d0-4cac-4ed2-9841-43f741f53701",
-            //     "MenuName": "专项检查",
-            //     "MenuNo": "05",
-            //     "MenuPath": null,
-            //     "ParentMenuId": "E6E5ECC3-3CD3-46BA-9732-F1098F21CB2D",
-            //     "IconPath": "icon-check-project",
-            //     "RowIndex": 50,
-            //     "Level": 2,
-            //     "ChildDisplayMode": 1,
-            //     "Children": [
-            //         {
-            //             "MenuId": "0145ab34-24d7-44bd-aa4f-69225b78c25a",
-            //             "MenuName": "专项检查任务",
-            //             "MenuNo": "05.01",
-            //             "MenuPath": "pages/em/specialCheck/specialCheckTask/specialCheckTask",
-            //             "ParentMenuId": "cdcf97d0-4cac-4ed2-9841-43f741f53701",
-            //             "IconPath": null,
-            //             "RowIndex": 10,
-            //             "Level": 3,
-            //             "ChildDisplayMode": 1,
-            //             "Children": []
-            //         },
-            //         {
-            //             "MenuId": "39ef5b34-7787-4c36-91fc-888a18e2c366",
-            //             "MenuName": "检查评分结果",
-            //             "MenuNo": "05.02",
-            //             "MenuPath": "pages/em/specialCheck/specialScoreResult/specialScoreResult",
-            //             "ParentMenuId": "cdcf97d0-4cac-4ed2-9841-43f741f53701",
-            //             "IconPath": null,
-            //             "RowIndex": 20,
-            //             "Level": 3,
-            //             "ChildDisplayMode": 1,
-            //             "Children": []
-            //         },
-            //         {
-            //             "MenuId": "3a8d41d6-102b-4ccd-882c-aa8c7fa27c0d",
-            //             "MenuName": "检查问题整理",
-            //             "MenuNo": "05.03",
-            //             "MenuPath": "pages/em/specialCheck/specialQuestTrim/specialQuestTrim",
-            //             "ParentMenuId": "cdcf97d0-4cac-4ed2-9841-43f741f53701",
-            //             "IconPath": null,
-            //             "RowIndex": 30,
-            //             "Level": 3,
-            //             "ChildDisplayMode": 1,
-            //             "Children": []
-            //         },
-            //         {
-            //             "MenuId": "43EE4FE6-D472-4EE9-B7BA-6268425C574F",
-            //             "MenuName": "整改报告派单",
-            //             "MenuNo": "",
-            //             "MenuPath": "pages/em/specialCheck/specialReportSendOut/specialReportSendOut",
-            //             "ParentMenuId": "cdcf97d0-4cac-4ed2-9841-43f741f53701",
-            //             "IconPath": null,
-            //             "RowIndex": 40,
-            //             "Level": 3,
-            //             "ChildDisplayMode": 1,
-            //             "Children": []
-            //         },
-            //         {
-            //             "MenuId": "33d304af-4064-4689-9770-b129ec79c6cd",
-            //             "MenuName": "检查问题跟进",
-            //             "MenuNo": "05.04",
-            //             "MenuPath": "pages/em/specialCheck/specialQuestFollow/specialQuestFollow",
-            //             "ParentMenuId": "cdcf97d0-4cac-4ed2-9841-43f741f53701",
-            //             "IconPath": null,
-            //             "RowIndex": 50,
-            //             "Level": 3,
-            //             "ChildDisplayMode": 1,
-            //             "Children": []
-            //         }
-            //     ]
-            // },
-            // {
-            //     "MenuId": "ABCC7B5B-6188-456B-BCDD-EC7D33CF3996",
-            //     "MenuName": "形象进度",
-            //     "MenuNo": "07",
-            //     "MenuPath": "",
-            //     "ParentMenuId": "E6E5ECC3-3CD3-46BA-9732-F1098F21CB2D",
-            //     "IconPath": "icon-tongjibaobiao",
-            //     "RowIndex": 60,
-            //     "Level": 2,
-            //     "ChildDisplayMode": 1,
-            //     "Children": [
-            //         {
-            //             "MenuId": "5B7A1680-A920-4E2D-8410-947C7C1FF15F",
-            //             "MenuName": "形象进度分区设置",
-            //             "MenuNo": "06.07.01",
-            //             "MenuPath": "pages/em/graphicProgress/graphicProgressSet/index",
-            //             "ParentMenuId": "ABCC7B5B-6188-456B-BCDD-EC7D33CF3996",
-            //             "IconPath": null,
-            //             "RowIndex": 10,
-            //             "Level": 3,
-            //             "ChildDisplayMode": 1,
-            //             "Children": []
-            //         },
-            //         {
-            //             "MenuId": "DC391688-6B16-4398-9C35-062F13DB77CA",
-            //             "MenuName": "形象进度登记",
-            //             "MenuNo": "06.07.02",
-            //             "MenuPath": "pages/em/graphicProgress/graphicProgressRegister/index",
-            //             "ParentMenuId": "ABCC7B5B-6188-456B-BCDD-EC7D33CF3996",
-            //             "IconPath": null,
-            //             "RowIndex": 20,
-            //             "Level": 3,
-            //             "ChildDisplayMode": 1,
-            //             "Children": []
-            //         },
-            //         {
-            //             "MenuId": "699A01EE-EE59-4813-A23F-A93C34FE645B",
-            //             "MenuName": "形象进度一览",
-            //             "MenuNo": "06.07.03",
-            //             "MenuPath": "pages/em/graphicProgress/graphicProgressScan/index",
-            //             "ParentMenuId": "ABCC7B5B-6188-456B-BCDD-EC7D33CF3996",
-            //             "IconPath": null,
-            //             "RowIndex": 30,
-            //             "Level": 3,
-            //             "ChildDisplayMode": 1,
-            //             "Children": []
-            //         }
-            //     ]
-            // }
-        ]
-    },
+    // {
+    //     "MenuId": "E6E5ECC3-3CD3-46BA-9732-F1098F21CB2D",
+    //     "MenuName": "工程管理",
+    //     "MenuNo": "08.02.51",
+    //     "MenuPath": "/engineerManage",
+    //     "ParentMenuId": null,
+    //     "IconPath": "icongongchengguanli1",
+    //     "RowIndex": 0,
+    //     "Level": 1,
+    //     "ChildDisplayMode": 1,
+    //     "Children": [
+    //         {
+    //             "MenuId": "E69D2C67-819E-463A-8698-68D9AF52F16C",
+    //             "MenuName": "基础设置",
+    //             "MenuNo": "08",
+    //             "MenuPath": "/basicSetting",
+    //             "ParentMenuId": "E6E5ECC3-3CD3-46BA-9732-F1098F21CB2D",
+    //             "IconPath": "iconjichushezhi",
+    //             "RowIndex": 0,
+    //             "Level": 2,
+    //             "ChildDisplayMode": 1,
+    //             "Children": [
+    //                 {
+    //                     "MenuId": "d5934cfa-9b22-4186-9866-a23cb59082f3",
+    //                     "MenuName": "桩基类型设置",
+    //                     "MenuNo": "08.02.03",
+    //                     "MenuPath": "/pileFoundationSet",
+    //                     "ParentMenuId": "E69D2C67-819E-463A-8698-68D9AF52F16C",
+    //                     "IconPath": null,
+    //                     "RowIndex": 20,
+    //                     "Level": 3,
+    //                     "ChildDisplayMode": 1,
+    //                     "Children": []
+    //                 },
+    //                 {
+    //                     "MenuId": "8f4ad5ad-5107-40d7-9d8d-076004de739f",
+    //                     "MenuName": "检查问题分类",
+    //                     "MenuNo": "08.02.02",
+    //                     "MenuPath": "pages/home/paramSet/checkProblemSet/checkProblemSet",
+    //                     "ParentMenuId": "E69D2C67-819E-463A-8698-68D9AF52F16C",
+    //                     "IconPath": null,
+    //                     "RowIndex": 21,
+    //                     "Level": 3,
+    //                     "ChildDisplayMode": 1,
+    //                     "Children": []
+    //                 },
+    //                 {
+    //                     "MenuId": "2a159f8b-2a93-4905-9bfe-fb15c739f517",
+    //                     "MenuName": "施工边界设置",
+    //                     "MenuNo": "08.02.04",
+    //                     "MenuPath": "pages/home/paramSet/constructionScope/constructionScope",
+    //                     "ParentMenuId": "E69D2C67-819E-463A-8698-68D9AF52F16C",
+    //                     "IconPath": null,
+    //                     "RowIndex": 30,
+    //                     "Level": 3,
+    //                     "ChildDisplayMode": 1,
+    //                     "Children": []
+    //                 },
+    //                 {
+    //                     "MenuId": "8A90D5DE-0CC5-496B-A660-B67356FECD35",
+    //                     "MenuName": "检查小组设置",
+    //                     "MenuNo": "08.02.05",
+    //                     "MenuPath": "pages/home/paramSet/checkGroup/checkGroup",
+    //                     "ParentMenuId": "E69D2C67-819E-463A-8698-68D9AF52F16C",
+    //                     "IconPath": null,
+    //                     "RowIndex": 40,
+    //                     "Level": 3,
+    //                     "ChildDisplayMode": 1,
+    //                     "Children": []
+    //                 },
+    //                 {
+    //                     "MenuId": "0722D2E2-9CA0-40B7-A0CF-51D7F7C389D3",
+    //                     "MenuName": "第三方账号管理",
+    //                     "MenuNo": "01",
+    //                     "MenuPath": "pages/home/sysSet/staffing/supervisor-staffing",
+    //                     "ParentMenuId": "E69D2C67-819E-463A-8698-68D9AF52F16C",
+    //                     "IconPath": null,
+    //                     "RowIndex": 50,
+    //                     "Level": 3,
+    //                     "ChildDisplayMode": 1,
+    //                     "Children": []
+    //                 },
+    //                 {
+    //                     "MenuId": "C4314FB2-A8BD-4BB6-9AD7-8A1C2D15B695",
+    //                     "MenuName": "第三方评估小组",
+    //                     "MenuNo": "08.02.51",
+    //                     "MenuPath": "pages/home/paramSet/thirdEvalGroup/thirdEvalGroup",
+    //                     "ParentMenuId": "E69D2C67-819E-463A-8698-68D9AF52F16C",
+    //                     "IconPath": null,
+    //                     "RowIndex": 60,
+    //                     "Level": 3,
+    //                     "ChildDisplayMode": 1,
+    //                     "Children": []
+    //                 },
+    //                 {
+    //                     "MenuId": "0FA466D3-6EE5-4C30-A228-DBE8E6071FFC",
+    //                     "MenuName": "检查经办人设置",
+    //                     "MenuNo": "08.02.06",
+    //                     "MenuPath": "pages/home/paramSet/agentSet/agentSet",
+    //                     "ParentMenuId": "E69D2C67-819E-463A-8698-68D9AF52F16C",
+    //                     "IconPath": null,
+    //                     "RowIndex": 70,
+    //                     "Level": 3,
+    //                     "ChildDisplayMode": 1,
+    //                     "Children": []
+    //                 },
+    //                 {
+    //                     "MenuId": "D2CF3D56-C8B7-46A2-885F-C97642A91591",
+    //                     "MenuName": "精装标段设置",
+    //                     "MenuNo": "08.04.21",
+    //                     "MenuPath": "pages/home/proSet/hardcoverSection/hardcoverSection",
+    //                     "ParentMenuId": "E69D2C67-819E-463A-8698-68D9AF52F16C",
+    //                     "IconPath": null,
+    //                     "RowIndex": 80,
+    //                     "Level": 3,
+    //                     "ChildDisplayMode": 1,
+    //                     "Children": []
+    //                 },
+    //                 {
+    //                     "MenuId": "fb3cbde5-dabc-42f3-bd89-3ded592eca8a",
+    //                     "MenuName": "项目桩基图配置",
+    //                     "MenuNo": "08.04.04",
+    //                     "MenuPath": "pages/home/proSet/pilePaperDraw/pilePaperDraw",
+    //                     "ParentMenuId": "E69D2C67-819E-463A-8698-68D9AF52F16C",
+    //                     "IconPath": null,
+    //                     "RowIndex": 90,
+    //                     "Level": 3,
+    //                     "ChildDisplayMode": 1,
+    //                     "Children": []
+    //                 },
+    //                 {
+    //                     "MenuId": "c59eb3f3-1b36-4cd3-a899-a4fabd1f7e31",
+    //                     "MenuName": "项目承建范围",
+    //                     "MenuNo": "08.04.06",
+    //                     "MenuPath": "pages/home/proSet/proScope/proScope",
+    //                     "ParentMenuId": "E69D2C67-819E-463A-8698-68D9AF52F16C",
+    //                     "IconPath": null,
+    //                     "RowIndex": 91,
+    //                     "Level": 3,
+    //                     "ChildDisplayMode": 1,
+    //                     "Children": []
+    //                 },
+    //                 {
+    //                     "MenuId": "E31F95EC-9416-4C14-AC30-AB7943318CCC",
+    //                     "MenuName": "项目级配置",
+    //                     "MenuNo": "",
+    //                     "MenuPath": "pages/home/proSet/projectCcUserSet/projectCcUserSet",
+    //                     "ParentMenuId": "E69D2C67-819E-463A-8698-68D9AF52F16C",
+    //                     "IconPath": null,
+    //                     "RowIndex": 110,
+    //                     "Level": 3,
+    //                     "ChildDisplayMode": 1,
+    //                     "Children": []
+    //                 }
+    //             ]
+    //         },
+    //         {
+    //             "MenuId": "bf028d04-71b4-4b52-accd-278a2d275fd9",
+    //             "MenuName": "标准库",
+    //             "MenuNo": "08.03",
+    //             "MenuPath": null,
+    //             "ParentMenuId": "E6E5ECC3-3CD3-46BA-9732-F1098F21CB2D",
+    //             "IconPath": "icon-wendangguanli",
+    //             "RowIndex": 7,
+    //             "Level": 2,
+    //             "ChildDisplayMode": 1,
+    //             "Children": [
+    //                 {
+    //                     "MenuId": "8a551fc6-54af-448f-8eb5-2744c022f133",
+    //                     "MenuName": "实测实量库",
+    //                     "MenuNo": "08.03.06",
+    //                     "MenuPath": "pages/home/libSet/measureStdLib/measureStdLib&type=1",
+    //                     "ParentMenuId": "bf028d04-71b4-4b52-accd-278a2d275fd9",
+    //                     "IconPath": null,
+    //                     "RowIndex": 0,
+    //                     "Level": 3,
+    //                     "ChildDisplayMode": 1,
+    //                     "Children": []
+    //                 },
+    //                 {
+    //                     "MenuId": "35e189ed-e68a-4b66-8339-15f8e54c047d",
+    //                     "MenuName": "工程验收库",
+    //                     "MenuNo": "08.03.01",
+    //                     "MenuPath": "pages/home/libSet/processLib/processLib",
+    //                     "ParentMenuId": "bf028d04-71b4-4b52-accd-278a2d275fd9",
+    //                     "IconPath": null,
+    //                     "RowIndex": 1,
+    //                     "Level": 3,
+    //                     "ChildDisplayMode": 1,
+    //                     "Children": []
+    //                 },
+    //                 {
+    //                     "MenuId": "6850D212-77DB-490F-B0F6-6C131DB1D683",
+    //                     "MenuName": "专项检查库",
+    //                     "MenuNo": "08.03.02",
+    //                     "MenuPath": "pages/home/libSet/specialCheckLib/specialCheckLib",
+    //                     "ParentMenuId": "bf028d04-71b4-4b52-accd-278a2d275fd9",
+    //                     "IconPath": null,
+    //                     "RowIndex": 1,
+    //                     "Level": 3,
+    //                     "ChildDisplayMode": 1,
+    //                     "Children": []
+    //                 },
+    //                 {
+    //                     "MenuId": "5761D017-13B0-4945-80CF-1468D9E3C728",
+    //                     "MenuName": "样板库",
+    //                     "MenuNo": "08.03.03",
+    //                     "MenuPath": "pages/home/libSet/SampleLibrary/sampleLibrary",
+    //                     "ParentMenuId": "bf028d04-71b4-4b52-accd-278a2d275fd9",
+    //                     "IconPath": null,
+    //                     "RowIndex": 2,
+    //                     "Level": 3,
+    //                     "ChildDisplayMode": 1,
+    //                     "Children": []
+    //                 },
+    //                 {
+    //                     "MenuId": "817f7a36-6a8f-42a9-bce8-7c47aa4ae02a",
+    //                     "MenuName": "评估检查库",
+    //                     "MenuNo": null,
+    //                     "MenuPath": "pages/home/libSet/checkEvalLib/checkEvalLib",
+    //                     "ParentMenuId": "bf028d04-71b4-4b52-accd-278a2d275fd9",
+    //                     "IconPath": null,
+    //                     "RowIndex": 3,
+    //                     "Level": 3,
+    //                     "ChildDisplayMode": 1,
+    //                     "Children": []
+    //                 },
+    //                 {
+    //                     "MenuId": "3b56068a-e885-4f22-96af-5c87c761ee9a",
+    //                     "MenuName": "评估实测库",
+    //                     "MenuNo": "08.03.04",
+    //                     "MenuPath": "pages/home/libSet/measureStdLib/measureStdLib&type=0",
+    //                     "ParentMenuId": "bf028d04-71b4-4b52-accd-278a2d275fd9",
+    //                     "IconPath": null,
+    //                     "RowIndex": 4,
+    //                     "Level": 3,
+    //                     "ChildDisplayMode": 1,
+    //                     "Children": []
+    //                 },
+    //                 {
+    //                     "MenuId": "113F9839-5F34-4AF1-BED8-9C2D4D9AF0C5",
+    //                     "MenuName": "企业质量验收库",
+    //                     "MenuNo": "08.03.05",
+    //                     "MenuPath": "pages/home/qualitySet/enterpriseQualityAccept/enterpriseQualityAccept",
+    //                     "ParentMenuId": "bf028d04-71b4-4b52-accd-278a2d275fd9",
+    //                     "IconPath": null,
+    //                     "RowIndex": 50,
+    //                     "Level": 3,
+    //                     "ChildDisplayMode": 1,
+    //                     "Children": []
+    //                 },
+    //                 {
+    //                     "MenuId": "28ADE05B-5892-4562-882B-7DFC3A9A4A76",
+    //                     "MenuName": "淋水试验库",
+    //                     "MenuNo": "08.03.07",
+    //                     "MenuPath": "pages/home/libSet/SprayWaterLib/SprayWaterLib",
+    //                     "ParentMenuId": "bf028d04-71b4-4b52-accd-278a2d275fd9",
+    //                     "IconPath": null,
+    //                     "RowIndex": 60,
+    //                     "Level": 3,
+    //                     "ChildDisplayMode": 1,
+    //                     "Children": []
+    //                 },
+    //                 {
+    //                     "MenuId": "AA7B43AE-E391-4456-B063-7F56F2063830",
+    //                     "MenuName": "闭水试验库",
+    //                     "MenuNo": "08.03.08",
+    //                     "MenuPath": "pages/home/libSet/CloseWaterLib/CloseWaterLib",
+    //                     "ParentMenuId": "bf028d04-71b4-4b52-accd-278a2d275fd9",
+    //                     "IconPath": null,
+    //                     "RowIndex": 61,
+    //                     "Level": 3,
+    //                     "ChildDisplayMode": 1,
+    //                     "Children": []
+    //                 },
+    //                 {
+    //                     "MenuId": "1EB2FF85-CA78-4D9E-BD66-95BD9DCDB92E",
+    //                     "MenuName": "安全验收库",
+    //                     "MenuNo": "08.03.09",
+    //                     "MenuPath": "pages/home/libSet/safeProcessLib/safeProcessLib",
+    //                     "ParentMenuId": "bf028d04-71b4-4b52-accd-278a2d275fd9",
+    //                     "IconPath": null,
+    //                     "RowIndex": 70,
+    //                     "Level": 3,
+    //                     "ChildDisplayMode": 1,
+    //                     "Children": []
+    //                 }
+    //             ]
+    //         },
+    //         {
+    //             "MenuId": "3e58653d-f7dd-4b82-9d24-9706748b1c7a",
+    //             "MenuName": "实测实量",
+    //             "MenuNo": "15",
+    //             "MenuPath": null,
+    //             "ParentMenuId": "E6E5ECC3-3CD3-46BA-9732-F1098F21CB2D",
+    //             "IconPath": "icon-celiang",
+    //             "RowIndex": 8,
+    //             "Level": 2,
+    //             "ChildDisplayMode": 1,
+    //             "Children": [
+    //                 {
+    //                     "MenuId": "0FC1FFE7-9F0E-4552-A014-389035BDE104",
+    //                     "MenuName": "实测实量对比",
+    //                     "MenuNo": "08.03.05",
+    //                     "MenuPath": "pages/em/measureStd/measureStdContrast/measureStdContrast",
+    //                     "ParentMenuId": "3e58653d-f7dd-4b82-9d24-9706748b1c7a",
+    //                     "IconPath": null,
+    //                     "RowIndex": 10,
+    //                     "Level": 3,
+    //                     "ChildDisplayMode": 1,
+    //                     "Children": []
+    //                 },
+    //                 {
+    //                     "MenuId": "EE585948-777B-4B96-AE7E-320781BD310D",
+    //                     "MenuName": "实测实量跟进",
+    //                     "MenuNo": "08.03.05",
+    //                     "MenuPath": "pages/em/measureStd/measureStdFollow/measureStdFollow",
+    //                     "ParentMenuId": "3e58653d-f7dd-4b82-9d24-9706748b1c7a",
+    //                     "IconPath": null,
+    //                     "RowIndex": 20,
+    //                     "Level": 3,
+    //                     "ChildDisplayMode": 1,
+    //                     "Children": []
+    //                 },
+    //                 {
+    //                     "MenuId": "D39F7C1D-E003-446F-93DC-64E6796314F8",
+    //                     "MenuName": "实测问题跟进",
+    //                     "MenuNo": "08.03.05",
+    //                     "MenuPath": "pages/em/daily/inspectionProblemFollow/inspectionProblemFollow&type=1",
+    //                     "ParentMenuId": "3e58653d-f7dd-4b82-9d24-9706748b1c7a",
+    //                     "IconPath": null,
+    //                     "RowIndex": 50,
+    //                     "Level": 3,
+    //                     "ChildDisplayMode": 1,
+    //                     "Children": []
+    //                 }
+    //             ]
+    //         },
+    //         // {
+    //         //     "MenuId": "287e57df-050f-485a-9ee8-ac0aef6e98cf",
+    //         //     "MenuName": "日常巡查",
+    //         //     "MenuNo": "01",
+    //         //     "MenuPath": null,
+    //         //     "ParentMenuId": "E6E5ECC3-3CD3-46BA-9732-F1098F21CB2D",
+    //         //     "IconPath": "icon-icon-fix_sent",
+    //         //     "RowIndex": 10,
+    //         //     "Level": 2,
+    //         //     "ChildDisplayMode": 1,
+    //         //     "Children": [
+    //         //         {
+    //         //             "MenuId": "ab340b5e-0634-46c8-8012-aae0c83da316",
+    //         //             "MenuName": "巡查问题跟进",
+    //         //             "MenuNo": "01.01",
+    //         //             "MenuPath": "pages/em/daily/inspectionProblemFollow/inspectionProblemFollow&type=0",
+    //         //             "ParentMenuId": "287e57df-050f-485a-9ee8-ac0aef6e98cf",
+    //         //             "IconPath": null,
+    //         //             "RowIndex": 10,
+    //         //             "Level": 3,
+    //         //             "ChildDisplayMode": 1,
+    //         //             "Children": []
+    //         //         }
+    //         //     ]
+    //         // },
+    //         // {
+    //         //     "MenuId": "981175D1-7C06-4853-8893-3C30CCE8D724",
+    //         //     "MenuName": "样板管理",
+    //         //     "MenuNo": "15",
+    //         //     "MenuPath": null,
+    //         //     "ParentMenuId": "E6E5ECC3-3CD3-46BA-9732-F1098F21CB2D",
+    //         //     "IconPath": "icon-LC_icon_date_line",
+    //         //     "RowIndex": 10,
+    //         //     "Level": 2,
+    //         //     "ChildDisplayMode": 1,
+    //         //     "Children": [
+    //         //         {
+    //         //             "MenuId": "5FE6D797-2E3B-4201-9C69-A3B2564FA726",
+    //         //             "MenuName": "样板验收跟进",
+    //         //             "MenuNo": "01.01",
+    //         //             "MenuPath": "pages/home/modelManagement/modelFollowup/modelFollowup",
+    //         //             "ParentMenuId": "981175D1-7C06-4853-8893-3C30CCE8D724",
+    //         //             "IconPath": null,
+    //         //             "RowIndex": 1,
+    //         //             "Level": 3,
+    //         //             "ChildDisplayMode": 1,
+    //         //             "Children": []
+    //         //         }
+    //         //     ]
+    //         // },
+    //         // {
+    //         //     "MenuId": "68566C98-DE7A-42C5-AEEE-BDAB1A77A4E6",
+    //         //     "MenuName": "淋水闭水试验",
+    //         //     "MenuNo": "16",
+    //         //     "MenuPath": null,
+    //         //     "ParentMenuId": "E6E5ECC3-3CD3-46BA-9732-F1098F21CB2D",
+    //         //     "IconPath": "icon-LC_icon_date_line",
+    //         //     "RowIndex": 11,
+    //         //     "Level": 2,
+    //         //     "ChildDisplayMode": 1,
+    //         //     "Children": [
+    //         //         {
+    //         //             "MenuId": "E8F41147-86F6-4024-86B5-14E18DD62EF8",
+    //         //             "MenuName": "淋水试验跟进",
+    //         //             "MenuNo": "16.01",
+    //         //             "MenuPath": "pages/em/SprayWaterFollow/SprayWaterFollow&type=0",
+    //         //             "ParentMenuId": "68566C98-DE7A-42C5-AEEE-BDAB1A77A4E6",
+    //         //             "IconPath": null,
+    //         //             "RowIndex": 10,
+    //         //             "Level": 3,
+    //         //             "ChildDisplayMode": 1,
+    //         //             "Children": []
+    //         //         },
+    //         //         {
+    //         //             "MenuId": "A50A10FD-840F-43BC-ACF5-31ECCF409132",
+    //         //             "MenuName": "闭水试验跟进",
+    //         //             "MenuNo": "16.02",
+    //         //             "MenuPath": "pages/em/SprayWaterFollow/SprayWaterFollow&type=1",
+    //         //             "ParentMenuId": "68566C98-DE7A-42C5-AEEE-BDAB1A77A4E6",
+    //         //             "IconPath": null,
+    //         //             "RowIndex": 11,
+    //         //             "Level": 3,
+    //         //             "ChildDisplayMode": 1,
+    //         //             "Children": []
+    //         //         }
+    //         //     ]
+    //         // },
+    //         // {
+    //         //     "MenuId": "4A0F9DC8-F45E-4C25-831D-F2DB050CE3C5",
+    //         //     "MenuName": "材料验收",
+    //         //     "MenuNo": "27",
+    //         //     "MenuPath": null,
+    //         //     "ParentMenuId": "E6E5ECC3-3CD3-46BA-9732-F1098F21CB2D",
+    //         //     "IconPath": " iconcailiao",
+    //         //     "RowIndex": 17,
+    //         //     "Level": 2,
+    //         //     "ChildDisplayMode": 1,
+    //         //     "Children": [
+    //         //         {
+    //         //             "MenuId": "AD3C1802-D0DB-4B42-8CD2-819378AE76E7",
+    //         //             "MenuName": "材料名称管理",
+    //         //             "MenuNo": "27",
+    //         //             "MenuPath": "pages/em/MaterialAccept/MaterialNameLibrary/MaterialNameLibrary",
+    //         //             "ParentMenuId": "4A0F9DC8-F45E-4C25-831D-F2DB050CE3C5",
+    //         //             "IconPath": null,
+    //         //             "RowIndex": 17,
+    //         //             "Level": 3,
+    //         //             "ChildDisplayMode": 1,
+    //         //             "Children": []
+    //         //         },
+    //         //         {
+    //         //             "MenuId": "D85FD1D5-A29B-4C34-A7E5-C6F9E32A6C7D",
+    //         //             "MenuName": "材料品牌管理",
+    //         //             "MenuNo": "27",
+    //         //             "MenuPath": "pages/em/MaterialAccept/MaterialBrandLibrary/MaterialBrandLibrary",
+    //         //             "ParentMenuId": "4A0F9DC8-F45E-4C25-831D-F2DB050CE3C5",
+    //         //             "IconPath": "",
+    //         //             "RowIndex": 17,
+    //         //             "Level": 3,
+    //         //             "ChildDisplayMode": 1,
+    //         //             "Children": []
+    //         //         },
+    //         //         {
+    //         //             "MenuId": "E172CE92-F63B-404C-A4E7-6A153617E2FE",
+    //         //             "MenuName": "材料合同管理",
+    //         //             "MenuNo": "27",
+    //         //             "MenuPath": "pages/em/MaterialAccept/ContractLibrary/ContractLibrary",
+    //         //             "ParentMenuId": "4A0F9DC8-F45E-4C25-831D-F2DB050CE3C5",
+    //         //             "IconPath": "",
+    //         //             "RowIndex": 17,
+    //         //             "Level": 3,
+    //         //             "ChildDisplayMode": 1,
+    //         //             "Children": []
+    //         //         },
+    //         //         {
+    //         //             "MenuId": "9C88E25F-A713-454A-947C-0C8F8FC042FF",
+    //         //             "MenuName": "材料验收跟进",
+    //         //             "MenuNo": "27",
+    //         //             "MenuPath": "pages\\em\\MaterialAccept\\materialAcceptanceFollow\\materialAcceptanceFollow",
+    //         //             "ParentMenuId": "4A0F9DC8-F45E-4C25-831D-F2DB050CE3C5",
+    //         //             "IconPath": null,
+    //         //             "RowIndex": 20,
+    //         //             "Level": 3,
+    //         //             "ChildDisplayMode": 1,
+    //         //             "Children": []
+    //         //         }
+    //         //     ]
+    //         // },
+    //         // {
+    //         //     "MenuId": "4C5531C1-C7E7-4B93-8B0C-1E84D4A81674",
+    //         //     "MenuName": "桩基管控",
+    //         //     "MenuNo": "27",
+    //         //     "MenuPath": "",
+    //         //     "ParentMenuId": "E6E5ECC3-3CD3-46BA-9732-F1098F21CB2D",
+    //         //     "IconPath": "icon-database",
+    //         //     "RowIndex": 17,
+    //         //     "Level": 2,
+    //         //     "ChildDisplayMode": 1,
+    //         //     "Children": [
+    //         //         {
+    //         //             "MenuId": "B84221B8-0D77-4AF7-80CD-B7412008E357",
+    //         //             "MenuName": "桩基管控跟进",
+    //         //             "MenuNo": "27",
+    //         //             "MenuPath": "pages/em/pileFoundation/accordingTo/index",
+    //         //             "ParentMenuId": "4C5531C1-C7E7-4B93-8B0C-1E84D4A81674",
+    //         //             "IconPath": "icon-database",
+    //         //             "RowIndex": 17,
+    //         //             "Level": 3,
+    //         //             "ChildDisplayMode": 1,
+    //         //             "Children": []
+    //         //         }
+    //         //     ]
+    //         // },
+    //         // {
+    //         //     "MenuId": "24d1bda1-3256-44f3-8c49-790f6ce5ce4e",
+    //         //     "MenuName": "工程验收",
+    //         //     "MenuNo": "02",
+    //         //     "MenuPath": null,
+    //         //     "ParentMenuId": "E6E5ECC3-3CD3-46BA-9732-F1098F21CB2D",
+    //         //     "IconPath": "icon-database",
+    //         //     "RowIndex": 20,
+    //         //     "Level": 2,
+    //         //     "ChildDisplayMode": 1,
+    //         //     "Children": [
+    //         //         {
+    //         //             "MenuId": "84570237-ba06-46e2-8c67-1a6ad1d7d378",
+    //         //             "MenuName": "工序验收总览",
+    //         //             "MenuNo": "02.01",
+    //         //             "MenuPath": "pages/em/process/processAccOverview/processAccOverview",
+    //         //             "ParentMenuId": "24d1bda1-3256-44f3-8c49-790f6ce5ce4e",
+    //         //             "IconPath": null,
+    //         //             "RowIndex": 10,
+    //         //             "Level": 3,
+    //         //             "ChildDisplayMode": 1,
+    //         //             "Children": []
+    //         //         },
+    //         //         {
+    //         //             "MenuId": "2abc22c8-931e-4c75-9816-27a1080de60a",
+    //         //             "MenuName": "工序验收跟进",
+    //         //             "MenuNo": "02.02",
+    //         //             "MenuPath": "pages/em/process/processAccFollow/processAccFollow",
+    //         //             "ParentMenuId": "24d1bda1-3256-44f3-8c49-790f6ce5ce4e",
+    //         //             "IconPath": null,
+    //         //             "RowIndex": 20,
+    //         //             "Level": 3,
+    //         //             "ChildDisplayMode": 1,
+    //         //             "Children": []
+    //         //         },
+    //         //         {
+    //         //             "MenuId": "6748D7F0-28F2-4439-9BA2-9BBD0AC0052B",
+    //         //             "MenuName": "工序移交跟进",
+    //         //             "MenuNo": "02.05",
+    //         //             "MenuPath": "pages/em/process/processHandover/processHandover",
+    //         //             "ParentMenuId": "24d1bda1-3256-44f3-8c49-790f6ce5ce4e",
+    //         //             "IconPath": null,
+    //         //             "RowIndex": 50,
+    //         //             "Level": 3,
+    //         //             "ChildDisplayMode": 1,
+    //         //             "Children": []
+    //         //         }
+    //         //     ]
+    //         // },
+    //         // {
+    //         //     "MenuId": "DF3759C9-C098-4BCA-848D-1B9DE7F92371",
+    //         //     "MenuName": "安全管理",
+    //         //     "MenuNo": "17",
+    //         //     "MenuPath": null,
+    //         //     "ParentMenuId": "E6E5ECC3-3CD3-46BA-9732-F1098F21CB2D",
+    //         //     "IconPath": "icon-LC_icon_date_line",
+    //         //     "RowIndex": 21,
+    //         //     "Level": 2,
+    //         //     "ChildDisplayMode": 1,
+    //         //     "Children": [
+    //         //         {
+    //         //             "MenuId": "C78B8726-8571-45B9-ABC7-35629792A6E2",
+    //         //             "MenuName": "安全验收跟进",
+    //         //             "MenuNo": "02.04",
+    //         //             "MenuPath": "pages/em/process/safeAccFollow/safeAccFollow",
+    //         //             "ParentMenuId": "DF3759C9-C098-4BCA-848D-1B9DE7F92371",
+    //         //             "IconPath": null,
+    //         //             "RowIndex": 40,
+    //         //             "Level": 3,
+    //         //             "ChildDisplayMode": 1,
+    //         //             "Children": []
+    //         //         },
+    //         //         {
+    //         //             "MenuId": "B7F28686-3E0D-4C79-8CCF-819984409806",
+    //         //             "MenuName": "安全晨会跟进",
+    //         //             "MenuNo": "02.05",
+    //         //             "MenuPath": "pages\\em\\process\\SafetyMorning\\SafetyMorning",
+    //         //             "ParentMenuId": "DF3759C9-C098-4BCA-848D-1B9DE7F92371",
+    //         //             "IconPath": null,
+    //         //             "RowIndex": 50,
+    //         //             "Level": 3,
+    //         //             "ChildDisplayMode": 1,
+    //         //             "Children": []
+    //         //         }
+    //         //     ]
+    //         // },
+    //         // {
+    //         //     "MenuId": "B96E18DD-1ED0-45A9-92D0-C2FA54C55917",
+    //         //     "MenuName": "过程评估",
+    //         //     "MenuNo": "06.01",
+    //         //     "MenuPath": null,
+    //         //     "ParentMenuId": "E6E5ECC3-3CD3-46BA-9732-F1098F21CB2D",
+    //         //     "IconPath": "icon-pinggu",
+    //         //     "RowIndex": 30,
+    //         //     "Level": 2,
+    //         //     "ChildDisplayMode": 1,
+    //         //     "Children": [
+    //         //         {
+    //         //             "MenuId": "84E8AA44-798B-4FB7-AA02-50D7A9C1FD08",
+    //         //             "MenuName": "过程评估任务",
+    //         //             "MenuNo": "06.01.01",
+    //         //             "MenuPath": "pages/em/courseEval/courseEvalTask/courseEvalTask",
+    //         //             "ParentMenuId": "B96E18DD-1ED0-45A9-92D0-C2FA54C55917",
+    //         //             "IconPath": null,
+    //         //             "RowIndex": 10,
+    //         //             "Level": 3,
+    //         //             "ChildDisplayMode": 1,
+    //         //             "Children": []
+    //         //         },
+    //         //         {
+    //         //             "MenuId": "423A3877-F423-48C7-A6E1-20E7B8DC2267",
+    //         //             "MenuName": "设置评估小组",
+    //         //             "MenuNo": "06.01.02",
+    //         //             "MenuPath": "pages/em/courseEval/setEvalGroup/setEvalGroup",
+    //         //             "ParentMenuId": "B96E18DD-1ED0-45A9-92D0-C2FA54C55917",
+    //         //             "IconPath": null,
+    //         //             "RowIndex": 11,
+    //         //             "Level": 3,
+    //         //             "ChildDisplayMode": 1,
+    //         //             "Children": []
+    //         //         },
+    //         //         {
+    //         //             "MenuId": "1ECAED97-DC0B-471F-861E-CF6CFCA49AC6",
+    //         //             "MenuName": "分配组员工作",
+    //         //             "MenuNo": "06.01.03",
+    //         //             "MenuPath": "pages/em/courseEval/assignWorkRange/assignWorkRange",
+    //         //             "ParentMenuId": "B96E18DD-1ED0-45A9-92D0-C2FA54C55917",
+    //         //             "IconPath": null,
+    //         //             "RowIndex": 12,
+    //         //             "Level": 3,
+    //         //             "ChildDisplayMode": 1,
+    //         //             "Children": []
+    //         //         },
+    //         //         {
+    //         //             "MenuId": "ED491102-8B49-48D9-9865-80E494B4FBF8",
+    //         //             "MenuName": "组员评估",
+    //         //             "MenuNo": "06.01.04",
+    //         //             "MenuPath": "pages/em/courseEval/memberScore/memberScore",
+    //         //             "ParentMenuId": "B96E18DD-1ED0-45A9-92D0-C2FA54C55917",
+    //         //             "IconPath": null,
+    //         //             "RowIndex": 14,
+    //         //             "Level": 3,
+    //         //             "ChildDisplayMode": 1,
+    //         //             "Children": []
+    //         //         },
+    //         //         {
+    //         //             "MenuId": "4ACDCC9F-3D51-4619-BE64-DCF00C05DA14",
+    //         //             "MenuName": "过程评估结果",
+    //         //             "MenuNo": "06.01.05",
+    //         //             "MenuPath": "pages/em/courseEval/courseEvalResult/courseEvalResult",
+    //         //             "ParentMenuId": "B96E18DD-1ED0-45A9-92D0-C2FA54C55917",
+    //         //             "IconPath": null,
+    //         //             "RowIndex": 20,
+    //         //             "Level": 3,
+    //         //             "ChildDisplayMode": 1,
+    //         //             "Children": []
+    //         //         },
+    //         //         {
+    //         //             "MenuId": "798BD4D9-6AE8-4E36-91B4-31448731CDB5",
+    //         //             "MenuName": "检查问题整理",
+    //         //             "MenuNo": "06.01.06",
+    //         //             "MenuPath": "pages/em/courseEval/evalQuestionArran/evalQuestionArran",
+    //         //             "ParentMenuId": "B96E18DD-1ED0-45A9-92D0-C2FA54C55917",
+    //         //             "IconPath": null,
+    //         //             "RowIndex": 30,
+    //         //             "Level": 3,
+    //         //             "ChildDisplayMode": 1,
+    //         //             "Children": []
+    //         //         },
+    //         //         {
+    //         //             "MenuId": "10144EEE-A123-41E9-A9C5-7F0BBA220D9B",
+    //         //             "MenuName": "整改报告派单",
+    //         //             "MenuNo": "06.01.09",
+    //         //             "MenuPath": "pages/em/courseEval/courseReportSendOut/courseReportSendOut",
+    //         //             "ParentMenuId": "B96E18DD-1ED0-45A9-92D0-C2FA54C55917",
+    //         //             "IconPath": null,
+    //         //             "RowIndex": 40,
+    //         //             "Level": 3,
+    //         //             "ChildDisplayMode": 1,
+    //         //             "Children": []
+    //         //         },
+    //         //         {
+    //         //             "MenuId": "54E10E4E-DFC8-4735-926B-307C792F44B4",
+    //         //             "MenuName": "上传评估报告",
+    //         //             "MenuNo": "08",
+    //         //             "MenuPath": "pages/em/courseEval/thirdWebUpload/thirdWebUpload",
+    //         //             "ParentMenuId": "B96E18DD-1ED0-45A9-92D0-C2FA54C55917",
+    //         //             "IconPath": null,
+    //         //             "RowIndex": 50,
+    //         //             "Level": 3,
+    //         //             "ChildDisplayMode": 1,
+    //         //             "Children": []
+    //         //         },
+    //         //         {
+    //         //             "MenuId": "117C2EB0-FD22-4DE6-8CD8-19140FDE7186",
+    //         //             "MenuName": "评估问题跟进",
+    //         //             "MenuNo": "07",
+    //         //             "MenuPath": "pages/em/courseEval/evalQuestFollow/evalQuestFollow",
+    //         //             "ParentMenuId": "B96E18DD-1ED0-45A9-92D0-C2FA54C55917",
+    //         //             "IconPath": null,
+    //         //             "RowIndex": 60,
+    //         //             "Level": 3,
+    //         //             "ChildDisplayMode": 1,
+    //         //             "Children": []
+    //         //         }
+    //         //     ]
+    //         // },
+    //         // {
+    //         //     "MenuId": "cdcf97d0-4cac-4ed2-9841-43f741f53701",
+    //         //     "MenuName": "专项检查",
+    //         //     "MenuNo": "05",
+    //         //     "MenuPath": null,
+    //         //     "ParentMenuId": "E6E5ECC3-3CD3-46BA-9732-F1098F21CB2D",
+    //         //     "IconPath": "icon-check-project",
+    //         //     "RowIndex": 50,
+    //         //     "Level": 2,
+    //         //     "ChildDisplayMode": 1,
+    //         //     "Children": [
+    //         //         {
+    //         //             "MenuId": "0145ab34-24d7-44bd-aa4f-69225b78c25a",
+    //         //             "MenuName": "专项检查任务",
+    //         //             "MenuNo": "05.01",
+    //         //             "MenuPath": "pages/em/specialCheck/specialCheckTask/specialCheckTask",
+    //         //             "ParentMenuId": "cdcf97d0-4cac-4ed2-9841-43f741f53701",
+    //         //             "IconPath": null,
+    //         //             "RowIndex": 10,
+    //         //             "Level": 3,
+    //         //             "ChildDisplayMode": 1,
+    //         //             "Children": []
+    //         //         },
+    //         //         {
+    //         //             "MenuId": "39ef5b34-7787-4c36-91fc-888a18e2c366",
+    //         //             "MenuName": "检查评分结果",
+    //         //             "MenuNo": "05.02",
+    //         //             "MenuPath": "pages/em/specialCheck/specialScoreResult/specialScoreResult",
+    //         //             "ParentMenuId": "cdcf97d0-4cac-4ed2-9841-43f741f53701",
+    //         //             "IconPath": null,
+    //         //             "RowIndex": 20,
+    //         //             "Level": 3,
+    //         //             "ChildDisplayMode": 1,
+    //         //             "Children": []
+    //         //         },
+    //         //         {
+    //         //             "MenuId": "3a8d41d6-102b-4ccd-882c-aa8c7fa27c0d",
+    //         //             "MenuName": "检查问题整理",
+    //         //             "MenuNo": "05.03",
+    //         //             "MenuPath": "pages/em/specialCheck/specialQuestTrim/specialQuestTrim",
+    //         //             "ParentMenuId": "cdcf97d0-4cac-4ed2-9841-43f741f53701",
+    //         //             "IconPath": null,
+    //         //             "RowIndex": 30,
+    //         //             "Level": 3,
+    //         //             "ChildDisplayMode": 1,
+    //         //             "Children": []
+    //         //         },
+    //         //         {
+    //         //             "MenuId": "43EE4FE6-D472-4EE9-B7BA-6268425C574F",
+    //         //             "MenuName": "整改报告派单",
+    //         //             "MenuNo": "",
+    //         //             "MenuPath": "pages/em/specialCheck/specialReportSendOut/specialReportSendOut",
+    //         //             "ParentMenuId": "cdcf97d0-4cac-4ed2-9841-43f741f53701",
+    //         //             "IconPath": null,
+    //         //             "RowIndex": 40,
+    //         //             "Level": 3,
+    //         //             "ChildDisplayMode": 1,
+    //         //             "Children": []
+    //         //         },
+    //         //         {
+    //         //             "MenuId": "33d304af-4064-4689-9770-b129ec79c6cd",
+    //         //             "MenuName": "检查问题跟进",
+    //         //             "MenuNo": "05.04",
+    //         //             "MenuPath": "pages/em/specialCheck/specialQuestFollow/specialQuestFollow",
+    //         //             "ParentMenuId": "cdcf97d0-4cac-4ed2-9841-43f741f53701",
+    //         //             "IconPath": null,
+    //         //             "RowIndex": 50,
+    //         //             "Level": 3,
+    //         //             "ChildDisplayMode": 1,
+    //         //             "Children": []
+    //         //         }
+    //         //     ]
+    //         // },
+    //         // {
+    //         //     "MenuId": "ABCC7B5B-6188-456B-BCDD-EC7D33CF3996",
+    //         //     "MenuName": "形象进度",
+    //         //     "MenuNo": "07",
+    //         //     "MenuPath": "",
+    //         //     "ParentMenuId": "E6E5ECC3-3CD3-46BA-9732-F1098F21CB2D",
+    //         //     "IconPath": "icon-tongjibaobiao",
+    //         //     "RowIndex": 60,
+    //         //     "Level": 2,
+    //         //     "ChildDisplayMode": 1,
+    //         //     "Children": [
+    //         //         {
+    //         //             "MenuId": "5B7A1680-A920-4E2D-8410-947C7C1FF15F",
+    //         //             "MenuName": "形象进度分区设置",
+    //         //             "MenuNo": "06.07.01",
+    //         //             "MenuPath": "pages/em/graphicProgress/graphicProgressSet/index",
+    //         //             "ParentMenuId": "ABCC7B5B-6188-456B-BCDD-EC7D33CF3996",
+    //         //             "IconPath": null,
+    //         //             "RowIndex": 10,
+    //         //             "Level": 3,
+    //         //             "ChildDisplayMode": 1,
+    //         //             "Children": []
+    //         //         },
+    //         //         {
+    //         //             "MenuId": "DC391688-6B16-4398-9C35-062F13DB77CA",
+    //         //             "MenuName": "形象进度登记",
+    //         //             "MenuNo": "06.07.02",
+    //         //             "MenuPath": "pages/em/graphicProgress/graphicProgressRegister/index",
+    //         //             "ParentMenuId": "ABCC7B5B-6188-456B-BCDD-EC7D33CF3996",
+    //         //             "IconPath": null,
+    //         //             "RowIndex": 20,
+    //         //             "Level": 3,
+    //         //             "ChildDisplayMode": 1,
+    //         //             "Children": []
+    //         //         },
+    //         //         {
+    //         //             "MenuId": "699A01EE-EE59-4813-A23F-A93C34FE645B",
+    //         //             "MenuName": "形象进度一览",
+    //         //             "MenuNo": "06.07.03",
+    //         //             "MenuPath": "pages/em/graphicProgress/graphicProgressScan/index",
+    //         //             "ParentMenuId": "ABCC7B5B-6188-456B-BCDD-EC7D33CF3996",
+    //         //             "IconPath": null,
+    //         //             "RowIndex": 30,
+    //         //             "Level": 3,
+    //         //             "ChildDisplayMode": 1,
+    //         //             "Children": []
+    //         //         }
+    //         //     ]
+    //         // }
+    //     ]
+    // },
     // {
     //     "MenuId": "E9F87059-D9C1-4277-BB3D-066FDC473A87",
     //     "MenuName": "验房管理",
@@ -1833,275 +1833,275 @@ var menu = [
     //         }
     //     ]
     // },
-    // {
-    //     "MenuId": "3",
-    //     "MenuName": "系统管理",
-    //     "MenuNo": "08",
-    //     "MenuPath": null,
-    //     "ParentMenuId": null,
-    //     "IconPath": "icon-iconwangyesheji",
-    //     "RowIndex": 80,
-    //     "Level": 1,
-    //     "ChildDisplayMode": 1,
-    //     "Children": [
-    //         {
-    //             "MenuId": "7e00b088-4ec0-4a4c-aaf6-d25455ef4dcc",
-    //             "MenuName": "系统设置",
-    //             "MenuNo": "08.01",
-    //             "MenuPath": null,
-    //             "ParentMenuId": "3",
-    //             "IconPath": "icon-iconwangyesheji",
-    //             "RowIndex": 10,
-    //             "Level": 2,
-    //             "ChildDisplayMode": 1,
-    //             "Children": [
-    //                 {
-    //                     "MenuId": "4b0cefd0-8dcd-4660-9921-7bd1ef5b0214",
-    //                     "MenuName": "组织架构",
-    //                     "MenuNo": "08.01.01",
-    //                     "MenuPath": "pages/home/sysSet/organizationalStructure/organizationalStructure",
-    //                     "ParentMenuId": "7e00b088-4ec0-4a4c-aaf6-d25455ef4dcc",
-    //                     "IconPath": null,
-    //                     "RowIndex": 10,
-    //                     "Level": 3,
-    //                     "ChildDisplayMode": 1,
-    //                     "Children": []
-    //                 },
-    //                 {
-    //                     "MenuId": "1074e265-e4b0-498e-9a75-4d3bf3b5e2e5",
-    //                     "MenuName": "角色分类",
-    //                     "MenuNo": "",
-    //                     "MenuPath": "pages/home/sysSet/roleCategory/roleCategoryt",
-    //                     "ParentMenuId": "7e00b088-4ec0-4a4c-aaf6-d25455ef4dcc",
-    //                     "IconPath": null,
-    //                     "RowIndex": 15,
-    //                     "Level": 3,
-    //                     "ChildDisplayMode": 1,
-    //                     "Children": []
-    //                 },
-    //                 {
-    //                     "MenuId": "20905f86-f8da-4f8d-97c7-b93a5fe5aa51",
-    //                     "MenuName": "角色设置",
-    //                     "MenuNo": "",
-    //                     "MenuPath": "pages/home/sysSet/roleSet/roleSet",
-    //                     "ParentMenuId": "7e00b088-4ec0-4a4c-aaf6-d25455ef4dcc",
-    //                     "IconPath": null,
-    //                     "RowIndex": 16,
-    //                     "Level": 3,
-    //                     "ChildDisplayMode": 1,
-    //                     "Children": []
-    //                 },
-    //                 {
-    //                     "MenuId": "b665302b-4317-4bbf-9808-e334083f774d",
-    //                     "MenuName": "角色权限",
-    //                     "MenuNo": "08.01.02",
-    //                     "MenuPath": null,
-    //                     "ParentMenuId": "7e00b088-4ec0-4a4c-aaf6-d25455ef4dcc",
-    //                     "IconPath": null,
-    //                     "RowIndex": 20,
-    //                     "Level": 3,
-    //                     "ChildDisplayMode": 1,
-    //                     "Children": [
-    //                         {
-    //                             "MenuId": "27d165f3-ecfb-4f29-99a1-156e528e183e",
-    //                             "MenuName": "内部角色",
-    //                             "MenuNo": "08.01.02.01",
-    //                             "MenuPath": "pages/home/sysSet/inRoleSet/inRoleSet",
-    //                             "ParentMenuId": "b665302b-4317-4bbf-9808-e334083f774d",
-    //                             "IconPath": null,
-    //                             "RowIndex": 10,
-    //                             "Level": 4,
-    //                             "ChildDisplayMode": 1,
-    //                             "Children": []
-    //                         },
-    //                         {
-    //                             "MenuId": "dc1522a2-1542-4557-8f3e-e8f16165874b",
-    //                             "MenuName": "外部角色",
-    //                             "MenuNo": "08.01.02.02",
-    //                             "MenuPath": "pages/home/sysSet/outRoleSet/outRoleSet",
-    //                             "ParentMenuId": "b665302b-4317-4bbf-9808-e334083f774d",
-    //                             "IconPath": null,
-    //                             "RowIndex": 20,
-    //                             "Level": 4,
-    //                             "ChildDisplayMode": 1,
-    //                             "Children": []
-    //                         }
-    //                     ]
-    //                 },
-    //                 {
-    //                     "MenuId": "0093812D-B6AB-4151-8F71-112A3EA07DF0",
-    //                     "MenuName": "合作单位管理",
-    //                     "MenuNo": "08.07.10",
-    //                     "MenuPath": "pages/home/sysSet/builderSet/builderManage",
-    //                     "ParentMenuId": "7e00b088-4ec0-4a4c-aaf6-d25455ef4dcc",
-    //                     "IconPath": null,
-    //                     "RowIndex": 30,
-    //                     "Level": 3,
-    //                     "ChildDisplayMode": 1,
-    //                     "Children": []
-    //                 },
-    //                 {
-    //                     "MenuId": "cf4fe333-eec0-4fae-83db-a1c880c4ab03",
-    //                     "MenuName": "合作单位",
-    //                     "MenuNo": "08.01.03",
-    //                     "MenuPath": "pages/home/sysSet/builderSet/builderSet",
-    //                     "ParentMenuId": "7e00b088-4ec0-4a4c-aaf6-d25455ef4dcc",
-    //                     "IconPath": null,
-    //                     "RowIndex": 40,
-    //                     "Level": 3,
-    //                     "ChildDisplayMode": 1,
-    //                     "Children": []
-    //                 },
-    //                 {
-    //                     "MenuId": "68E96730-124E-44ED-9439-06DE502B5E8E",
-    //                     "MenuName": "待办工作交接",
-    //                     "MenuNo": "08.01.04",
-    //                     "MenuPath": "pages/home/sysSet/agencyHandover/agencyHandover",
-    //                     "ParentMenuId": "7e00b088-4ec0-4a4c-aaf6-d25455ef4dcc",
-    //                     "IconPath": null,
-    //                     "RowIndex": 42,
-    //                     "Level": 3,
-    //                     "ChildDisplayMode": 1,
-    //                     "Children": []
-    //                 }
-    //             ]
-    //         },
-    //         {
-    //             "MenuId": "b2cbdfec-8937-458e-8302-63f19d889d5b",
-    //             "MenuName": "参数设置",
-    //             "MenuNo": "08.02",
-    //             "MenuPath": null,
-    //             "ParentMenuId": "3",
-    //             "IconPath": "icon-xitongshezhi",
-    //             "RowIndex": 20,
-    //             "Level": 2,
-    //             "ChildDisplayMode": 1,
-    //             "Children": [
-    //                 {
-    //                     "MenuId": "dbf3ed05-0c57-4a62-ae6a-0baafce69543",
-    //                     "MenuName": "产品类型分类",
-    //                     "MenuNo": "08.02.01",
-    //                     "MenuPath": "pages/home/paramSet/productType/productType",
-    //                     "ParentMenuId": "b2cbdfec-8937-458e-8302-63f19d889d5b",
-    //                     "IconPath": null,
-    //                     "RowIndex": 30,
-    //                     "Level": 3,
-    //                     "ChildDisplayMode": 1,
-    //                     "Children": []
-    //                 },
-    //                 {
-    //                     "MenuId": "39ed4c07-070a-421c-b9fd-ae53bde92b68",
-    //                     "MenuName": "任务预警设置",
-    //                     "MenuNo": "08.01.08",
-    //                     "MenuPath": "pages/home/sysSet/taskWarningSet/taskWarningSet",
-    //                     "ParentMenuId": "b2cbdfec-8937-458e-8302-63f19d889d5b",
-    //                     "IconPath": null,
-    //                     "RowIndex": 70,
-    //                     "Level": 3,
-    //                     "ChildDisplayMode": 0,
-    //                     "Children": []
-    //                 },
-    //                 {
-    //                     "MenuId": "AC79F50C-819E-4FC2-A1B4-0198AC05D1E0",
-    //                     "MenuName": "常用回复语设置",
-    //                     "MenuNo": "08.02.13",
-    //                     "MenuPath": "pages/home/sysSet/commonReplySet/commonReplySet",
-    //                     "ParentMenuId": "b2cbdfec-8937-458e-8302-63f19d889d5b",
-    //                     "IconPath": null,
-    //                     "RowIndex": 80,
-    //                     "Level": 3,
-    //                     "ChildDisplayMode": 1,
-    //                     "Children": []
-    //                 }
-    //             ]
-    //         },
-    //         {
-    //             "MenuId": "cc619462-04b0-462c-adff-2fcfc3858440",
-    //             "MenuName": "项目设置",
-    //             "MenuNo": "08.04",
-    //             "MenuPath": null,
-    //             "ParentMenuId": "3",
-    //             "IconPath": "icon-set3",
-    //             "RowIndex": 40,
-    //             "Level": 2,
-    //             "ChildDisplayMode": 1,
-    //             "Children": [
-    //                 {
-    //                     "MenuId": "f183d7df-c412-4b09-a700-ce36353aadb5",
-    //                     "MenuName": "项目组织架构",
-    //                     "MenuNo": "08.04.01",
-    //                     "MenuPath": "pages/home/proSet/projectOrganization/projectOrganization",
-    //                     "ParentMenuId": "cc619462-04b0-462c-adff-2fcfc3858440",
-    //                     "IconPath": null,
-    //                     "RowIndex": 10,
-    //                     "Level": 3,
-    //                     "ChildDisplayMode": 1,
-    //                     "Children": []
-    //                 },
-    //                 {
-    //                     "MenuId": "a776e87b-58a9-4c5d-b3af-db487b814fff",
-    //                     "MenuName": "项目及楼栋",
-    //                     "MenuNo": "08.04.02",
-    //                     "MenuPath": "pages/home/proSet/proBuild/proBuild",
-    //                     "ParentMenuId": "cc619462-04b0-462c-adff-2fcfc3858440",
-    //                     "IconPath": null,
-    //                     "RowIndex": 20,
-    //                     "Level": 3,
-    //                     "ChildDisplayMode": 1,
-    //                     "Children": []
-    //                 },
-    //                 {
-    //                     "MenuId": "79e24c67-7d35-420f-a63d-74d028cd8c21",
-    //                     "MenuName": "项目图纸绘制",
-    //                     "MenuNo": "08.04.03",
-    //                     "MenuPath": "setting/home/proSet/proPaperDraw/proPaperDraw",
-    //                     "ParentMenuId": "cc619462-04b0-462c-adff-2fcfc3858440",
-    //                     "IconPath": null,
-    //                     "RowIndex": 30,
-    //                     "Level": 3,
-    //                     "ChildDisplayMode": 1,
-    //                     "Children": []
-    //                 },
-    //                 {
-    //                     "MenuId": "0e25f016-df74-40c5-9c3c-415b2987433b",
-    //                     "MenuName": "项目图纸配置",
-    //                     "MenuNo": "08.04.05",
-    //                     "MenuPath": "pages/home/proSet/proPaperSet/proPaperSet",
-    //                     "ParentMenuId": "cc619462-04b0-462c-adff-2fcfc3858440",
-    //                     "IconPath": null,
-    //                     "RowIndex": 50,
-    //                     "Level": 3,
-    //                     "ChildDisplayMode": 1,
-    //                     "Children": []
-    //                 },
-    //                 {
-    //                     "MenuId": "049AF829-5CEA-42C3-9662-ABC420EE32F0",
-    //                     "MenuName": "项目形象进度分区",
-    //                     "MenuNo": "07.01",
-    //                     "MenuPath": "pages/home/proSet/planPartition/index",
-    //                     "ParentMenuId": "cc619462-04b0-462c-adff-2fcfc3858440",
-    //                     "IconPath": null,
-    //                     "RowIndex": 70,
-    //                     "Level": 3,
-    //                     "ChildDisplayMode": 1,
-    //                     "Children": []
-    //                 },
-    //                 {
-    //                     "MenuId": "0F5FCBE7-D534-4AC2-BC35-5EA46361E9C2",
-    //                     "MenuName": "离线数据包管理",
-    //                     "MenuNo": "08.04.07",
-    //                     "MenuPath": "pages/home/proSet/offlinePacketManagement/index",
-    //                     "ParentMenuId": "cc619462-04b0-462c-adff-2fcfc3858440",
-    //                     "IconPath": null,
-    //                     "RowIndex": 90,
-    //                     "Level": 3,
-    //                     "ChildDisplayMode": 1,
-    //                     "Children": []
-    //                 }
-    //             ]
-    //         }
-    //     ]
-    // },
+    {
+        "MenuId": "3",
+        "MenuName": "系统管理",
+        "MenuNo": "08",
+        "MenuPath": null,
+        "ParentMenuId": null,
+        "IconPath": "icon-iconwangyesheji",
+        "RowIndex": 80,
+        "Level": 1,
+        "ChildDisplayMode": 1,
+        "Children": [
+            {
+                "MenuId": "7e00b088-4ec0-4a4c-aaf6-d25455ef4dcc",
+                "MenuName": "系统设置",
+                "MenuNo": "08.01",
+                "MenuPath": null,
+                "ParentMenuId": "3",
+                "IconPath": "icon-iconwangyesheji",
+                "RowIndex": 10,
+                "Level": 2,
+                "ChildDisplayMode": 1,
+                "Children": [
+                    // {
+                    //     "MenuId": "4b0cefd0-8dcd-4660-9921-7bd1ef5b0214",
+                    //     "MenuName": "组织架构",
+                    //     "MenuNo": "08.01.01",
+                    //     "MenuPath": "pages/home/sysSet/organizationalStructure/organizationalStructure",
+                    //     "ParentMenuId": "7e00b088-4ec0-4a4c-aaf6-d25455ef4dcc",
+                    //     "IconPath": null,
+                    //     "RowIndex": 10,
+                    //     "Level": 3,
+                    //     "ChildDisplayMode": 1,
+                    //     "Children": []
+                    // },
+                    // {
+                    //     "MenuId": "1074e265-e4b0-498e-9a75-4d3bf3b5e2e5",
+                    //     "MenuName": "角色分类",
+                    //     "MenuNo": "",
+                    //     "MenuPath": "pages/home/sysSet/roleCategory/roleCategoryt",
+                    //     "ParentMenuId": "7e00b088-4ec0-4a4c-aaf6-d25455ef4dcc",
+                    //     "IconPath": null,
+                    //     "RowIndex": 15,
+                    //     "Level": 3,
+                    //     "ChildDisplayMode": 1,
+                    //     "Children": []
+                    // },
+                    {
+                        "MenuId": "20905f86-f8da-4f8d-97c7-b93a5fe5aa51",
+                        "MenuName": "角色设置",
+                        "MenuNo": "",
+                        "MenuPath": "pages/home/sysSet/roleSet/roleSet",
+                        "ParentMenuId": "7e00b088-4ec0-4a4c-aaf6-d25455ef4dcc",
+                        "IconPath": null,
+                        "RowIndex": 16,
+                        "Level": 3,
+                        "ChildDisplayMode": 1,
+                        "Children": []
+                    },
+                    {
+                        "MenuId": "b665302b-4317-4bbf-9808-e334083f774d",
+                        "MenuName": "角色权限",
+                        "MenuNo": "08.01.02",
+                        "MenuPath": null,
+                        "ParentMenuId": "7e00b088-4ec0-4a4c-aaf6-d25455ef4dcc",
+                        "IconPath": null,
+                        "RowIndex": 20,
+                        "Level": 3,
+                        "ChildDisplayMode": 1,
+                        "Children": [
+                            {
+                                "MenuId": "27d165f3-ecfb-4f29-99a1-156e528e183e",
+                                "MenuName": "内部角色",
+                                "MenuNo": "08.01.02.01",
+                                "MenuPath": "pages/home/sysSet/inRoleSet/inRoleSet",
+                                "ParentMenuId": "b665302b-4317-4bbf-9808-e334083f774d",
+                                "IconPath": null,
+                                "RowIndex": 10,
+                                "Level": 4,
+                                "ChildDisplayMode": 1,
+                                "Children": []
+                            },
+                            {
+                                "MenuId": "dc1522a2-1542-4557-8f3e-e8f16165874b",
+                                "MenuName": "外部角色",
+                                "MenuNo": "08.01.02.02",
+                                "MenuPath": "pages/home/sysSet/outRoleSet/outRoleSet",
+                                "ParentMenuId": "b665302b-4317-4bbf-9808-e334083f774d",
+                                "IconPath": null,
+                                "RowIndex": 20,
+                                "Level": 4,
+                                "ChildDisplayMode": 1,
+                                "Children": []
+                            }
+                        ]
+                    },
+                    // {
+                    //     "MenuId": "0093812D-B6AB-4151-8F71-112A3EA07DF0",
+                    //     "MenuName": "合作单位管理",
+                    //     "MenuNo": "08.07.10",
+                    //     "MenuPath": "pages/home/sysSet/builderSet/builderManage",
+                    //     "ParentMenuId": "7e00b088-4ec0-4a4c-aaf6-d25455ef4dcc",
+                    //     "IconPath": null,
+                    //     "RowIndex": 30,
+                    //     "Level": 3,
+                    //     "ChildDisplayMode": 1,
+                    //     "Children": []
+                    // },
+                    // {
+                    //     "MenuId": "cf4fe333-eec0-4fae-83db-a1c880c4ab03",
+                    //     "MenuName": "合作单位",
+                    //     "MenuNo": "08.01.03",
+                    //     "MenuPath": "pages/home/sysSet/builderSet/builderSet",
+                    //     "ParentMenuId": "7e00b088-4ec0-4a4c-aaf6-d25455ef4dcc",
+                    //     "IconPath": null,
+                    //     "RowIndex": 40,
+                    //     "Level": 3,
+                    //     "ChildDisplayMode": 1,
+                    //     "Children": []
+                    // },
+                    // {
+                    //     "MenuId": "68E96730-124E-44ED-9439-06DE502B5E8E",
+                    //     "MenuName": "待办工作交接",
+                    //     "MenuNo": "08.01.04",
+                    //     "MenuPath": "pages/home/sysSet/agencyHandover/agencyHandover",
+                    //     "ParentMenuId": "7e00b088-4ec0-4a4c-aaf6-d25455ef4dcc",
+                    //     "IconPath": null,
+                    //     "RowIndex": 42,
+                    //     "Level": 3,
+                    //     "ChildDisplayMode": 1,
+                    //     "Children": []
+                    // }
+                ]
+            },
+            // {
+            //     "MenuId": "b2cbdfec-8937-458e-8302-63f19d889d5b",
+            //     "MenuName": "参数设置",
+            //     "MenuNo": "08.02",
+            //     "MenuPath": null,
+            //     "ParentMenuId": "3",
+            //     "IconPath": "icon-xitongshezhi",
+            //     "RowIndex": 20,
+            //     "Level": 2,
+            //     "ChildDisplayMode": 1,
+            //     "Children": [
+            //         {
+            //             "MenuId": "dbf3ed05-0c57-4a62-ae6a-0baafce69543",
+            //             "MenuName": "产品类型分类",
+            //             "MenuNo": "08.02.01",
+            //             "MenuPath": "pages/home/paramSet/productType/productType",
+            //             "ParentMenuId": "b2cbdfec-8937-458e-8302-63f19d889d5b",
+            //             "IconPath": null,
+            //             "RowIndex": 30,
+            //             "Level": 3,
+            //             "ChildDisplayMode": 1,
+            //             "Children": []
+            //         },
+            //         {
+            //             "MenuId": "39ed4c07-070a-421c-b9fd-ae53bde92b68",
+            //             "MenuName": "任务预警设置",
+            //             "MenuNo": "08.01.08",
+            //             "MenuPath": "pages/home/sysSet/taskWarningSet/taskWarningSet",
+            //             "ParentMenuId": "b2cbdfec-8937-458e-8302-63f19d889d5b",
+            //             "IconPath": null,
+            //             "RowIndex": 70,
+            //             "Level": 3,
+            //             "ChildDisplayMode": 0,
+            //             "Children": []
+            //         },
+            //         {
+            //             "MenuId": "AC79F50C-819E-4FC2-A1B4-0198AC05D1E0",
+            //             "MenuName": "常用回复语设置",
+            //             "MenuNo": "08.02.13",
+            //             "MenuPath": "pages/home/sysSet/commonReplySet/commonReplySet",
+            //             "ParentMenuId": "b2cbdfec-8937-458e-8302-63f19d889d5b",
+            //             "IconPath": null,
+            //             "RowIndex": 80,
+            //             "Level": 3,
+            //             "ChildDisplayMode": 1,
+            //             "Children": []
+            //         }
+            //     ]
+            // },
+            {
+                "MenuId": "cc619462-04b0-462c-adff-2fcfc3858440",
+                "MenuName": "项目设置",
+                "MenuNo": "08.04",
+                "MenuPath": null,
+                "ParentMenuId": "3",
+                "IconPath": "icon-set3",
+                "RowIndex": 40,
+                "Level": 2,
+                "ChildDisplayMode": 1,
+                "Children": [
+                    {
+                        "MenuId": "f183d7df-c412-4b09-a700-ce36353aadb5",
+                        "MenuName": "项目组织架构",
+                        "MenuNo": "08.04.01",
+                        "MenuPath": "pages/home/proSet/projectOrganization/projectOrganization",
+                        "ParentMenuId": "cc619462-04b0-462c-adff-2fcfc3858440",
+                        "IconPath": null,
+                        "RowIndex": 10,
+                        "Level": 3,
+                        "ChildDisplayMode": 1,
+                        "Children": []
+                    },
+                    {
+                        "MenuId": "a776e87b-58a9-4c5d-b3af-db487b814fff",
+                        "MenuName": "项目及楼栋",
+                        "MenuNo": "08.04.02",
+                        "MenuPath": "pages/home/proSet/proBuild/proBuild",
+                        "ParentMenuId": "cc619462-04b0-462c-adff-2fcfc3858440",
+                        "IconPath": null,
+                        "RowIndex": 20,
+                        "Level": 3,
+                        "ChildDisplayMode": 1,
+                        "Children": []
+                    },
+                    {
+                        "MenuId": "79e24c67-7d35-420f-a63d-74d028cd8c21",
+                        "MenuName": "项目图纸绘制",
+                        "MenuNo": "08.04.03",
+                        "MenuPath": "setting/home/proSet/proPaperDraw/proPaperDraw",
+                        "ParentMenuId": "cc619462-04b0-462c-adff-2fcfc3858440",
+                        "IconPath": null,
+                        "RowIndex": 30,
+                        "Level": 3,
+                        "ChildDisplayMode": 1,
+                        "Children": []
+                    },
+                    {
+                        "MenuId": "0e25f016-df74-40c5-9c3c-415b2987433b",
+                        "MenuName": "项目图纸配置",
+                        "MenuNo": "08.04.05",
+                        "MenuPath": "pages/home/proSet/proPaperSet/proPaperSet",
+                        "ParentMenuId": "cc619462-04b0-462c-adff-2fcfc3858440",
+                        "IconPath": null,
+                        "RowIndex": 50,
+                        "Level": 3,
+                        "ChildDisplayMode": 1,
+                        "Children": []
+                    },
+                    // {
+                    //     "MenuId": "049AF829-5CEA-42C3-9662-ABC420EE32F0",
+                    //     "MenuName": "项目形象进度分区",
+                    //     "MenuNo": "07.01",
+                    //     "MenuPath": "pages/home/proSet/planPartition/index",
+                    //     "ParentMenuId": "cc619462-04b0-462c-adff-2fcfc3858440",
+                    //     "IconPath": null,
+                    //     "RowIndex": 70,
+                    //     "Level": 3,
+                    //     "ChildDisplayMode": 1,
+                    //     "Children": []
+                    // },
+                    // {
+                    //     "MenuId": "0F5FCBE7-D534-4AC2-BC35-5EA46361E9C2",
+                    //     "MenuName": "离线数据包管理",
+                    //     "MenuNo": "08.04.07",
+                    //     "MenuPath": "pages/home/proSet/offlinePacketManagement/index",
+                    //     "ParentMenuId": "cc619462-04b0-462c-adff-2fcfc3858440",
+                    //     "IconPath": null,
+                    //     "RowIndex": 90,
+                    //     "Level": 3,
+                    //     "ChildDisplayMode": 1,
+                    //     "Children": []
+                    // }
+                ]
+            }
+        ]
+    },
     // {
     //     "MenuId": "10",
     //     "MenuName": "后台管理",

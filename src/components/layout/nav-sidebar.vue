@@ -27,6 +27,15 @@ export default {
             // openeds:[],
         }
     },
+    watch:{
+        menuData(val){
+            console.info('watch',val)
+            if(val.length>0 && val[0].Children){
+                this.$router.replace(val[0].Children[0].MenuPath)
+
+            }
+        }
+    },
     computed:{
         menuData:{
             get(){
@@ -78,11 +87,11 @@ export default {
     updated(){
         console.info('updated')
         // 判断侧边栏是否有菜单;菜单下第一个子级是否有子菜单
-        if(this.menuData.length>0 && this.menuData[0].Children){
-            this.$router.replace(this.menuData[0].Children[0].MenuPath)
+        // if(this.menuData.length>0 && this.menuData[0].Children){
+        //     this.$router.replace(this.menuData[0].Children[0].MenuPath)
 
-        }
-    }
+        // }
+    },
 }
 </script>
 <style lang="less">
