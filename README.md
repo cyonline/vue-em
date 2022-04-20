@@ -54,9 +54,21 @@ loaders.push({
 问题:
 1.关于重复点击菜单会提示路由重复渲染的问题,去掉了手动点击跳转页面,使用element-submenu组件的router属性,并且重写了VueRouter的push和replace方法
 2.关于没有默认加载第一个页面的问题,本来想在侧边栏组件里mouted手动使用路由跳转,结果再次引起路由重复的提示,原因是默认进的是index页面,index页面里用了layout组件,layout组件里包含了侧边栏的组件,而看板路由里也用了layout组件,导致侧边栏多次加载,结果导致第二次跳转的时候提示路由重复,因为此时已经在看板页面了;处理方法:将用了layout的路由放到同一级下,共用layout组件(使layout只加载一次),由layout->content下的容器来放置,再单独写一个容器页面,给下一级的子路由使用;
-
-
-
+### 04.20
+/deep/ 会在嵌套的父级元素的选择器上加上一个data-v-[id],以便样式能够穿透其他带有data-v-[id]的元素到当前元素上生效,修改elementui的样式要加上
+```css
+  .right-side {
+      width: 65%;
+      padding: 20px;
+      .form-box {
+        width: 400px;
+          /deep/ .el-textarea__inner {
+            height: 80px;
+        }
+      }
+    }
+```
+上面这串代码会编译成 ```.right-side .form-box[data-v-b6bcfae4] .el-textarea__inner { height: 80px; }```
 
 
 
