@@ -102,7 +102,7 @@ export default {
                     password: _this.user.pwd
                 }
                 console.info(params);
-                this.$http.get('/public/authorize', params).then(res=>{
+                this.$http.post('/public/authorize', params).then(res=>{
                     console.info(res);
                     if(res.code == 200){
                         this.$message({
@@ -110,6 +110,7 @@ export default {
                             type: 'success'
                         })
                         localStorage.setItem('username',res.data.username)
+                        localStorage.setItem('userid',res.data.userid)
                         localStorage.setItem('access_token',res.data.access_token)
                         localStorage.setItem('expiresTime',res.data.expiresTime)
                         this.$router.push({

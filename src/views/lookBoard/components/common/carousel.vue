@@ -120,6 +120,7 @@ export default {
         this.autoPlay()
     },
     beforeDestroy(){
+        console.info('beforedestroyed')
         this.clear();
     },
     watch:{
