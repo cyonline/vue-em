@@ -11,11 +11,16 @@ function getToken(){
     var ws = window.localStorage;
     let nowTime = new Date().getTime();
     let expiresTime = ws.getItem('expiresTime')
-    // if ((nowTime < expiresTime && expiresTime - nowTime < 300000) || nowTime > expiresTime) {
-    //     axios.post("/Authorize").then(res=>{
-    //         ws.setItem('access_token',res.data)
-    //     })
-    // }
+    console.info('getoken')
+    if ((nowTime < expiresTime && expiresTime - nowTime < 1000*30) || nowTime > expiresTime) {
+        let params = {
+            username: localStorage.getItem('userName'),
+            password: localStorage.getItem('password')
+        }
+        axios.post("/public/authorize",params).then(res=>{
+            ws.setItem('access_token',res.data)
+        })
+    }
     if (ws.getItem("access_token")) {
         var token = ws.getItem("access_token");
         return token;

@@ -63,7 +63,6 @@ export default {
     },
     methods:{
         chooseMenuList(index,path){
-            console.info('side',path)
             // 修复重复点击同一个路由报错
             // if(path == this.$route.path){
             //     return;
