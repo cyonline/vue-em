@@ -9,18 +9,7 @@ import Config from './config'
 
 function getToken(){
     var ws = window.localStorage;
-    let nowTime = new Date().getTime();
-    let expiresTime = ws.getItem('expiresTime')
-    console.info('getoken')
-    if ((nowTime < expiresTime && expiresTime - nowTime < 1000*30) || nowTime > expiresTime) {
-        let params = {
-            username: localStorage.getItem('userName'),
-            password: localStorage.getItem('password')
-        }
-        axios.post("/public/authorize",params).then(res=>{
-            ws.setItem('access_token',res.data)
-        })
-    }
+    
     if (ws.getItem("access_token")) {
         var token = ws.getItem("access_token");
         return token;
@@ -72,7 +61,7 @@ service.interceptors.response.use(
         let code = 0
         console.info('error:',error);
         try {
-            code = error.response.data.status
+            code = error.response.data.code
         } catch (e) {
             if (error.toString().indexOf('Error: timeout') !== -1) {
                 Notification.error({
@@ -99,9 +88,8 @@ service.interceptors.response.use(
                     type: 'warning'
                 }
             ).then(() => {
-                // store.dispatch('LogOut').then(() => {
-                //     location.reload() // 为了重新实例化vue-router对象 避免bug
-                // })
+                window.location = '/'
+                
             })
         } else if (code === 403) {
             // router.push({ path: '/401' })
