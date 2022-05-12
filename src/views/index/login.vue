@@ -63,6 +63,7 @@
     </div>
 </template>
 <script>
+import JSEncrypt from 'jsencrypt';
 export default {
     name: 'login',
     data(){
@@ -89,17 +90,20 @@ export default {
                 
                 },
                 checkList: [],
-                pubkey:  "",
+                pubkey:  "-----BEGIN PUBLIC KEY-----MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCxMI49KY6fYDtgBcnms3+7B2CcWok6BKMQC8mTPBmAyIbVthX1KfpXf6GrMA+UAPo2+GaUUbeFt2NJqNDrTpPCK5aXMT4H5n0mzO5jTZXOkjWwtRWfBae9NVf9QZ3KWMu44+QV2LW91GUR/fjZJqoqpJ5zdm1170z45rkYOyWWHwIDAQAB-----END PUBLIC KEY-----",
                 isAnimate: false,
             }
     },
     methods:{
         postLoginData: function() {
                 var _this = this;
-                
+                var encrypt = new JSEncrypt();
+                encrypt.setPublicKey(_this.pubkey);
+                var enUserName = encrypt.encrypt(_this.user.uname);
+                var enPwd = encrypt.encrypt(_this.user.pwd);
                 let params = {
-                    username: _this.user.uname,
-                    password: _this.user.pwd
+                    username: enUserName,
+                    password: enPwd
                 }
                 console.info(params);
                 this.$http.post('/public/authorize', params).then(res=>{
@@ -124,10 +128,7 @@ export default {
                 })
                 sessionStorage.setItem('loginType', 0);
                 _this.rememberUserInfo();
-                // var encrypt = new JSEncrypt();
-                // encrypt.setPublicKey(_this.pubkey);
-                // var enUserName = encrypt.encrypt(_this.user.uname);
-                // var enPwd = encrypt.encrypt(_this.user.pwd);
+                
                 localStorage.setItem('username',this.user.uname)
                 
             },

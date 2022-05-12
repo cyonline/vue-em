@@ -16,7 +16,7 @@
             <div class="form-box">
               <el-form
                 ref="userForm"
-                v-model="userInfo"
+                :model="userInfo"
                 label-width="80px"
                 size="small"
                 label-position="top"
@@ -80,6 +80,16 @@ export default {
       this.$refs[formName].validate((valid) => {
         if (valid) {
           // 提交
+          let params = this.userInfo;
+          params = {
+              username: '',
+              email: '',
+              intro: '',
+              userType: '',
+          }
+          this.$http.post('/user/updateUserInfo',params).then((res=>{
+              
+          }))
         } else {
           return false;
         }
@@ -97,7 +107,7 @@ export default {
           console.info(res.data);
           this.userInfo.name = res.data.name;
           this.userInfo.email = res.data.email;
-          this.userType = res.data.userType==0?'超级管理员':'普通用户';
+          this.userType = res.data.user_type==1?'超级管理员':'普通用户';
           this.userName = res.data.name;
           this.userInfo.intro = res.data.intro;
         } else {
