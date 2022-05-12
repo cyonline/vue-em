@@ -64,7 +64,11 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         to: config.dev.assetsSubDirectory,
         ignore: ['.*']
       }
-    ])
+    ]),
+    new webpack.DefinePlugin({
+      // Definitions...
+      'BASE_URL': JSON.stringify(config.dev.BASE_URL)
+    })
   ]
 })
 
