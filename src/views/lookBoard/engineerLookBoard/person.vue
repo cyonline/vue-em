@@ -8,7 +8,11 @@
       <article ref="mainContent" class="lookboard_panel_content">
         <div class="box">
           <div class="left-side">
-            <div class="avator"></div>
+            <div class="avator" @click="openUploadImg">
+              <div class="mask">
+                <i class="icon el-icon-plus"></i>
+              </div>
+            </div>
             <div class="username">{{ userName }}</div>
             <div class="userType">{{ userType }}</div>
           </div>
@@ -56,12 +60,19 @@
         </div>
       </article>
     </main>
+    <template>
+        <upload-img :visible.sync="dialogShow"></upload-img>
+    </template>
   </div>
 </template>
 
 <script>
+import uploadImg from './components/uploadImg-dialog'
 export default {
   name: "personalLookBoard",
+  components:{
+    uploadImg,
+  },
   data: function () {
     return {
       userInfo: {},
@@ -73,6 +84,7 @@ export default {
           // { min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' }
         ],
       },
+      dialogShow: false,
     };
   },
   methods: {
@@ -119,6 +131,9 @@ export default {
       let params = {};
       this.$http.put("/user/userInfo", params).then((res) => {});
     },
+    openUploadImg() {
+      this.dialogShow = true;
+    }
   },
   created() {},
   mounted() {
@@ -151,6 +166,28 @@ export default {
           border-radius: 50%;
           box-shadow: 0px 0px 10px -5px #000;
           margin: 100px auto 40px;
+          position: relative;
+          overflow: hidden;
+          .mask{
+            opacity: 0;
+            position: absolute;
+            background: rgba(0,0,0,0.4);
+            line-height: @circleSize;
+            cursor: pointer;
+            transition: opacity 0.4s;
+            &:hover{
+              opacity: 1;
+            }
+            i{
+              font-size: 30px;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              margin-top: -15px;
+              margin-left: -15px;
+              color: #d6d6d6;
+            }
+          }
         }
         .username {
           text-align: center;
