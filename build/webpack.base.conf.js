@@ -18,11 +18,14 @@ const createLintingRule = () => ({
     emitWarning: !config.dev.showEslintErrorsInOverlay
   }
 })
-
+console.info(process.env.NODE_ENV)
+// console.info(process.argv)
+let env = process.env.NODE_ENV === 'production' ? 'product' : 'dev';
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
-    app: './src/main.js'
+    app: './src/main.js',
+    'config': ['./src/static/config.js']
   },
   output: {
     path: config.build.assetsRoot,

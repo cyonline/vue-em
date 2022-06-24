@@ -3,10 +3,10 @@ import axios from 'axios'
 import { Notification, MessageBox } from 'element-ui'
 // import store from '../store'
 // import { getToken } from '@/utils/auth'
-import Config from './config'
+import Config from '../static/config'
 
 // import { baseUrl } from '@/utils/env'
-
+console.info('Config',Config)
 function getToken(){
     var ws = window.localStorage;
     

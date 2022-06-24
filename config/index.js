@@ -3,23 +3,41 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 
 const path = require('path')
+var prodEnv = require('./prod.env') // 打包
+var devEnv = require('./dev.env') // 开发
+
+// 添加自定义的环境名称,在config.js配置文件中使用
+// console.info('argv',process.argv)
+// console.info('env',process.env.NODE_ENV)
+if(process && process.env.NODE_ENV && process.env.NODE_ENV === 'production') {  // 区分是开发环境还是生产环境(通过build执行的)
+  if (process.argv && process.argv.length > 2) {
+    // dev / product
+    prodEnv.CODE_ENV = '"' + process.argv[2] + '"'
+    devEnv.CODE_ENV = '"' + process.argv[2] + '"'
+  } else {
+    prodEnv.CODE_ENV = '"dev"'
+    devEnv.CODE_ENV = '"dev"'
+  }
+}else {
+  devEnv.CODE_ENV = '"dev"'
+}
 
 module.exports = {
   dev: {
-
+    env: devEnv,
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {
-      '/':{
-        target: 'http://localhost:8001',
-        // ws: true,
-        changeOrigin: true,
-        // pathRewrite: {
-        //   '^/api': ''
-        // }
-      }
-    },
+    // proxyTable: {
+    //   '/':{
+    //     target: 'http://localhost:8001',
+    //     // ws: true,
+    //     changeOrigin: true,
+    //     // pathRewrite: {
+    //     //   '^/api': ''
+    //     // }
+    //   }
+    // },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
@@ -54,6 +72,7 @@ module.exports = {
   },
 
   build: {
+    env: prodEnv,
     // Template for index.html
     index: path.resolve(__dirname, '../dist/index.html'),
 
