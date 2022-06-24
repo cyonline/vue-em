@@ -121,10 +121,11 @@ export default {
                             name: 'index'
                         })
                     }else{
-                        this.$message.error(res.msg)
+                        this.$message.error({
+                            message: res.msg,
+                            type: 'error'
+                        })
                     }
-                }).catch(err => {
-                    this.$message.error(err)
                 })
                 sessionStorage.setItem('loginType', 0);
                 _this.rememberUserInfo();
@@ -160,10 +161,16 @@ export default {
                         })
                         this.$refs['registerForm'].resetFields();
                     }else{
-                        this.$message.error(res.msg)
+                        this.$message.error({
+                            message: res.msg,
+                            type: 'error'
+                        })
                     }
                 }).catch(err => {
-                    this.$message.error(err)
+                    this.$message.error({
+                            message: err,
+                            type: 'error'
+                        })
                 })
             },
             submitForm: function(formName) {

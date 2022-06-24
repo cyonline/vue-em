@@ -6,7 +6,7 @@ import { Notification, MessageBox } from 'element-ui'
 import Config from '../static/config'
 
 // import { baseUrl } from '@/utils/env'
-console.info('Config',Config)
+
 function getToken(){
     var ws = window.localStorage;
     
@@ -75,7 +75,7 @@ service.interceptors.response.use(
                     title: '网络请求错误',
                     duration: 2500
                 })
-                return Promise.reject(error)
+                return Promise.reject('网络请求错误')
             }
         }
         if (code === 401) {

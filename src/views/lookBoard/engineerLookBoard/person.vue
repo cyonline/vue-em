@@ -123,7 +123,10 @@ export default {
           this.userName = res.data.name;
           this.userInfo.intro = res.data.intro;
         } else {
-          this.$message.error(res.msg);
+          this.$message.error({
+                            message: res.msg,
+                            type: 'error'
+                        });
         }
       });
     },

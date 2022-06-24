@@ -4,7 +4,7 @@ console.info('dev',process.env.CODE_ENV)
 if(process.env.CODE_ENV == 'dev'){
     getWebConfig = function(){
         return {
-            serverHost: "http://localhost:8001", // test
+            serverHost: "http://cyonline.club:8001", // test
     
             // writeUrl: "http://rmis.ideasoft.net.cn:8913/", // test
             // readUrl: "http://rmis.ideasoft.net.cn:8913/", // test

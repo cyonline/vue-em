@@ -10,9 +10,6 @@ var getSceneConfig = getProductConfig || getDevConfig ||
 export default function create (upperConfig) {
     const scenConfig = getSceneConfig(upperConfig)
     const defaultConfig = getDefaultConfig(scenConfig)
-    console.info('scenConfig',scenConfig)
-    console.info('defaultConfig',defaultConfig)
-    console.info('upperConfig',upperConfig)
     Object.assign(defaultConfig, scenConfig, upperConfig)
 
     // if (defaultConfig.hasOwnProperty('serverHost')) {

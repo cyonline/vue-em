@@ -3,6 +3,6 @@ const app = express();
 app.use(express.static('../dist'));
 app.use('/assets', express.static('../dist/assets'));
 
-app.listen(80,()=>{
+app.listen(4001,()=>{
     console.log('server is running!')
 })
