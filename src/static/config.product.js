@@ -3,7 +3,7 @@ var getWebConfig = null;
 if(process.env.CODE_ENV == 'product'){
     getWebConfig = function(){
         return {
-            serverHost: "http://cyonline.club:8001", // test
+            serverHost: "/", // test
     
             // writeUrl: "http://rmis.ideasoft.net.cn:8913/", // test
             // readUrl: "http://rmis.ideasoft.net.cn:8913/", // test

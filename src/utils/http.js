@@ -22,7 +22,7 @@ const service = axios.create({
     baseURL: Config.serverHost, // api 的 base_url
     // baseURL: process.env.BASE_API, // api 的 base_url
     timeout: Config.timeout, // 请求超时时间
-    // withCredentials: true
+    withCredentials: true
 })
 
 // request拦截器
